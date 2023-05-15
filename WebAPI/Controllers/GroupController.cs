@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Model.Models;
+using Model.Entities;
 using Model;
 using Microsoft.EntityFrameworkCore;
 

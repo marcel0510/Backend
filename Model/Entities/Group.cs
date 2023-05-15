@@ -2,24 +2,16 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Model.Models
+namespace Model.Entities
 {
-    [Table("Group")]
-    [Index(nameof(Name), nameof(SubjectId), IsUnique =true)]
-    public class Group: BaseEntity
+    public class Group
     {
-        [Required]
-        [StringLength(6)]
+        public int Id { get; set; }
         public string Name { get; set; } 
-        [Required]
         public int SubjectId { get; set; }
-        [Required]
-        public Subject Subject { get; set; } 
-        [Required]
+        public Subject Subject { get; set; }
+        public int ClassroomId { get; set; }
         public Classroom Classroom { get; set; } 
-        [Required] 
         public List<Session> Sessions { get; set; } 
-
-
     }
 }

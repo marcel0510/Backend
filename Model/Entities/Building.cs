@@ -2,19 +2,14 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Model.Models
+namespace Model.Entities
 {
-    [Table("Building")]
     [Index(nameof(Code), IsUnique = true)]  
-    public class Building: BaseEntity
+    public class Building
     {
-        [Required]
-        [MaxLength(3)]
+        public int Id { get; set; }
         public string Code { get; set; }
-        [Required]
-        [MaxLength(20)]
         public string Name { get; set; } 
-        [Required]
         public List<Classroom> Classrooms { get; set; } 
     }
 }

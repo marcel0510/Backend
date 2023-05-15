@@ -2,28 +2,18 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Model.Models
+namespace Model.Entities
 {
-    [Table("Classroom")]
-    [Index(nameof(Code), nameof(Floor), IsUnique = true)]
-    public class Classroom: BaseEntity
+    public class Classroom
     {
-
-        [Required]
-        [StringLength(4)]
+        public int Id { get; set; }
         public string Code { get; set; }
-        [Required]
         public bool IsLab { get; set; }
-        [StringLength(60)]
         public string Name { get; set; }
-        [Required]
         public int Capacity { get; set; }
-        [Required]
-        [StringLength(3)]
         public string Floor { get; set; } 
-        [Required]
+        public int BuildingId { get; set; }
         public Building Building { get; set; }
-        [Required]
         public List<Group> Groups { get; set;}
     }
 }

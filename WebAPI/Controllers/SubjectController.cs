@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Model;
-using Model.Models;
 using WebAPI.Services.Classes;
+using Model;
+using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using Microsoft.EntityFrameworkCore;
+using WebAPI.DTO.SubjectMapper;
 
 namespace WebAPI.Controllers
 {
@@ -11,29 +13,36 @@ namespace WebAPI.Controllers
     public class SubjectController : ControllerBase
     {
         private readonly ScheduleDbContext _context;
-        private readonly SubjectService _service;
+        private readonly IMapper _mapper;
 
-        public SubjectController(ScheduleDbContext context)
+        public SubjectController(ScheduleDbContext context, IMapper mapper)
         {
             _context = context;
-            _service = new (context);
+            _mapper = mapper;
         }
 
         // GET: api/Courses
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<dynamic>>> GetSubjects()
+        public async Task<ActionResult<IEnumerable<SubjectDTO>>> GetSubjects()
         {
             if (_context.Subject == null)
             {
                 return NotFound();
             }
-            return await _service.GetSubjects();
-            
-
-             
-
-
-       
+            return await _context.Subject
+                    .ProjectTo<SubjectDTO>(_mapper.ConfigurationProvider ).ToListAsync();
         }
+
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult<SubjectDTO>> GetSubject(int id)
+        {
+            if (_context.Subject == null)
+            {
+                return NotFound();
+            }
+            return await _context.Subject
+                    .ProjectTo<SubjectDTO>(_mapper.ConfigurationProvider).FirstOrDefaultAsync(s => s.Id == id);
+        }
+
     }
 }

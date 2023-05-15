@@ -3,20 +3,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 using Model.Enum;
 
-namespace Model.Models
+namespace Model.Entities
 {
-    [Table("Session")]
-    public class Session: BaseEntity
+    public class Session
     {
-        [Required]
+        public int Id { get; set; }
         public Day Day { get; set; }
-        [Required]
-        [Column(TypeName = "TIME")]
         public TimeSpan StartTime { get; set; }
-        [Required]
-        [Column(TypeName = "TIME")]
         public TimeSpan EndTime { get; set; }
-        [Required]
+        public int GroupId { get; set; }
         public Group Group { get; set; }
     }
 }

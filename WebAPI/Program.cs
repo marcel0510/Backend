@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Model;
 using WebAPI.Services.Interfaces;
 using WebAPI.Services.Classes;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,10 +12,19 @@ const string CONNECTIONNAME = "ScheduleDB";
 var connectionString = builder.Configuration.GetConnectionString(CONNECTIONNAME);
 
 //3. Agregar el contexto
-builder.Services.AddDbContext<ScheduleDbContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<ScheduleDbContext>(options =>
+{
+    options.UseSqlServer(connectionString);
+    //Comportamiento Tracking por defecto para mejorar la eficiencia de la aplicacion
+    options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+});
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    //Que se ignoren los ciclos que contienen unas a otras
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+});
 
 //Se agrega a los servicios implementados
 builder.Services.AddScoped<ISubjectService, SubjectService>();
@@ -33,6 +43,9 @@ builder.Services.AddCors(options =>
         builder.AllowAnyHeader();
     });
 });
+
+//Agregar el AutoMapper
+builder.Services.AddAutoMapper(typeof(Program));
 
 
 var app = builder.Build();
