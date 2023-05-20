@@ -4,9 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Model.Entities
 {
-    public class Group
+    public class Group: BaseEntity
     {
-        public int Id { get; set; }
         public string Name { get; set; } 
         public int SubjectId { get; set; }
         public Subject Subject { get; set; }

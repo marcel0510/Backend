@@ -5,6 +5,8 @@ using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Microsoft.EntityFrameworkCore;
 using WebAPI.DTO.SubjectMapper;
+using Model.Entities;
+using WebAPI.AddDTO;
 
 namespace WebAPI.Controllers
 {
@@ -42,6 +44,15 @@ namespace WebAPI.Controllers
             }
             return await _context.Subject
                     .ProjectTo<SubjectDTO>(_mapper.ConfigurationProvider).FirstOrDefaultAsync(s => s.Id == id);
+        }
+
+        [HttpPost("new")]
+        public async Task<ActionResult> AddSubject(AddSubjectDTO subjectDTO)
+        {
+            var subjectDB = _mapper.Map<Subject>(subjectDTO);
+            _context.Add(subjectDB);
+            await _context.SaveChangesAsync();  
+            return Ok(true);
         }
 
     }

@@ -13,6 +13,7 @@ namespace Model.Config
             builder.HasIndex(s => s.Code)
                 .IsUnique()
                 .HasFilter("isDeleted = 'false'");
+            builder.HasQueryFilter(s => !s.IsDeleted);
 
 
             builder.Property(s => s.Id)
@@ -39,7 +40,15 @@ namespace Model.Config
                 .IsRequired();
 
             builder.Property(s => s.IsLab)
-                .IsRequired();
+                .IsRequired()
+                .HasDefaultValue(false);
+
+            builder.Property(s => s.IsDeleted)
+                .HasDefaultValue(false);
+            builder.Property(s => s.CreatedBy)
+                .HasDefaultValue(1);
+            builder.Property(s => s.CreatedDate)
+                .HasDefaultValue(DateTime.Now);
         }
     }
 }

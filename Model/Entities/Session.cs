@@ -5,9 +5,8 @@ using Model.Enum;
 
 namespace Model.Entities
 {
-    public class Session
+    public class Session: BaseEntity
     {
-        public int Id { get; set; }
         public Day Day { get; set; }
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }

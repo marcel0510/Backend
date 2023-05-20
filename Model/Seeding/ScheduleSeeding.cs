@@ -19,6 +19,17 @@ namespace Model.Seeding
 
             modelBuilder.Entity<User>().HasData(admin);
 
+            //Celenadario
+            var calendar2022b = new Calendar()
+            {
+                Id = 1,
+                Period = "2022B",
+                PeridoInit = new DateTime(2022, 8, 23),
+                PeriodEnd = new DateTime(2023, 3, 31)
+            };
+
+            modelBuilder.Entity<Calendar>().HasData(calendar2022b);
+
             //Edificios
             var electrica = new Building()
             {
@@ -199,6 +210,7 @@ namespace Model.Seeding
                 Capacity = 25,
                 Floor = "P6",
                 BuildingId = 2,
+                CalendarId = 1
             };
             var aula2 = new Classroom()
             {
@@ -209,6 +221,7 @@ namespace Model.Seeding
                 Capacity = 35,
                 Floor = "P5",
                 BuildingId = 2,
+                CalendarId = 1
             };
             var aula3 = new Classroom()
             {
@@ -219,6 +232,7 @@ namespace Model.Seeding
                 Capacity = 25,
                 Floor = "P6",
                 BuildingId = 2,
+                CalendarId = 1
             };
             var aula4 = new Classroom()
             {
@@ -229,6 +243,7 @@ namespace Model.Seeding
                 Capacity = 20,
                 Floor = "P2",
                 BuildingId = 1,
+                CalendarId = 1
             };
             var aula5 = new Classroom()
             {
@@ -239,6 +254,7 @@ namespace Model.Seeding
                 Capacity = 20,
                 Floor = "P7",
                 BuildingId = 2,
+                CalendarId = 1
             };
             var aula6 = new Classroom()
             {
@@ -249,6 +265,7 @@ namespace Model.Seeding
                 Capacity = 20,
                 Floor = "P2",
                 BuildingId = 1,
+                CalendarId = 1
             };
             var aula7 = new Classroom()
             {
@@ -259,6 +276,7 @@ namespace Model.Seeding
                 Capacity = 20,
                 Floor = "P6",
                 BuildingId = 2,
+                CalendarId = 1
             };
             var aula8 = new Classroom()
             {
@@ -269,6 +287,7 @@ namespace Model.Seeding
                 Capacity = 20,
                 Floor = "P3",
                 BuildingId = 2,
+                CalendarId = 1
             };
             var aula9 = new Classroom()
             {
@@ -279,6 +298,7 @@ namespace Model.Seeding
                 Capacity = 20,
                 Floor = "P2",
                 BuildingId = 1,
+                CalendarId = 1
             };
             var aula10 = new Classroom()
             {
@@ -289,6 +309,7 @@ namespace Model.Seeding
                 Capacity = 20,
                 Floor = "P7",
                 BuildingId = 2,
+                CalendarId = 1
             };
 
             modelBuilder.Entity<Classroom>().HasData(aula1, aula2, aula3, aula4, aula5, aula6, aula7, aula8, aula9, aula10);
@@ -399,7 +420,7 @@ namespace Model.Seeding
                 GroupId = 3
             };
 
-            //Llenado aula4{
+            //Llenado aula4
             //Sesiones Intranets
             var sessionHIntra1 = new Session()
             {

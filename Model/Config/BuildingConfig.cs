@@ -12,6 +12,7 @@ namespace Model.Config
             builder.HasKey(b => b.Id);
             builder.HasIndex(b => b.Code)
                 .HasFilter("isDeleted = 'false'");
+            builder.HasQueryFilter(b => !b.IsDeleted);
 
             builder.Property(b => b.Id)
                 .IsRequired()
@@ -27,6 +28,13 @@ namespace Model.Config
                 .IsRequired()
                 .HasMaxLength(40)
                 .HasColumnName("name");
+
+            builder.Property(b => b.IsDeleted)
+                .HasDefaultValue(false);
+            builder.Property(b => b.CreatedBy)
+                .HasDefaultValue(1);
+            builder.Property(b => b.CreatedDate)
+                .HasDefaultValue(DateTime.Now);
         }
     }
 }

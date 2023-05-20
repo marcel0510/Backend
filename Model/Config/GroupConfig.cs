@@ -10,7 +10,7 @@ namespace Model.Config
         {
             builder.ToTable("Group");
             builder.HasKey(g => g.Id);
- 
+            builder.HasQueryFilter(g => !g.IsDeleted);
 
             builder.Property(g => g.Id)
                 .IsRequired()
@@ -29,6 +29,12 @@ namespace Model.Config
             builder.Property(g => g.ClassroomId)
                 .IsRequired()
                 .HasColumnName("classroomId");
+            builder.Property(c => c.IsDeleted)
+                .HasDefaultValue(false);
+            builder.Property(g => g.CreatedBy)
+                .HasDefaultValue(1);
+            builder.Property(g => g.CreatedDate)
+                .HasDefaultValue(DateTime.Now);
         }
     }
 }

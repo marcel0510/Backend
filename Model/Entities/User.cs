@@ -3,9 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Model.Entities
 {
-    public class User
+    public class User: BaseEntity
     {
-        public int Id { get; set; }
         [EmailAddress]
         public string Email { get; set; }
         public string Password { get; set; }

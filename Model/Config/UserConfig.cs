@@ -15,6 +15,7 @@ namespace Model.Config
             builder.HasIndex(u => u.Email)
                 .IsUnique()
                 .HasFilter("isDeleted = 'false'");
+            builder.HasQueryFilter(u => !u.IsDeleted);
 
             builder.Property(u => u.Id)
                 .IsRequired()
@@ -41,6 +42,13 @@ namespace Model.Config
                 .HasConversion<string>()
                 .HasMaxLength(10)
                 .HasColumnName("role");
+
+            builder.Property(u => u.IsDeleted)
+                .HasDefaultValue(false);
+            builder.Property(u => u.CreatedBy)
+                .HasDefaultValue(1);
+            builder.Property(u => u.CreatedDate)
+                .HasDefaultValue(DateTime.Now);
 
 
         }

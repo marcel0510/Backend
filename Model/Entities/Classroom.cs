@@ -4,9 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Model.Entities
 {
-    public class Classroom
+    public class Classroom: BaseEntity
     {
-        public int Id { get; set; }
         public string Code { get; set; }
         public bool IsLab { get; set; }
         public string Name { get; set; }
@@ -14,6 +13,9 @@ namespace Model.Entities
         public string Floor { get; set; } 
         public int BuildingId { get; set; }
         public Building Building { get; set; }
+        public Calendar Calendar { get; set; }
+        public int CalendarId { get; set; }
         public List<Group> Groups { get; set;}
+
     }
 }
