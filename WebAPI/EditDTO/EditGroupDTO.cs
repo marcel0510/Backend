@@ -1,4 +1,5 @@
 ﻿using WebAPI.AddDTO.AddGroupMapper;
+using WebAPI.DTO;
 
 namespace WebAPI.EditDTO
 {
@@ -7,6 +8,5 @@ namespace WebAPI.EditDTO
         public string Name { get; set; }
         public int SubjectId { get; set; }
         public int ClassroomId { get; set; }
-        public List<AddSessionDTO> Sessions { get; set; }
     }
 }

@@ -25,10 +25,7 @@ namespace WebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<BuildingDTO>>> GetBuildings()
         {
-            if(_context.Building is null)
-            {
-                return NotFound();
-            }
+            if(_context.Building is null) { return NotFound(); }
             return await _context.Building
                 .ProjectTo<BuildingDTO>(_mapper.ConfigurationProvider).ToArrayAsync();
 
@@ -37,10 +34,7 @@ namespace WebAPI.Controllers
         [HttpGet("{id:int}")]
         public async Task<ActionResult<BuildingDTO>> GetBuilding(int id)
         {
-            if (_context.Building is null)
-            {
-                return NotFound();
-            }
+            if (_context.Building is null) { return NotFound(); }
             var building = await _context.Building.FirstOrDefaultAsync(b => b.Id == id);
             var buildingDTO = _mapper.Map<BuildingDTO>(building);
             return buildingDTO;
@@ -59,10 +53,7 @@ namespace WebAPI.Controllers
         public async Task<ActionResult> UpdateBuilding(int id, BuildingDTO buildingDTO)
         {
             var buildingDB = await _context.Building.AsTracking().FirstOrDefaultAsync(b => b.Id == id);
-            if(buildingDB is null)
-            {
-                return NotFound();
-            }
+            if(buildingDB is null) { return NotFound(); }
             buildingDB = _mapper.Map(buildingDTO, buildingDB);
             await _context.SaveChangesAsync();
             return Ok(true);
@@ -72,10 +63,7 @@ namespace WebAPI.Controllers
         public async Task<ActionResult> DeleteBuilding(int id)
         {
             var buildingDB = await _context.Building.AsTracking().FirstOrDefaultAsync(b => b.Id == id);
-            if(buildingDB is null)
-            {
-                return NotFound();
-            }
+            if(buildingDB is null) { return NotFound(); }
             buildingDB.IsDeleted = true;
             await _context.SaveChangesAsync();
             return Ok(true);

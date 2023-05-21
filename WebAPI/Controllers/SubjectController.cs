@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using WebAPI.DTO.SubjectMapper;
 using Model.Entities;
 using WebAPI.AddDTO;
+using WebAPI.EditDTO;
 
 namespace WebAPI.Controllers
 {
@@ -27,21 +28,15 @@ namespace WebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SubjectDTO>>> GetSubjects()
         {
-            if (_context.Subject == null)
-            {
-                return NotFound();
-            }
+            if (_context.Subject == null) { return NotFound(); }
             return await _context.Subject
-                    .ProjectTo<SubjectDTO>(_mapper.ConfigurationProvider ).ToListAsync();
+                    .ProjectTo<SubjectDTO>(_mapper.ConfigurationProvider).ToListAsync();
         }
 
         [HttpGet("{id:int}")]
         public async Task<ActionResult<SubjectDTO>> GetSubject(int id)
         {
-            if (_context.Subject == null)
-            {
-                return NotFound();
-            }
+            if (_context.Subject == null) { return NotFound(); }
             return await _context.Subject
                     .ProjectTo<SubjectDTO>(_mapper.ConfigurationProvider).FirstOrDefaultAsync(s => s.Id == id);
         }
@@ -51,7 +46,27 @@ namespace WebAPI.Controllers
         {
             var subjectDB = _mapper.Map<Subject>(subjectDTO);
             _context.Add(subjectDB);
-            await _context.SaveChangesAsync();  
+            await _context.SaveChangesAsync();
+            return Ok(true);
+        }
+
+        [HttpPut("update/{id:int}")]
+        public async Task<ActionResult> UpdateSubject(int id, EditSubjectDTO subjectDTO)
+        {
+            var subjectDB = await _context.Subject.AsTracking().FirstOrDefaultAsync(s => s.Id == id);
+            if (subjectDB is null) { return NotFound(); }
+            subjectDB = _mapper.Map(subjectDTO, subjectDB);
+            await _context.SaveChangesAsync();
+            return Ok(true);
+        }
+
+        [HttpDelete("delete/{id:int}")]
+        public async Task<ActionResult> DeleteSubject(int id)
+        {
+            var subjetDB = await _context.Subject.AsTracking().FirstOrDefaultAsync(s => s.Id == id);
+            if (subjetDB is null) { return NotFound(); }
+            subjetDB.IsDeleted = true;
+            await _context.SaveChangesAsync();
             return Ok(true);
         }
 

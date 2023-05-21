@@ -25,10 +25,7 @@ namespace WebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsers()
         {
-            if (_context.Building is null)
-            {
-                return NotFound();
-            }
+            if (_context.Building is null) { return NotFound(); }
             return await _context.User
                 .ProjectTo<UserDTO>(_mapper.ConfigurationProvider).ToArrayAsync();
         }
@@ -36,10 +33,7 @@ namespace WebAPI.Controllers
         [HttpGet("{id:int}")]
         public async Task<ActionResult<UserDTO>> GetUser(int id)
         {
-            if (_context.User is null)
-            {
-                return NotFound();
-            }
+            if (_context.User is null) { return NotFound(); }
             var user = await _context.User.FirstOrDefaultAsync(u => u.Id == id);
             var UserDTO = _mapper.Map<UserDTO>(user);
             return UserDTO;
@@ -58,10 +52,7 @@ namespace WebAPI.Controllers
         public async Task<ActionResult> UpdateUser(int id, UserDTO userDTO)
         {
             var userDB = await _context.User.AsTracking().FirstOrDefaultAsync(b => b.Id == id);
-            if (userDB is null)
-            {
-                return NotFound();
-            }
+            if (userDB is null) { return NotFound(); }
             userDB = _mapper.Map(userDTO, userDB);
             await _context.SaveChangesAsync();
             return Ok(true);
@@ -71,10 +62,7 @@ namespace WebAPI.Controllers
         public async Task<ActionResult> UpdatePasswordUser(int id, AddUserDTO userDTO)
         {
             var userDB = await _context.User.AsTracking().FirstOrDefaultAsync(b => b.Id == id);
-            if (userDB is null)
-            {
-                return NotFound();
-            }
+            if (userDB is null) { return NotFound(); }
             userDB = _mapper.Map(userDTO, userDB);
             await _context.SaveChangesAsync();
             return Ok(true);
@@ -84,10 +72,7 @@ namespace WebAPI.Controllers
         public async Task<ActionResult> DeleteUser(int id)
         {
             var userDB = await _context.User.AsTracking().FirstOrDefaultAsync(b => b.Id == id);
-            if (userDB is null)
-            {
-                return NotFound();
-            }
+            if (userDB is null) { return NotFound(); }
             userDB.IsDeleted = true;
             await _context.SaveChangesAsync();
             return Ok(true);

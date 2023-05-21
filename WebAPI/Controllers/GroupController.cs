@@ -8,6 +8,7 @@ using WebAPI.DTO.GroupMapper;
 using AutoMapper;
 using WebAPI.AddDTO.AddGroupMapper;
 using WebAPI.EditDTO;
+using WebAPI.DTO;
 
 namespace WebAPI.Controllers
 {
@@ -28,11 +29,7 @@ namespace WebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<GroupDTO>>> GetGroups()
         {
-            if (_context.Group == null)
-            {
-                return NotFound();
-            }
-
+            if (_context.Group == null) { return NotFound(); }
             return await _context.Group
                 .ProjectTo<GroupDTO>(_mapper.ConfigurationProvider).ToListAsync();
         }
@@ -40,10 +37,7 @@ namespace WebAPI.Controllers
         [HttpGet("{id:int}")]
         public async Task<ActionResult<GroupDTO>> GetGroup(int id)
         {
-            if (_context.Group is null) {
-                return NotFound();
-            }
-
+            if (_context.Group is null) { return NotFound(); }
             return await _context.Group
                 .ProjectTo<GroupDTO>(_mapper.ConfigurationProvider).FirstOrDefaultAsync(g => g.Id == id);
         }
@@ -56,7 +50,6 @@ namespace WebAPI.Controllers
             _context.Entry(group.Classroom).State = EntityState.Unchanged;
             _context.Add(group);
             await _context.SaveChangesAsync();
-
             return Ok(true);
         }
 
@@ -64,10 +57,7 @@ namespace WebAPI.Controllers
         public async Task<ActionResult<bool>> UndateGroup(int id, EditGroupDTO groupDTO)
         {
             var groupDB = await _context.Group.AsTracking().FirstOrDefaultAsync(g => g.Id == id);
-            if(groupDB is null)
-            {
-                return NotFound();
-            }
+            if(groupDB is null) { return NotFound(); }
             groupDB = _mapper.Map(groupDTO, groupDB);
             await _context.SaveChangesAsync();
             return Ok(true);
@@ -77,12 +67,11 @@ namespace WebAPI.Controllers
         public async Task<ActionResult<bool>> DeleteGroup(int id)
         {
             var groupDb = await _context.Group.AsTracking().FirstOrDefaultAsync(g => g.Id == id);
-            if (groupDb is null)
-            {
-                return NotFound();
-            }
+            if (groupDb is null) { return NotFound(); }
+            groupDb.IsDeleted = true;
             await _context.SaveChangesAsync();
             return Ok(true);
         }
+      
     }
 }

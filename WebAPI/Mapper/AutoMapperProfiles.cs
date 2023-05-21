@@ -53,6 +53,19 @@ namespace WebAPI.Mapper
                         DateTime.ParseExact(campo.EndTime, "HH:mm:ss", CultureInfo.InvariantCulture).Minute,
                         DateTime.ParseExact(campo.EndTime, "HH:mm:ss", CultureInfo.InvariantCulture).Second
                     )));
+            CreateMap<EditSessionDTO, Session>()
+                .ForMember(ent => ent.StartTime,
+                dto => dto.MapFrom(campo => new TimeSpan(
+                        DateTime.ParseExact(campo.StartTime, "HH:mm:ss", CultureInfo.InvariantCulture).Hour,
+                        DateTime.ParseExact(campo.StartTime, "HH:mm:ss", CultureInfo.InvariantCulture).Minute,
+                        DateTime.ParseExact(campo.StartTime, "HH:mm:ss", CultureInfo.InvariantCulture).Second
+                    )))
+                .ForMember(ent => ent.EndTime,
+                dto => dto.MapFrom(campo => new TimeSpan(
+                        DateTime.ParseExact(campo.EndTime, "HH:mm:ss", CultureInfo.InvariantCulture).Hour,
+                        DateTime.ParseExact(campo.EndTime, "HH:mm:ss", CultureInfo.InvariantCulture).Minute,
+                        DateTime.ParseExact(campo.EndTime, "HH:mm:ss", CultureInfo.InvariantCulture).Second
+                    )));
 
 
             CreateMap<AddGroupDTO, Group>()
@@ -62,6 +75,8 @@ namespace WebAPI.Mapper
             //Edit Map
 
             CreateMap<EditGroupDTO, Group>();
+            CreateMap<EditSubjectDTO, Subject>();
+            CreateMap<EditClassroomDTO, Classroom>();
 
         }
     }
