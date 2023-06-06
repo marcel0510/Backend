@@ -30,6 +30,10 @@ namespace Model.Config
                 .HasMaxLength(90)
                 .HasColumnName("name");
 
+            builder.Property(s => s.Alias)
+                .HasColumnName("alias")
+                .HasMaxLength(50);
+
             builder.Property(s => s.NumHours)
                 .IsRequired();
 

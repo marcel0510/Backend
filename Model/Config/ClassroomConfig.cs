@@ -10,8 +10,6 @@ namespace Model.Config
         {
             builder.ToTable("Classroom");
             builder.HasKey(c => c.Id);
-            builder.HasIndex(c => new { c.Code, c.Floor })
-                .HasFilter("isDeleted = 'false'");
             builder.HasQueryFilter(c => !c.IsDeleted);
 
             builder.Property(c => c.Id)

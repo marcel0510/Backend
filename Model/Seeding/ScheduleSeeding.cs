@@ -24,7 +24,7 @@ namespace Model.Seeding
             {
                 Id = 1,
                 Period = "2022B",
-                PeridoInit = new DateTime(2022, 8, 23),
+                PeriodInit = new DateTime(2022, 8, 23),
                 PeriodEnd = new DateTime(2023, 3, 31)
             };
 
@@ -82,6 +82,7 @@ namespace Model.Seeding
                 Id = 4,
                 Code = "ITID832",
                 Name = "REDES DE AREA LOCAL INALAMBRICAS",
+                Alias = "WLAN",
                 NumHours = 3,
                 NumCredits = 3,
                 NumSemester = 8,

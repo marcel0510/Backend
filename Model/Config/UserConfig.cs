@@ -29,7 +29,8 @@ namespace Model.Config
 
             builder.Property(u => u.Password)
                 .IsRequired()
-                .HasMaxLength(15)
+                .HasMaxLength(200)
+                .HasField("_password")
                 .HasColumnName("password");
 
             builder.Property(u => u.Name)

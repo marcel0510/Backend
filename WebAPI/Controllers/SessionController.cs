@@ -1,11 +1,8 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Model;
-using WebAPI.AddDTO.AddGroupMapper;
-using WebAPI.DTO;
-using WebAPI.EditDTO;
+using WebAPI.DTO.EditDTO;
 
 namespace WebAPI.Controllers
 {
@@ -26,7 +23,7 @@ namespace WebAPI.Controllers
         {
             foreach (var session in sessions)
             {
-                var sessionDB = _context.Session.AsTracking().FirstOrDefault(s => s.Id == session.Id);
+                var sessionDB = await _context.Session.AsTracking().FirstOrDefaultAsync(s => s.Id == session.Id);
                 sessionDB = _mapper.Map(session, sessionDB);
             }
 

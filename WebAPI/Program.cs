@@ -4,12 +4,18 @@ using Model;
 using WebAPI.Services.Interfaces;
 using WebAPI.Services.Classes;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using WebAPI.Secutiry;
 
 var builder = WebApplication.CreateBuilder(args);
 
 //2. Obtener la cadena de conexion
 const string CONNECTIONNAME = "ScheduleDB";
 var connectionString = builder.Configuration.GetConnectionString(CONNECTIONNAME);
+
+var configuration = builder.Configuration;  
 
 //3. Agregar el contexto
 builder.Services.AddDbContext<ScheduleDbContext>(options =>
@@ -44,9 +50,28 @@ builder.Services.AddCors(options =>
     });
 });
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["TknKey"])),
+            ValidateIssuer = false,
+            ValidateAudience = false,
+
+        };
+    });
+
 //Agregar el AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
+
+builder.Services.AddScoped<ITokenService, TokenService>();
+
 var app = builder.Build();
+
+//Agregar configuracion de token
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

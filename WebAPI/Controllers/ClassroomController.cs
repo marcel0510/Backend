@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Model;
 using Model.Entities;
-using WebAPI.AddDTO;
 using WebAPI.DTO;
-using WebAPI.DTO.ClassroomMapper;
-using WebAPI.EditDTO;
+using WebAPI.DTO.AddDTO;
+using WebAPI.DTO.EditDTO;
+using WebAPI.DTO.ReadDTO.ClassroomMapper;
 
 namespace WebAPI.Controllers
 {
@@ -44,7 +44,32 @@ namespace WebAPI.Controllers
         public async Task<ActionResult> AddClasroom(AddClassroomDTO classroomDTO)
         {
             var classroomDB = _mapper.Map<Classroom>(classroomDTO);
-            _context.AddRange(classroomDB);
+            _context.Add(classroomDB);
+            await _context.SaveChangesAsync();
+            return Ok(true);
+        }
+
+        [HttpPut("newCalendar/{oldCalendarId:int}/{newCalendarId}")]
+        public async Task<ActionResult> CopyCalendar(int oldCalendarId, int newCalendarId)
+        {
+            if (_context.Classroom is null) { return NotFound(); }
+            var classroomListNew = new List<Classroom>();
+            var classroomListDB = await _context.Classroom.AsTracking().Where(c => c.Id == oldCalendarId).ToListAsync();
+            foreach (var classroom in classroomListDB)
+            {
+                var newClassroom = new Classroom() {
+                    Code = classroom.Code,
+                    IsLab = classroom.IsLab,
+                    Name = classroom.Name,
+                    Capacity = classroom.Capacity,
+                    Floor = classroom.Floor,
+                    BuildingId = classroom.BuildingId,
+                    CalendarId = newCalendarId
+                };
+
+                classroomListNew.Add(newClassroom);
+            }
+            _context.AddRange(classroomListNew);
             await _context.SaveChangesAsync();
             return Ok(true);
         }

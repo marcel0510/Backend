@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Model;
 using Model.Entities;
-using WebAPI.DTO;
-using WebAPI.DTO.ClassroomMapper;
+using WebAPI.DTO.ReadDTO.BuildingMapper;
+using WebAPI.DTO.ReadDTO.ClassroomMapper;
 
 namespace WebAPI.Controllers
 {
@@ -41,7 +41,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("new")]
-        public async Task<ActionResult> AddBuilding(BuildingDTO buldingDTO)
+        public async Task<ActionResult> AddBuilding(CBuildingDTO buldingDTO)
         {
             var buildingDB = _mapper.Map<Building>(buldingDTO);
             _context.AddRange(buildingDB);

@@ -1,12 +1,13 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Model;
 using Model.Entities;
-using WebAPI.AddDTO;
-using WebAPI.DTO;
+using WebAPI.DTO.AddDTO;
+using WebAPI.DTO.ReadDTO;
+using WebAPI.DTO.ValidateDTO;
+using WebAPI.Secutiry;
 
 namespace WebAPI.Controllers
 {
@@ -16,11 +17,12 @@ namespace WebAPI.Controllers
     {
         private readonly ScheduleDbContext _context;
         private readonly IMapper _mapper;
-
-        public UserController(ScheduleDbContext context, IMapper mapper)
+        private readonly ITokenService _tokenService;
+        public UserController(ScheduleDbContext context, IMapper mapper, ITokenService tokenService)
         {
             _context = context;
             _mapper = mapper;
+            _tokenService = tokenService;
         }
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsers()
@@ -40,12 +42,22 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("new")]
-        public async Task<ActionResult> AddBuilding(AddUserDTO userDTO)
+        public async Task<ActionResult> AddUser(AddUserDTO userDTO)
         {
+            var userExists = await _context.User.AnyAsync(u => u.Email.ToLower() == userDTO.Email.ToLower());
+            if (userExists) return BadRequest(new
+            {
+                isSuccess = false,
+                Message = "Este usuario ya está registrado"
+            });
             var userDB = _mapper.Map<User>(userDTO);
-            _context.AddRange(userDB);
+            _context.Add(userDB);
             await _context.SaveChangesAsync();
-            return Ok(true);
+            return Ok(new
+            {
+                isSuccess = true,
+                Message = "Usuario registrado correctamente"
+            });
         }
 
         [HttpPut("update/{id:int}")]
@@ -76,6 +88,33 @@ namespace WebAPI.Controllers
             userDB.IsDeleted = true;
             await _context.SaveChangesAsync();
             return Ok(true);
+        }
+
+        [HttpPost("validate")]
+        public async Task<ActionResult> ValidateUser(ValidateUserDTO userDTO)
+        {
+            var userDB = await _context.User.FirstOrDefaultAsync(u => u.Email == userDTO.Email);
+            if (userDB is null) return Unauthorized(new {
+                isSuccess = false,
+                Message = "La contraseña o el correo no se han reconocido"
+            });
+
+            if (BCrypt.Net.BCrypt.Verify(userDTO.Password, userDB.Password))
+            {
+                var token = _tokenService.GetToken(userDB);
+                var user = _mapper.Map<UserDTO>(userDB);
+                return Ok(new
+                {
+                    isSuccess = true,
+                    token,
+                    user,
+                });
+            }
+            else return Ok(new
+            {
+                isSuccess = false,
+                Message = "La contraseña o el correo no se han reconocido"
+            }) ;
         }
     }
 }

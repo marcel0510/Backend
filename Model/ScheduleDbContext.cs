@@ -22,5 +22,6 @@ namespace Model
         public DbSet<Session> Session { get; set; }
         public DbSet<Group> Group { get; set; }
         public DbSet<Classroom> Classroom { get; set; }
+        public DbSet<Calendar> Calendar { get; set; }
     }
 }

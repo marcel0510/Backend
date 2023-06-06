@@ -4,11 +4,11 @@ using Model.Entities;
 using Model;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper.QueryableExtensions;
-using WebAPI.DTO.GroupMapper;
 using AutoMapper;
-using WebAPI.AddDTO.AddGroupMapper;
-using WebAPI.EditDTO;
 using WebAPI.DTO;
+using WebAPI.DTO.AddDTO.AddGroupMapper;
+using WebAPI.DTO.EditDTO;
+using WebAPI.DTO.ReadDTO.GroupMapper;
 
 namespace WebAPI.Controllers
 {

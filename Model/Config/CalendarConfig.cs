@@ -26,7 +26,7 @@ namespace Model.Config
                 .IsRequired()
                 .HasMaxLength(5)
                 .HasColumnName("period");
-            builder.Property(c => c.PeridoInit)
+            builder.Property(c => c.PeriodInit)
                 .IsRequired()
                 .HasColumnName("periodInit");
 
