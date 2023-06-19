@@ -20,6 +20,7 @@ namespace Model.Seeding
             modelBuilder.Entity<User>().HasData(admin);
 
             //Celenadario
+            
             var calendar2022b = new Calendar()
             {
                 Id = 1,
@@ -28,7 +29,15 @@ namespace Model.Seeding
                 PeriodEnd = new DateTime(2023, 3, 31)
             };
 
-            modelBuilder.Entity<Calendar>().HasData(calendar2022b);
+            var calendar2023a = new Calendar()
+            {
+                Id = 2,
+                Period = "2023A",
+                PeriodInit = new DateTime(2023, 5, 8),
+                PeriodEnd = new DateTime(2023, 9, 20)
+            };
+
+            modelBuilder.Entity<Calendar>().HasData(calendar2022b, calendar2023a);
 
             //Edificios
             var electrica = new Building()
@@ -211,7 +220,6 @@ namespace Model.Seeding
                 Capacity = 25,
                 Floor = "P6",
                 BuildingId = 2,
-                CalendarId = 1
             };
             var aula2 = new Classroom()
             {
@@ -222,7 +230,6 @@ namespace Model.Seeding
                 Capacity = 35,
                 Floor = "P5",
                 BuildingId = 2,
-                CalendarId = 1
             };
             var aula3 = new Classroom()
             {
@@ -233,7 +240,6 @@ namespace Model.Seeding
                 Capacity = 25,
                 Floor = "P6",
                 BuildingId = 2,
-                CalendarId = 1
             };
             var aula4 = new Classroom()
             {
@@ -244,7 +250,6 @@ namespace Model.Seeding
                 Capacity = 20,
                 Floor = "P2",
                 BuildingId = 1,
-                CalendarId = 1
             };
             var aula5 = new Classroom()
             {
@@ -254,8 +259,7 @@ namespace Model.Seeding
                 Name = "LABORATORIO DE INTERCONECTIVIDAD",
                 Capacity = 20,
                 Floor = "P7",
-                BuildingId = 2,
-                CalendarId = 1
+                BuildingId = 2
             };
             var aula6 = new Classroom()
             {
@@ -265,8 +269,7 @@ namespace Model.Seeding
                 Name = null,
                 Capacity = 20,
                 Floor = "P2",
-                BuildingId = 1,
-                CalendarId = 1
+                BuildingId = 1
             };
             var aula7 = new Classroom()
             {
@@ -276,8 +279,7 @@ namespace Model.Seeding
                 Name = null,
                 Capacity = 20,
                 Floor = "P6",
-                BuildingId = 2,
-                CalendarId = 1
+                BuildingId = 2
             };
             var aula8 = new Classroom()
             {
@@ -287,8 +289,7 @@ namespace Model.Seeding
                 Name = null,
                 Capacity = 20,
                 Floor = "P3",
-                BuildingId = 2,
-                CalendarId = 1
+                BuildingId = 2
             };
             var aula9 = new Classroom()
             {
@@ -298,8 +299,7 @@ namespace Model.Seeding
                 Name = null,
                 Capacity = 20,
                 Floor = "P2",
-                BuildingId = 1,
-                CalendarId = 1
+                BuildingId = 1
             };
             var aula10 = new Classroom()
             {
@@ -310,7 +310,7 @@ namespace Model.Seeding
                 Capacity = 20,
                 Floor = "P7",
                 BuildingId = 2,
-                CalendarId = 1
+                 
             };
 
             modelBuilder.Entity<Classroom>().HasData(aula1, aula2, aula3, aula4, aula5, aula6, aula7, aula8, aula9, aula10);
@@ -321,6 +321,7 @@ namespace Model.Seeding
                 Name = "GR1",
                 SubjectId = 1,
                 ClassroomId = 1,
+                CalendarId = 1,
             };
             var grEvalRedes = new Group()
             {
@@ -328,6 +329,8 @@ namespace Model.Seeding
                 Name = "GR1",
                 SubjectId = 2,
                 ClassroomId = 2,
+                CalendarId = 1,
+
             };
             var grHacking = new Group()
             {
@@ -335,6 +338,8 @@ namespace Model.Seeding
                 Name = "GR1",
                 SubjectId = 3,
                 ClassroomId = 3,
+                CalendarId = 1,
+
             };
 
             //Llenado aula4
@@ -344,6 +349,8 @@ namespace Model.Seeding
                 Name = "GR1",
                 SubjectId = 6,
                 ClassroomId = 4,
+                CalendarId = 1,
+
             };
             var grDistr = new Group()
             {
@@ -351,6 +358,8 @@ namespace Model.Seeding
                 Name = "GR1",
                 SubjectId = 7,
                 ClassroomId = 4,
+                CalendarId = 1,
+
             };
             var grwlan = new Group()
             {
@@ -358,6 +367,8 @@ namespace Model.Seeding
                 Name = "GR1",
                 SubjectId = 4,
                 ClassroomId = 4,
+                CalendarId = 1,
+
             };
             var grSisOp = new Group()
             {
@@ -365,6 +376,8 @@ namespace Model.Seeding
                 Name = "GR1",
                 SubjectId = 14,
                 ClassroomId = 4,
+                CalendarId = 1,
+
             };
 
             modelBuilder.Entity<Group>().HasData(grAdmin, grEvalRedes, grHacking, grIntranets, grDistr, grwlan, grSisOp);

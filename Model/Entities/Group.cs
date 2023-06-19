@@ -10,7 +10,9 @@ namespace Model.Entities
         public int SubjectId { get; set; }
         public Subject Subject { get; set; }
         public int ClassroomId { get; set; }
-        public Classroom Classroom { get; set; } 
+        public Classroom Classroom { get; set; }
+        public int CalendarId { get; set; }
+        public Calendar Calendar { get; set; }
         public List<Session> Sessions { get; set; } 
     }
 }

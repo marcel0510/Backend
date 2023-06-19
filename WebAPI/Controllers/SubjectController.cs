@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WebAPI.Services.Classes;
 using Model;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
@@ -8,6 +7,7 @@ using Model.Entities;
 using WebAPI.DTO.AddDTO;
 using WebAPI.DTO.EditDTO;
 using WebAPI.DTO.ReadDTO.SubjectMapper;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebAPI.Controllers
 {
@@ -26,6 +26,7 @@ namespace WebAPI.Controllers
 
         // GET: api/Courses
         [HttpGet]
+        [AllowAnonymous]
         public async Task<ActionResult<IEnumerable<SubjectDTO>>> GetSubjects()
         {
             if (_context.Subject == null) { return NotFound(); }
@@ -34,6 +35,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("{id:int}")]
+        [AllowAnonymous]
         public async Task<ActionResult<SubjectDTO>> GetSubject(int id)
         {
             if (_context.Subject == null) { return NotFound(); }
@@ -44,20 +46,38 @@ namespace WebAPI.Controllers
         [HttpPost("new")]
         public async Task<ActionResult> AddSubject(AddSubjectDTO subjectDTO)
         {
+            var subjectExists = await _context.Subject.AnyAsync(s => s.Code.ToLower() == subjectDTO.Code.ToLower());
+            if (subjectExists) return Ok(new { isSuccess = false, errorType = 1 });
             var subjectDB = _mapper.Map<Subject>(subjectDTO);
+            subjectDB.CreatedDate = DateTime.Now;
             _context.Add(subjectDB);
             await _context.SaveChangesAsync();
-            return Ok(true);
+            return Ok(new { isSuccess = true });
         }
 
-        [HttpPut("update/{id:int}")]
-        public async Task<ActionResult> UpdateSubject(int id, EditSubjectDTO subjectDTO)
+        [HttpPut("update")]
+        public async Task<ActionResult> UpdateSubject(EditSubjectDTO subjectDTO)
         {
-            var subjectDB = await _context.Subject.AsTracking().FirstOrDefaultAsync(s => s.Id == id);
-            if (subjectDB is null) { return NotFound(); }
+            var subjectExists = await _context.Subject.AnyAsync(s => s.Code.ToLower() == subjectDTO.Code.ToLower());
+            if (subjectExists)
+            {
+                var subjectDB1 = await _context.Subject.AsTracking().FirstOrDefaultAsync(s => s.Id == subjectDTO.Id);
+                var isTheSame = subjectDTO.Code == subjectDB1.Code;
+                if(isTheSame) {
+                    subjectDB1 = _mapper.Map(subjectDTO, subjectDB1);
+                    subjectDB1.UpdatedDate = DateTime.Now;
+                    await _context.SaveChangesAsync();
+                    return Ok(new { isSuccess = true });
+                }
+                else
+                {
+                    return Ok(new { isSuccess = false, errorType = 2 });
+                }
+            }
+            var subjectDB = await _context.Subject.AsTracking().FirstOrDefaultAsync(s => s.Id == subjectDTO.Id);
             subjectDB = _mapper.Map(subjectDTO, subjectDB);
-            await _context.SaveChangesAsync();
-            return Ok(true);
+            subjectDB.UpdatedDate = DateTime.Now;
+            return Ok(new { isSuccess = true });
         }
 
         [HttpDelete("delete/{id:int}")]

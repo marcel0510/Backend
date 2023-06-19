@@ -1,14 +1,13 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Model.Entities;
 using Model;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper.QueryableExtensions;
 using AutoMapper;
-using WebAPI.DTO;
 using WebAPI.DTO.AddDTO.AddGroupMapper;
 using WebAPI.DTO.EditDTO;
 using WebAPI.DTO.ReadDTO.GroupMapper;
+using WebAPI.DTO.AddDTO;
 
 namespace WebAPI.Controllers
 {
@@ -48,6 +47,7 @@ namespace WebAPI.Controllers
             var group = _mapper.Map<Group>(groupERD);
             _context.Entry(group.Subject).State = EntityState.Unchanged;        
             _context.Entry(group.Classroom).State = EntityState.Unchanged;
+            _context.Entry(group.Calendar).State = EntityState.Unchanged;
             _context.Add(group);
             await _context.SaveChangesAsync();
             return Ok(true);

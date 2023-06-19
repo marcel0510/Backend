@@ -1,4 +1,4 @@
-//1. Importamos el paquete necesario
+ //1. Importamos el paquete necesario
 using Microsoft.EntityFrameworkCore;
 using Model;
 using WebAPI.Services.Interfaces;
@@ -32,8 +32,6 @@ builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
 });
 
-//Se agrega a los servicios implementados
-builder.Services.AddScoped<ISubjectService, SubjectService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -66,6 +64,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 //Agregar el AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
 
+builder.Services.AddScoped<IClassroomService, ClassroomService>();
+builder.Services.AddScoped<IGroupService, GroupService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 
 var app = builder.Build();
@@ -82,6 +82,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();    
 app.UseAuthorization();
 
 app.MapControllers();

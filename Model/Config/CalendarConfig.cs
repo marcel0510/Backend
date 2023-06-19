@@ -16,7 +16,8 @@ namespace Model.Config
             builder.ToTable("Calendar");
             builder.HasKey(c => c.Id);
             builder.HasIndex(c => c.Period)
-                .HasFilter("isDeleted = 'false'");
+                .HasFilter("isDeleted = 'false'");  
+            builder.HasQueryFilter(c => !c.IsDeleted);
 
             builder.Property(c => c.Id)
                 .IsRequired()

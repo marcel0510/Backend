@@ -32,6 +32,7 @@ namespace WebAPI.Controllers
                     .ProjectTo<ClassroomDTO>(_mapper.ConfigurationProvider).ToListAsync();
         }
 
+
         [HttpGet("{id:int}")]
         public async Task<ActionResult<ClassroomDTO>> GetClasroom(int id)
         {
@@ -45,31 +46,6 @@ namespace WebAPI.Controllers
         {
             var classroomDB = _mapper.Map<Classroom>(classroomDTO);
             _context.Add(classroomDB);
-            await _context.SaveChangesAsync();
-            return Ok(true);
-        }
-
-        [HttpPut("newCalendar/{oldCalendarId:int}/{newCalendarId}")]
-        public async Task<ActionResult> CopyCalendar(int oldCalendarId, int newCalendarId)
-        {
-            if (_context.Classroom is null) { return NotFound(); }
-            var classroomListNew = new List<Classroom>();
-            var classroomListDB = await _context.Classroom.AsTracking().Where(c => c.Id == oldCalendarId).ToListAsync();
-            foreach (var classroom in classroomListDB)
-            {
-                var newClassroom = new Classroom() {
-                    Code = classroom.Code,
-                    IsLab = classroom.IsLab,
-                    Name = classroom.Name,
-                    Capacity = classroom.Capacity,
-                    Floor = classroom.Floor,
-                    BuildingId = classroom.BuildingId,
-                    CalendarId = newCalendarId
-                };
-
-                classroomListNew.Add(newClassroom);
-            }
-            _context.AddRange(classroomListNew);
             await _context.SaveChangesAsync();
             return Ok(true);
         }
@@ -93,6 +69,5 @@ namespace WebAPI.Controllers
             await _context.SaveChangesAsync();
             return Ok(true);
         }
-
     }
 }

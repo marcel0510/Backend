@@ -12,7 +12,7 @@ using Model;
 namespace Model.Migrations
 {
     [DbContext(typeof(ScheduleDbContext))]
-    [Migration("20230531001306_Db")]
+    [Migration("20230611224705_Db")]
     partial class Db
     {
         /// <inheritdoc />
@@ -48,7 +48,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 30, 19, 13, 5, 878, DateTimeKind.Local).AddTicks(2969));
+                        .HasDefaultValue(new DateTime(2023, 6, 11, 17, 47, 5, 620, DateTimeKind.Local).AddTicks(4691));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -126,7 +126,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 30, 19, 13, 5, 878, DateTimeKind.Local).AddTicks(6178));
+                        .HasDefaultValue(new DateTime(2023, 6, 11, 17, 47, 5, 620, DateTimeKind.Local).AddTicks(6345));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -180,6 +180,20 @@ namespace Model.Migrations
                             PeriodInit = new DateTime(2022, 8, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             UpdatedBy = 0,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Period = "2023A",
+                            PeriodEnd = new DateTime(2023, 9, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            PeriodInit = new DateTime(2023, 5, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -195,9 +209,6 @@ namespace Model.Migrations
                     b.Property<int>("BuildingId")
                         .HasColumnType("int")
                         .HasColumnName("buildingId");
-
-                    b.Property<int>("CalendarId")
-                        .HasColumnType("int");
 
                     b.Property<int>("Capacity")
                         .HasColumnType("int");
@@ -216,7 +227,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 30, 19, 13, 5, 878, DateTimeKind.Local).AddTicks(7969));
+                        .HasDefaultValue(new DateTime(2023, 6, 11, 17, 47, 5, 620, DateTimeKind.Local).AddTicks(8334));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -256,8 +267,6 @@ namespace Model.Migrations
 
                     b.HasIndex("BuildingId");
 
-                    b.HasIndex("CalendarId");
-
                     b.ToTable("Classroom", (string)null);
 
                     b.HasData(
@@ -265,7 +274,6 @@ namespace Model.Migrations
                         {
                             Id = 1,
                             BuildingId = 2,
-                            CalendarId = 1,
                             Capacity = 25,
                             Code = "E023",
                             CreatedBy = 0,
@@ -283,7 +291,6 @@ namespace Model.Migrations
                         {
                             Id = 2,
                             BuildingId = 2,
-                            CalendarId = 1,
                             Capacity = 35,
                             Code = "E028",
                             CreatedBy = 0,
@@ -300,7 +307,6 @@ namespace Model.Migrations
                         {
                             Id = 3,
                             BuildingId = 2,
-                            CalendarId = 1,
                             Capacity = 25,
                             Code = "E026",
                             CreatedBy = 0,
@@ -318,7 +324,6 @@ namespace Model.Migrations
                         {
                             Id = 4,
                             BuildingId = 1,
-                            CalendarId = 1,
                             Capacity = 20,
                             Code = "E002",
                             CreatedBy = 0,
@@ -335,7 +340,6 @@ namespace Model.Migrations
                         {
                             Id = 5,
                             BuildingId = 2,
-                            CalendarId = 1,
                             Capacity = 20,
                             Code = "LABINTC",
                             CreatedBy = 0,
@@ -353,7 +357,6 @@ namespace Model.Migrations
                         {
                             Id = 6,
                             BuildingId = 1,
-                            CalendarId = 1,
                             Capacity = 20,
                             Code = "E003",
                             CreatedBy = 0,
@@ -370,7 +373,6 @@ namespace Model.Migrations
                         {
                             Id = 7,
                             BuildingId = 2,
-                            CalendarId = 1,
                             Capacity = 20,
                             Code = "E022",
                             CreatedBy = 0,
@@ -387,7 +389,6 @@ namespace Model.Migrations
                         {
                             Id = 8,
                             BuildingId = 2,
-                            CalendarId = 1,
                             Capacity = 20,
                             Code = "E022",
                             CreatedBy = 0,
@@ -404,7 +405,6 @@ namespace Model.Migrations
                         {
                             Id = 9,
                             BuildingId = 1,
-                            CalendarId = 1,
                             Capacity = 20,
                             Code = "E001",
                             CreatedBy = 0,
@@ -421,7 +421,6 @@ namespace Model.Migrations
                         {
                             Id = 10,
                             BuildingId = 2,
-                            CalendarId = 1,
                             Capacity = 20,
                             Code = "E004",
                             CreatedBy = 0,
@@ -445,6 +444,9 @@ namespace Model.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CalendarId")
+                        .HasColumnType("int");
+
                     b.Property<int>("ClassroomId")
                         .HasColumnType("int")
                         .HasColumnName("classroomId");
@@ -457,7 +459,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 30, 19, 13, 5, 878, DateTimeKind.Local).AddTicks(9402));
+                        .HasDefaultValue(new DateTime(2023, 6, 11, 17, 47, 5, 621, DateTimeKind.Local).AddTicks(38));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -488,6 +490,8 @@ namespace Model.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CalendarId");
+
                     b.HasIndex("ClassroomId");
 
                     b.HasIndex("SubjectId");
@@ -498,6 +502,7 @@ namespace Model.Migrations
                         new
                         {
                             Id = 1,
+                            CalendarId = 1,
                             ClassroomId = 1,
                             CreatedBy = 0,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -512,6 +517,7 @@ namespace Model.Migrations
                         new
                         {
                             Id = 2,
+                            CalendarId = 1,
                             ClassroomId = 2,
                             CreatedBy = 0,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -526,6 +532,7 @@ namespace Model.Migrations
                         new
                         {
                             Id = 3,
+                            CalendarId = 1,
                             ClassroomId = 3,
                             CreatedBy = 0,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -540,6 +547,7 @@ namespace Model.Migrations
                         new
                         {
                             Id = 4,
+                            CalendarId = 1,
                             ClassroomId = 4,
                             CreatedBy = 0,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -554,6 +562,7 @@ namespace Model.Migrations
                         new
                         {
                             Id = 5,
+                            CalendarId = 1,
                             ClassroomId = 4,
                             CreatedBy = 0,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -568,6 +577,7 @@ namespace Model.Migrations
                         new
                         {
                             Id = 6,
+                            CalendarId = 1,
                             ClassroomId = 4,
                             CreatedBy = 0,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -582,6 +592,7 @@ namespace Model.Migrations
                         new
                         {
                             Id = 7,
+                            CalendarId = 1,
                             ClassroomId = 4,
                             CreatedBy = 0,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -612,7 +623,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 30, 19, 13, 5, 879, DateTimeKind.Local).AddTicks(878));
+                        .HasDefaultValue(new DateTime(2023, 6, 11, 17, 47, 5, 621, DateTimeKind.Local).AddTicks(1755));
 
                     b.Property<string>("Day")
                         .IsRequired()
@@ -896,7 +907,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 30, 19, 13, 5, 879, DateTimeKind.Local).AddTicks(2986));
+                        .HasDefaultValue(new DateTime(2023, 6, 11, 17, 47, 5, 621, DateTimeKind.Local).AddTicks(4284));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -1219,7 +1230,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 30, 19, 13, 5, 879, DateTimeKind.Local).AddTicks(6524));
+                        .HasDefaultValue(new DateTime(2023, 6, 11, 17, 47, 5, 621, DateTimeKind.Local).AddTicks(6503));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -1281,7 +1292,7 @@ namespace Model.Migrations
                             Email = "admin@gmail.com",
                             IsDeleted = false,
                             Name = "Admin",
-                            Password = "$2a$11$0Bp3wTILzGovHjUJJTFR4uprrJIbgo1qEdZRZlD0NM2Z97cViCqdm",
+                            Password = "$2a$11$fGsVsqnV1BueI05wmYpm/OLu3FRQqB8q.twB3/MoBVHiebUnO6jsy",
                             Role = "Admin",
                             UpdatedBy = 0,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -1296,19 +1307,17 @@ namespace Model.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("Building");
+                });
+
+            modelBuilder.Entity("Model.Entities.Group", b =>
+                {
                     b.HasOne("Model.Entities.Calendar", "Calendar")
                         .WithMany()
                         .HasForeignKey("CalendarId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Building");
-
-                    b.Navigation("Calendar");
-                });
-
-            modelBuilder.Entity("Model.Entities.Group", b =>
-                {
                     b.HasOne("Model.Entities.Classroom", "Classroom")
                         .WithMany("Groups")
                         .HasForeignKey("ClassroomId")
@@ -1320,6 +1329,8 @@ namespace Model.Migrations
                         .HasForeignKey("SubjectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Calendar");
 
                     b.Navigation("Classroom");
 

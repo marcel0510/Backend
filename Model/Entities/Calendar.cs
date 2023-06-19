@@ -11,6 +11,6 @@ namespace Model.Entities
         public string Period { get; set; }
         public DateTime PeriodInit { get; set; }
         public DateTime PeriodEnd { get; set;}
-        List<Classroom> Classrooms { get; set; }
+        List<Group> Groups { get; set; }
     }
 }

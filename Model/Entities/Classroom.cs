@@ -13,8 +13,6 @@ namespace Model.Entities
         public string Floor { get; set; } 
         public int BuildingId { get; set; }
         public Building Building { get; set; }
-        public Calendar Calendar { get; set; }
-        public int CalendarId { get; set; }
         public List<Group> Groups { get; set;}
 
     }
