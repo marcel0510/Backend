@@ -14,7 +14,6 @@ namespace WebAPI.Controllers
 {
     [Route("api/calendar")]
     [ApiController]
-    [Authorize]
     public class CalendarController : ControllerBase
     {
         private readonly ScheduleDbContext _context;

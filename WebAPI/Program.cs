@@ -81,13 +81,12 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthentication();    
 app.UseAuthorization();
-
 app.MapControllers();
 
-//Decirle a la aplicacion que haga uso de cors
 app.UseCors("CorsPolicy");
+
+//Decirle a la aplicacion que haga uso de cors
 
 app.Run();

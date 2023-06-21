@@ -25,11 +25,11 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ClassroomDTO>>> GetClassrooms()
+        public async Task<ActionResult<IEnumerable<GeneralClassroomDTO>>> GetClassrooms()
         {
             if (_context.Classroom is null) { return NotFound(); }
             return await _context.Classroom
-                    .ProjectTo<ClassroomDTO>(_mapper.ConfigurationProvider).ToListAsync();
+                    .ProjectTo<GeneralClassroomDTO>(_mapper.ConfigurationProvider).ToListAsync();
         }
 
 
@@ -44,10 +44,18 @@ namespace WebAPI.Controllers
         [HttpPost("new")]
         public async Task<ActionResult> AddClasroom(AddClassroomDTO classroomDTO)
         {
+            var classroomsDB = await _context.Classroom.ProjectTo<GeneralClassroomDTO>(_mapper.ConfigurationProvider)
+                .Where(c => c.Building.Id == classroomDTO.BuildingId).ToListAsync();
+            var classroomExists = classroomsDB.Any(c => c.Code.ToLower() == classroomDTO.Code.ToLower()
+                                                    && c.Floor.ToLower() == classroomDTO.Floor.ToLower());
+            if (classroomExists) return Ok(new { isSuccess = false, errorType = 1 });
             var classroomDB = _mapper.Map<Classroom>(classroomDTO);
+            classroomDB.CreatedBy = classroomDTO.CreatedBy;
+            classroomDB.CreatedDate = DateTime.Now;
+            _context.Entry(classroomDB.Building).State = EntityState.Unchanged;
             _context.Add(classroomDB);
             await _context.SaveChangesAsync();
-            return Ok(true);
+            return Ok(new { isSuccess = true });
         }
 
         [HttpPut("update/{id:int}")]

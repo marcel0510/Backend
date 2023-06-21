@@ -22,36 +22,47 @@ namespace WebAPI.Mapper
             CreateMap<Session, SessionDTO>()
                 .ForMember(dto => dto.StartTime, ent => ent.MapFrom(campo => campo.StartTime.ToString(@"hh\:mm")))
                 .ForMember(dto => dto.EndTime, ent => ent.MapFrom(campo => "" + campo.EndTime.ToString(@"hh\:mm")));
-            CreateMap<Building, CBuildingDTO>();
+
+
+            //Mapeo Building
             CreateMap<Building, BuildingDTO>();
-
-            CreateMap<Group, SGroupDTO>();
-            CreateMap<Group, CGroupDTO>();
-
-            CreateMap<Subject, CSubjectDTO>();
-            CreateMap<Subject, GSubjectDTO>();
-
-            CreateMap<Classroom, SClassroomDTO>();
-            CreateMap<Classroom, GClassroomDTO>();
             CreateMap<Classroom, BClassroomDTO>();
-            CreateMap<Classroom, ClassroomDTO>();
 
-            CreateMap<Group, GroupDTO>();
-            CreateMap<Subject, SubjectDTO>();
-       
-
+            //Mapeo Calendar
             CreateMap<Model.Entities.Calendar, CalendarDTO>()
                 .ForMember(dto => dto.PeriodInit, ent => ent.MapFrom(campo => campo.PeriodInit.ToString("yyyy-MM-dd")))
                 .ForMember(dto => dto.PeriodEnd, ent => ent.MapFrom(campo => campo.PeriodEnd.ToString("yyyy-MM-dd")));
-            
+
+            //Mapeo Classroom
+            CreateMap<Classroom, ClassroomDTO>();
+            CreateMap<Classroom, GeneralClassroomDTO>();
+            CreateMap<Building, CBuildingDTO>();
+            CreateMap<Subject, CSubjectDTO>();
+            CreateMap<Group, CGroupDTO>();
+
+            //Mapeo para Group
+            CreateMap<Group, GroupDTO>();
+            CreateMap<Subject, GSubjectDTO>();
+            CreateMap<Classroom, GClassroomDTO>()
+                .ForMember(dto => dto.Building, ent => ent.MapFrom(campo => campo.Building.Code));
+            CreateMap<Model.Entities.Calendar, GCalendarDTO>();
+
+            //Mapeo para Subject
+            CreateMap<Subject, SubjectDTO>();
+            CreateMap<Group, SGroupDTO>();
+            CreateMap<Classroom, SClassroomDTO>();
+
 
             //Mapeado para agregar datos
-
-            CreateMap<UserDTO, User>();
+            //Para edificios
             CreateMap<AddBuildingDTO, Building>();
+            //Para usuarios
             CreateMap<AddUserDTO, User>();
+            //Para materias
             CreateMap<AddSubjectDTO, Subject>();
-            CreateMap<AddClassroomDTO, Classroom>();
+            //Para Aulas
+            CreateMap<AddClassroomDTO, Classroom>()
+                .ForMember(ent => ent.Building, dto => dto.MapFrom(campo => new Building() { Id = campo.BuildingId }));
 
             CreateMap<AddSessionDTO, Session>()
                 .ForMember(ent => ent.StartTime,

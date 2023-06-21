@@ -10,6 +10,5 @@
         public int NumCredits { get; set; }
         public int NumSemester { get; set; }
         public bool IsLab { get; set; }
-        public List<SGroupDTO> Groups { get; set; }
     }
 }

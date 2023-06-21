@@ -16,7 +16,6 @@ namespace WebAPI.Controllers
 {
     [Route("api/building/")]
     [ApiController]
-    [Authorize]
     public class BuildingController : ControllerBase
     {
         private readonly ScheduleDbContext _context;

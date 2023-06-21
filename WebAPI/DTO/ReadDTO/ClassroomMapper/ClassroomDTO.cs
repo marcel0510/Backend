@@ -11,7 +11,6 @@ namespace WebAPI.DTO.ReadDTO.ClassroomMapper
         public string Name { get; set; }
         public int Capacity { get; set; }
         public string Floor { get; set; }
-        public string Period { get; set; }
         public CBuildingDTO Building { get; set; }
         public List<CGroupDTO> Groups { get; set; }
     }

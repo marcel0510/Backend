@@ -8,6 +8,7 @@ using WebAPI.DTO.AddDTO;
 using WebAPI.DTO.EditDTO;
 using WebAPI.DTO.ReadDTO.SubjectMapper;
 using Microsoft.AspNetCore.Authorization;
+using WebAPI.Services.Interfaces;
 
 namespace WebAPI.Controllers
 {
@@ -17,11 +18,14 @@ namespace WebAPI.Controllers
     {
         private readonly ScheduleDbContext _context;
         private readonly IMapper _mapper;
+        private readonly IGroupService _groupService;
 
-        public SubjectController(ScheduleDbContext context, IMapper mapper)
+
+        public SubjectController(ScheduleDbContext context, IMapper mapper, IGroupService groupService)
         {
             _context = context;
             _mapper = mapper;
+            _groupService = groupService;
         }
 
         // GET: api/Courses
@@ -44,11 +48,13 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("new")]
+        
         public async Task<ActionResult> AddSubject(AddSubjectDTO subjectDTO)
         {
             var subjectExists = await _context.Subject.AnyAsync(s => s.Code.ToLower() == subjectDTO.Code.ToLower());
             if (subjectExists) return Ok(new { isSuccess = false, errorType = 1 });
             var subjectDB = _mapper.Map<Subject>(subjectDTO);
+            if (subjectDB.Alias == "") subjectDB.Alias = null;
             subjectDB.CreatedDate = DateTime.Now;
             _context.Add(subjectDB);
             await _context.SaveChangesAsync();
@@ -65,6 +71,7 @@ namespace WebAPI.Controllers
                 var isTheSame = subjectDTO.Code == subjectDB1.Code;
                 if(isTheSame) {
                     subjectDB1 = _mapper.Map(subjectDTO, subjectDB1);
+                    if (subjectDB1.Alias == "") subjectDB1.Alias = null;
                     subjectDB1.UpdatedDate = DateTime.Now;
                     await _context.SaveChangesAsync();
                     return Ok(new { isSuccess = true });
@@ -76,18 +83,23 @@ namespace WebAPI.Controllers
             }
             var subjectDB = await _context.Subject.AsTracking().FirstOrDefaultAsync(s => s.Id == subjectDTO.Id);
             subjectDB = _mapper.Map(subjectDTO, subjectDB);
+            if (subjectDB.Alias == "") subjectDB.Alias = null;
             subjectDB.UpdatedDate = DateTime.Now;
             return Ok(new { isSuccess = true });
         }
 
-        [HttpDelete("delete/{id:int}")]
-        public async Task<ActionResult> DeleteSubject(int id)
+        [HttpDelete("delete/{subjectId:int}/{userId:int}")]
+        public async Task<ActionResult> DeleteSubject(int subjectId, int userId)
         {
-            var subjetDB = await _context.Subject.AsTracking().FirstOrDefaultAsync(s => s.Id == id);
-            if (subjetDB is null) { return NotFound(); }
-            subjetDB.IsDeleted = true;
+            var subjectDB = await _context.Subject.AsTracking().FirstOrDefaultAsync(s => s.Id == subjectId);
+            if (subjectDB is null) { return Ok(new { isSuccess = false, typeError = 0 }); }
+            subjectDB.DeletedBy = userId;
+            subjectDB.DeletedDate = DateTime.Now;
+            subjectDB.IsDeleted = true;
+            var errasedGroups = await _groupService.DeleteGroupsBySubject(_context, subjectId, userId);
+            if(!errasedGroups) return Ok(new { isSuccess = false, errorType = 3 });
             await _context.SaveChangesAsync();
-            return Ok(true);
+            return Ok(new { isSuccess = true });
         }
 
     }

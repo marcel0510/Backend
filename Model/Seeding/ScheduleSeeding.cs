@@ -37,7 +37,7 @@ namespace Model.Seeding
                 PeriodEnd = new DateTime(2023, 9, 20)
             };
 
-            modelBuilder.Entity<Calendar>().HasData(calendar2022b, calendar2023a);
+            modelBuilder.Entity<Calendar>().HasData(calendar2022b);
 
             //Edificios
             var electrica = new Building()

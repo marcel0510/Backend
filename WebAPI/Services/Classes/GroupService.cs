@@ -3,6 +3,7 @@ using AutoMapper.QueryableExtensions;
 using Microsoft.EntityFrameworkCore;
 using Model;
 using Model.Entities;
+using System.Globalization;
 using WebAPI.DTO.AddDTO.AddGroupMapper;
 using WebAPI.DTO.ReadDTO.GroupMapper;
 using WebAPI.Services.Interfaces;
@@ -16,6 +17,20 @@ namespace WebAPI.Services.Classes
         {
             var groupsDB = await context.Group.AsTracking().Where(g => g.CalendarId == calendarId).ToListAsync();
             if(groupsDB == null) return false;
+            groupsDB.ForEach(g =>
+            {
+                g.IsDeleted = true;
+                g.DeletedBy = userId;
+                g.DeletedDate = DateTime.Now;
+            });
+
+            return true;
+        }
+
+        public async Task<bool> DeleteGroupsBySubject(ScheduleDbContext context, int subjectId, int userId)
+        {
+            var groupsDB = await context.Group.AsTracking().Where(g => g.SubjectId == subjectId).ToListAsync();
+            if (groupsDB == null) return false;
             groupsDB.ForEach(g =>
             {
                 g.IsDeleted = true;
