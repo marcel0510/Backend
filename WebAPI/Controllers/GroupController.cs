@@ -8,6 +8,8 @@ using WebAPI.DTO.AddDTO.AddGroupMapper;
 using WebAPI.DTO.EditDTO;
 using WebAPI.DTO.ReadDTO.GroupMapper;
 using WebAPI.DTO.AddDTO;
+using WebAPI.Services.Interfaces;
+using WebAPI.DTO.ReadDTO.ClassroomMapper;
 
 namespace WebAPI.Controllers
 {
@@ -17,20 +19,22 @@ namespace WebAPI.Controllers
     {
         private readonly ScheduleDbContext _context;
         private readonly IMapper _mapper;
+        private readonly IGroupService _groupService;
 
-        public GroupController(ScheduleDbContext context, IMapper mapper)
+        public GroupController(ScheduleDbContext context, IMapper mapper, IGroupService groupService)
         {
             _context = context;
             _mapper = mapper;
+            _groupService = groupService;
         }
 
         // GET: api/Courses
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<GroupDTO>>> GetGroups()
+        public async Task<ActionResult<IEnumerable<GeneralGroupDTO>>> GetGroups()
         {
             if (_context.Group == null) { return NotFound(); }
             return await _context.Group
-                .ProjectTo<GroupDTO>(_mapper.ConfigurationProvider).ToListAsync();
+                .ProjectTo<GeneralGroupDTO>(_mapper.ConfigurationProvider).ToListAsync();
         }
 
         [HttpGet("{id:int}")]
@@ -42,15 +46,22 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("new")]
-        public async Task<ActionResult<bool>> AddGroup(AddGroupDTO groupERD)
+        public async Task<ActionResult<bool>> AddGroup(AddGroupDTO groupDTO)
         {
-            var group = _mapper.Map<Group>(groupERD);
+            var classroomDTO = await _context.Classroom
+                .ProjectTo<ClassroomDTO>(_mapper.ConfigurationProvider).FirstOrDefaultAsync(c => c.Id == groupDTO.ClassroomId);
+
+            var groupExists = _groupService.ValidateRepitedNames(classroomDTO.Groups, groupDTO.SubjectId, groupDTO.Name);
+            if (groupExists) return Ok(new { isSuccess = false, errorType = 1 });
+            var overlappingExists = _groupService.ValidateOverlappingSchedules(classroomDTO, groupDTO.Sessions);
+            if(overlappingExists.Count != 0) return Ok(new {isSuccess = false, errorType = 2, overlappingGrs = overlappingExists.Distinct() });
+            var group = _mapper.Map<Group>(groupDTO);
             _context.Entry(group.Subject).State = EntityState.Unchanged;        
             _context.Entry(group.Classroom).State = EntityState.Unchanged;
             _context.Entry(group.Calendar).State = EntityState.Unchanged;
             _context.Add(group);
             await _context.SaveChangesAsync();
-            return Ok(true);
+            return Ok(new { isSuccess = true });
         }
 
         [HttpPut("update/{id:int}")]

@@ -45,7 +45,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 21, 6, 0, 52, 771, DateTimeKind.Local).AddTicks(4338));
+                        .HasDefaultValue(new DateTime(2023, 6, 25, 13, 57, 20, 714, DateTimeKind.Local).AddTicks(8512));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -123,7 +123,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 21, 6, 0, 52, 771, DateTimeKind.Local).AddTicks(5776));
+                        .HasDefaultValue(new DateTime(2023, 6, 25, 13, 57, 20, 715, DateTimeKind.Local).AddTicks(584));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -210,7 +210,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 21, 6, 0, 52, 771, DateTimeKind.Local).AddTicks(7365));
+                        .HasDefaultValue(new DateTime(2023, 6, 25, 13, 57, 20, 715, DateTimeKind.Local).AddTicks(2957));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -418,6 +418,93 @@ namespace Model.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Model.Entities.Floor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("BuildingId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(3)
+                        .HasColumnType("nvarchar(3)")
+                        .HasColumnName("code");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BuildingId");
+
+                    b.ToTable("Floor", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            BuildingId = 1,
+                            Code = "P1"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            BuildingId = 1,
+                            Code = "P2"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            BuildingId = 1,
+                            Code = "P3"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            BuildingId = 2,
+                            Code = "P1"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            BuildingId = 2,
+                            Code = "P2"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            BuildingId = 2,
+                            Code = "P3"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            BuildingId = 2,
+                            Code = "P4"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            BuildingId = 2,
+                            Code = "P5"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            BuildingId = 2,
+                            Code = "P6"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            BuildingId = 2,
+                            Code = "P7"
+                        });
+                });
+
             modelBuilder.Entity("Model.Entities.Group", b =>
                 {
                     b.Property<int>("Id")
@@ -442,7 +529,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 21, 6, 0, 52, 771, DateTimeKind.Local).AddTicks(8784));
+                        .HasDefaultValue(new DateTime(2023, 6, 25, 13, 57, 20, 715, DateTimeKind.Local).AddTicks(5737));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -606,7 +693,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 21, 6, 0, 52, 772, DateTimeKind.Local).AddTicks(191));
+                        .HasDefaultValue(new DateTime(2023, 6, 25, 13, 57, 20, 715, DateTimeKind.Local).AddTicks(7838));
 
                     b.Property<string>("Day")
                         .IsRequired()
@@ -890,7 +977,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 21, 6, 0, 52, 772, DateTimeKind.Local).AddTicks(2252));
+                        .HasDefaultValue(new DateTime(2023, 6, 25, 13, 57, 20, 716, DateTimeKind.Local).AddTicks(676));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -1213,7 +1300,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 21, 6, 0, 52, 772, DateTimeKind.Local).AddTicks(4002));
+                        .HasDefaultValue(new DateTime(2023, 6, 25, 13, 57, 20, 716, DateTimeKind.Local).AddTicks(3261));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -1275,7 +1362,7 @@ namespace Model.Migrations
                             Email = "admin@gmail.com",
                             IsDeleted = false,
                             Name = "Admin",
-                            Password = "$2a$11$4q7i9PwMIgn5Mep4B0YTAubMlZmc3bTHUzyHdZfzN/TcOzI8ZNQpG",
+                            Password = "$2a$11$5OR/2JUFrc6U.Ctz1Kd6M.ylBVr5Nva2TUdX0N.TyLyerad0GzIwS",
                             Role = "Admin",
                             UpdatedBy = 0,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -1286,6 +1373,17 @@ namespace Model.Migrations
                 {
                     b.HasOne("Model.Entities.Building", "Building")
                         .WithMany("Classrooms")
+                        .HasForeignKey("BuildingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Building");
+                });
+
+            modelBuilder.Entity("Model.Entities.Floor", b =>
+                {
+                    b.HasOne("Model.Entities.Building", "Building")
+                        .WithMany("Floors")
                         .HasForeignKey("BuildingId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1334,6 +1432,8 @@ namespace Model.Migrations
             modelBuilder.Entity("Model.Entities.Building", b =>
                 {
                     b.Navigation("Classrooms");
+
+                    b.Navigation("Floors");
                 });
 
             modelBuilder.Entity("Model.Entities.Classroom", b =>

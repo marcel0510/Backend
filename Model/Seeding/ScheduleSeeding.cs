@@ -29,13 +29,6 @@ namespace Model.Seeding
                 PeriodEnd = new DateTime(2023, 3, 31)
             };
 
-            var calendar2023a = new Calendar()
-            {
-                Id = 2,
-                Period = "2023A",
-                PeriodInit = new DateTime(2023, 5, 8),
-                PeriodEnd = new DateTime(2023, 9, 20)
-            };
 
             modelBuilder.Entity<Calendar>().HasData(calendar2022b);
 
@@ -54,6 +47,68 @@ namespace Model.Seeding
             };
 
             modelBuilder.Entity<Building>().HasData(electrica, quimica_electrica);
+
+            var p1E = new Floor() { 
+                Id = 1,
+                Code = "P1",
+                BuildingId = 1
+            };
+            var p2E = new Floor()
+            {
+                Id = 2,
+                Code = "P2",
+                BuildingId = 1
+            };
+            var p3E = new Floor()
+            {
+                Id = 3,
+                Code = "P3",
+                BuildingId = 1
+            };
+
+            var p1Q = new Floor()
+            {
+                Id = 4,
+                Code = "P1",
+                BuildingId = 2
+            };
+            var p2Q = new Floor()
+            {
+                Id = 5,
+                Code = "P2",
+                BuildingId = 2
+            };
+            var p3Q = new Floor()
+            {
+                Id = 6,
+                Code = "P3",
+                BuildingId = 2
+            };
+            var p4Q = new Floor()
+            {
+                Id = 7,
+                Code = "P4",
+                BuildingId = 2
+            };
+            var p5Q = new Floor()
+            {
+                Id = 8,
+                Code = "P5",
+                BuildingId = 2
+            };
+            var p6Q = new Floor()
+            {
+                Id = 9,
+                Code = "P6",
+                BuildingId = 2
+            };
+            var p7Q = new Floor()
+            {
+                Id = 10,
+                Code = "P7",
+                BuildingId = 2
+            };
+            modelBuilder.Entity<Floor>().HasData(p1E, p2E, p3E, p1Q, p2Q, p3Q, p4Q, p5Q, p6Q, p7Q);
 
             //Materias
             var adminRedes = new Subject()

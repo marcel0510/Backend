@@ -1,7 +1,8 @@
-﻿    using AutoMapper;
+﻿using AutoMapper;
 using Model.Entities;
 using System.Globalization;
 using WebAPI.DTO.AddDTO;
+using WebAPI.DTO.AddDTO.AddBuildingMapper;
 using WebAPI.DTO.AddDTO.AddGroupMapper;
 using WebAPI.DTO.DeleteDTO;
 using WebAPI.DTO.EditDTO;
@@ -26,7 +27,7 @@ namespace WebAPI.Mapper
 
             //Mapeo Building
             CreateMap<Building, BuildingDTO>();
-            CreateMap<Classroom, BClassroomDTO>();
+            CreateMap<Floor, BFloorDTO>().ReverseMap();
 
             //Mapeo Calendar
             CreateMap<Model.Entities.Calendar, CalendarDTO>()
@@ -39,9 +40,12 @@ namespace WebAPI.Mapper
             CreateMap<Building, CBuildingDTO>();
             CreateMap<Subject, CSubjectDTO>();
             CreateMap<Group, CGroupDTO>();
+            CreateMap<Group, CGeneralGroupDTO>()
+                .ForMember(dto => dto.Subject, ent => ent.MapFrom(campo => campo.Subject.Name));
 
             //Mapeo para Group
             CreateMap<Group, GroupDTO>();
+            CreateMap<Group, GeneralGroupDTO>();
             CreateMap<Subject, GSubjectDTO>();
             CreateMap<Classroom, GClassroomDTO>()
                 .ForMember(dto => dto.Building, ent => ent.MapFrom(campo => campo.Building.Code));
@@ -56,6 +60,8 @@ namespace WebAPI.Mapper
             //Mapeado para agregar datos
             //Para edificios
             CreateMap<AddBuildingDTO, Building>();
+            CreateMap<AddFloorDTO, Floor>();
+                
             //Para usuarios
             CreateMap<AddUserDTO, User>();
             //Para materias
@@ -94,7 +100,8 @@ namespace WebAPI.Mapper
             CreateMap<EditBuildingDTO, Building>();
             CreateMap<EditGroupDTO, Group>();
             CreateMap<EditSubjectDTO, Subject>();
-            CreateMap<EditClassroomDTO, Classroom>();
+            CreateMap<EditClassroomDTO, Classroom>()
+                .ForMember(ent => ent.Building, dto => dto.MapFrom(campo => new Building() { Id = campo.BuildingId }));
             CreateMap<CalendarDTO, Model.Entities.Calendar>()
                 .ForMember(dto => dto.PeriodInit, ent => ent.MapFrom(campo => DateTime.Parse(campo.PeriodInit)))
                 .ForMember(dto => dto.PeriodEnd, ent => ent.MapFrom(campo => DateTime.Parse(campo.PeriodEnd)));

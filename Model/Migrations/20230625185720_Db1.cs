@@ -23,7 +23,7 @@ namespace Model.Migrations
                     name = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 6, 21, 6, 0, 52, 771, DateTimeKind.Local).AddTicks(4338)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 6, 25, 13, 57, 20, 714, DateTimeKind.Local).AddTicks(8512)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -45,7 +45,7 @@ namespace Model.Migrations
                     periodEnd = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 6, 21, 6, 0, 52, 771, DateTimeKind.Local).AddTicks(5776)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 6, 25, 13, 57, 20, 715, DateTimeKind.Local).AddTicks(584)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -71,7 +71,7 @@ namespace Model.Migrations
                     IsLab = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 6, 21, 6, 0, 52, 772, DateTimeKind.Local).AddTicks(2252)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 6, 25, 13, 57, 20, 716, DateTimeKind.Local).AddTicks(676)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -94,7 +94,7 @@ namespace Model.Migrations
                     role = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 6, 21, 6, 0, 52, 772, DateTimeKind.Local).AddTicks(4002)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 6, 25, 13, 57, 20, 716, DateTimeKind.Local).AddTicks(3261)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -119,7 +119,7 @@ namespace Model.Migrations
                     buildingId = table.Column<int>(type: "int", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 6, 21, 6, 0, 52, 771, DateTimeKind.Local).AddTicks(7365)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 6, 25, 13, 57, 20, 715, DateTimeKind.Local).AddTicks(2957)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -137,6 +137,26 @@ namespace Model.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Floor",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    code = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false),
+                    BuildingId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Floor", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_Floor_Building_BuildingId",
+                        column: x => x.BuildingId,
+                        principalTable: "Building",
+                        principalColumn: "id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Group",
                 columns: table => new
                 {
@@ -148,7 +168,7 @@ namespace Model.Migrations
                     CalendarId = table.Column<int>(type: "int", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 6, 21, 6, 0, 52, 771, DateTimeKind.Local).AddTicks(8784)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 6, 25, 13, 57, 20, 715, DateTimeKind.Local).AddTicks(5737)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -189,7 +209,7 @@ namespace Model.Migrations
                     groupId = table.Column<int>(type: "int", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 6, 21, 6, 0, 52, 772, DateTimeKind.Local).AddTicks(191)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 6, 25, 13, 57, 20, 715, DateTimeKind.Local).AddTicks(7838)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -272,7 +292,7 @@ namespace Model.Migrations
             migrationBuilder.InsertData(
                 table: "User",
                 columns: new[] { "id", "DeletedBy", "DeletedDate", "email", "name", "password", "role", "UpdatedBy", "UpdatedDate" },
-                values: new object[] { 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin@gmail.com", "Admin", "$2a$11$4q7i9PwMIgn5Mep4B0YTAubMlZmc3bTHUzyHdZfzN/TcOzI8ZNQpG", "Admin", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin@gmail.com", "Admin", "$2a$11$5OR/2JUFrc6U.Ctz1Kd6M.ylBVr5Nva2TUdX0N.TyLyerad0GzIwS", "Admin", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Classroom",
@@ -309,6 +329,23 @@ namespace Model.Migrations
                     { 8, 2, 20, "E022", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P3", null, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
                     { 9, 1, 20, "E001", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P2", null, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
                     { 10, 2, 20, "E004", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P7", null, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Floor",
+                columns: new[] { "id", "BuildingId", "code" },
+                values: new object[,]
+                {
+                    { 1, 1, "P1" },
+                    { 2, 1, "P2" },
+                    { 3, 1, "P3" },
+                    { 4, 2, "P1" },
+                    { 5, 2, "P2" },
+                    { 6, 2, "P3" },
+                    { 7, 2, "P4" },
+                    { 8, 2, "P5" },
+                    { 9, 2, "P6" },
+                    { 10, 2, "P7" }
                 });
 
             migrationBuilder.InsertData(
@@ -364,6 +401,11 @@ namespace Model.Migrations
                 column: "buildingId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Floor_BuildingId",
+                table: "Floor",
+                column: "BuildingId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Group_CalendarId",
                 table: "Group",
                 column: "CalendarId");
@@ -401,6 +443,9 @@ namespace Model.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Floor");
+
             migrationBuilder.DropTable(
                 name: "Session");
 

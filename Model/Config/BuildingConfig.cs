@@ -29,6 +29,7 @@ namespace Model.Config
                 .HasMaxLength(40)
                 .HasColumnName("name");
 
+
             builder.Property(b => b.IsDeleted)
                 .HasDefaultValue(false);
             builder.Property(b => b.CreatedBy)

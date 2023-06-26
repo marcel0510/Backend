@@ -64,6 +64,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 //Agregar el AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
 
+builder.Services.AddScoped<IBuildingService, BuildingService>();
 builder.Services.AddScoped<IClassroomService, ClassroomService>();
 builder.Services.AddScoped<IGroupService, GroupService>();
 builder.Services.AddScoped<ITokenService, TokenService>();

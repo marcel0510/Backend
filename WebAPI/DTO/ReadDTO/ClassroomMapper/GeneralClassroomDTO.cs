@@ -10,5 +10,6 @@
         public string Floor { get; set; }
         public string Period { get; set; }
         public CBuildingDTO Building { get; set; }
+        public List<CGeneralGroupDTO> Groups { get; set; }
     }
 }

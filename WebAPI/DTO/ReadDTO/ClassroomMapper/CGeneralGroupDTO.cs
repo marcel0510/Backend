@@ -1,10 +1,9 @@
 ﻿namespace WebAPI.DTO.ReadDTO.ClassroomMapper
 {
-    public class CGroupDTO
+    public class CGeneralGroupDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public CSubjectDTO Subject { get; set; }
-        public List<SessionDTO> Sessions { get; set; }
+        public string Subject { get; set; }
     }
 }

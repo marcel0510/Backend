@@ -5,11 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Model;
 using Model.Entities;
-using WebAPI.DTO.AddDTO;
-using WebAPI.DTO.DeleteDTO;
+using WebAPI.DTO.AddDTO.AddBuildingMapper;
 using WebAPI.DTO.EditDTO;
 using WebAPI.DTO.ReadDTO.BuildingMapper;
-using WebAPI.DTO.ReadDTO.ClassroomMapper;
+using WebAPI.DTO.ReadDTO.SubjectMapper;
 using WebAPI.Services.Interfaces;
 
 namespace WebAPI.Controllers
@@ -21,12 +20,14 @@ namespace WebAPI.Controllers
         private readonly ScheduleDbContext _context;
         private readonly IMapper _mapper;
         private readonly IClassroomService _classroomService;
+        private readonly IBuildingService _buildingService;
 
-        public BuildingController(ScheduleDbContext context, IMapper mapper, IClassroomService classroomService)
+        public BuildingController(ScheduleDbContext context, IMapper mapper, IClassroomService classroomService, IBuildingService buildingService)
         {
             _context = context;
             _mapper = mapper;
             _classroomService = classroomService;
+            _buildingService = buildingService;
         }
         [HttpGet]
         [AllowAnonymous]
@@ -39,13 +40,11 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("{id:int}")]
-        [AllowAnonymous]
         public async Task<ActionResult<BuildingDTO>> GetBuilding(int id)
         {
-            if (_context.Building is null) { return Ok(new { isSuccess = false, typeError = 0 }); }
-            var building = await _context.Building.FirstOrDefaultAsync(b => b.Id == id);
-            var buildingDTO = _mapper.Map<BuildingDTO>(building);
-            return buildingDTO;
+ 
+            return await _context.Building
+                    .ProjectTo<BuildingDTO>(_mapper.ConfigurationProvider).FirstOrDefaultAsync(b => b.Id == id);
         }
 
         [HttpPost("new")]
@@ -65,11 +64,14 @@ namespace WebAPI.Controllers
         {
             var buildExists = await _context.Building.AnyAsync(b => b.Code.ToLower() == buildingDTO.Code.ToLower());
             if (buildExists) {
-                var buildingDB1 = await _context.Building.AsTracking().FirstOrDefaultAsync(b => b.Id == buildingDTO.Id);
+                var buildingDB1 = await _context.Building.AsTracking().Include(b => b.Floors).FirstOrDefaultAsync(b => b.Id == buildingDTO.Id);
                 var isTheSame = buildingDTO.Code == buildingDB1.Code;
                 if (isTheSame)
                 {
+                    var updatedFloors = _mapper.Map<List<Floor>>(buildingDTO.Floors);
                     buildingDB1 = _mapper.Map(buildingDTO, buildingDB1);
+                    buildingDB1.Floors.Clear();
+                    buildingDB1.Floors = updatedFloors;
                     buildingDB1.UpdatedDate = DateTime.Now;
                     await _context.SaveChangesAsync();
                     return Ok(new { isSuccess = true });

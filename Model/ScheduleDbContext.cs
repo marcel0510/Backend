@@ -18,6 +18,7 @@ namespace Model
         }
         public DbSet<User> User { get; set; }
         public DbSet<Building> Building { get; set; }
+        public DbSet<Floor> Floors { get; set; }
         public DbSet<Subject> Subject { get; set; }
         public DbSet<Session> Session { get; set; }
         public DbSet<Group> Group { get; set; }
