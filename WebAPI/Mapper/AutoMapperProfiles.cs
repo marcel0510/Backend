@@ -69,44 +69,12 @@ namespace WebAPI.Mapper
             //Para Aulas
             CreateMap<AddClassroomDTO, Classroom>()
                 .ForMember(ent => ent.Building, dto => dto.MapFrom(campo => new Building() { Id = campo.BuildingId }));
-
-            CreateMap<AddSessionDTO, Session>()
-                .ForMember(ent => ent.StartTime,
-                dto => dto.MapFrom(campo => new TimeSpan(
-                        DateTime.ParseExact(campo.StartTime, "HH:mm:ss", CultureInfo.InvariantCulture).Hour,
-                        DateTime.ParseExact(campo.StartTime, "HH:mm:ss", CultureInfo.InvariantCulture).Minute,
-                        DateTime.ParseExact(campo.StartTime, "HH:mm:ss", CultureInfo.InvariantCulture).Second
-                    )))
-                .ForMember(ent => ent.EndTime,
-                dto => dto.MapFrom(campo => new TimeSpan(
-                        DateTime.ParseExact(campo.EndTime, "HH:mm:ss", CultureInfo.InvariantCulture).Hour,
-                        DateTime.ParseExact(campo.EndTime, "HH:mm:ss", CultureInfo.InvariantCulture).Minute,
-                        DateTime.ParseExact(campo.EndTime, "HH:mm:ss", CultureInfo.InvariantCulture).Second
-                    )));
-
-
+            //Para sesiones
             CreateMap<AddGroupDTO, Group>()
                 .ForMember(ent => ent.Subject, dto => dto.MapFrom(campo => new Subject() { Id = campo.SubjectId }))
                 .ForMember(ent => ent.Classroom, dto => dto.MapFrom(campo => new Classroom() { Id = campo.ClassroomId }))
                 .ForMember(ent => ent.Calendar, dto => dto.MapFrom(campo => new Model.Entities.Calendar() { Id = campo.CalendarId }));
-
-            CreateMap<AddCalendarDTO, Model.Entities.Calendar>()
-                .ForMember(dto => dto.PeriodInit, ent => ent.MapFrom(campo => DateTime.Parse(campo.PeriodInit)))
-                .ForMember(dto => dto.PeriodEnd, ent => ent.MapFrom(campo => DateTime.Parse(campo.PeriodEnd)));
-
-
-            //Edit Map
-
-            CreateMap<EditBuildingDTO, Building>();
-            CreateMap<EditGroupDTO, Group>();
-            CreateMap<EditSubjectDTO, Subject>();
-            CreateMap<EditClassroomDTO, Classroom>()
-                .ForMember(ent => ent.Building, dto => dto.MapFrom(campo => new Building() { Id = campo.BuildingId }));
-            CreateMap<CalendarDTO, Model.Entities.Calendar>()
-                .ForMember(dto => dto.PeriodInit, ent => ent.MapFrom(campo => DateTime.Parse(campo.PeriodInit)))
-                .ForMember(dto => dto.PeriodEnd, ent => ent.MapFrom(campo => DateTime.Parse(campo.PeriodEnd)));
-
-            CreateMap<EditSessionDTO, Session>()
+            CreateMap<AddSessionDTO, Session>()
                 .ForMember(ent => ent.StartTime,
                 dto => dto.MapFrom(campo => new TimeSpan(
                         DateTime.ParseExact(campo.StartTime, "HH:mm", CultureInfo.InvariantCulture).Hour,
@@ -119,6 +87,33 @@ namespace WebAPI.Mapper
                         DateTime.ParseExact(campo.EndTime, "HH:mm", CultureInfo.InvariantCulture).Minute,
                         DateTime.ParseExact(campo.EndTime, "HH:mm", CultureInfo.InvariantCulture).Second
                     )));
+
+
+            
+
+            CreateMap<AddCalendarDTO, Model.Entities.Calendar>()
+                .ForMember(dto => dto.PeriodInit, ent => ent.MapFrom(campo => DateTime.Parse(campo.PeriodInit)))
+                .ForMember(dto => dto.PeriodEnd, ent => ent.MapFrom(campo => DateTime.Parse(campo.PeriodEnd)));
+
+
+            //Edit Map
+            //Edificos
+            CreateMap<EditBuildingDTO, Building>();
+            //Group
+            CreateMap<EditGroupDTO, Group>()
+                .ForMember(ent => ent.Subject, dto => dto.MapFrom(campo => new Subject() { Id = campo.SubjectId }))
+                .ForMember(ent => ent.Classroom, dto => dto.MapFrom(campo => new Classroom() { Id = campo.ClassroomId }))
+                .ForMember(ent => ent.Calendar, dto => dto.MapFrom(campo => new Model.Entities.Calendar() { Id = campo.CalendarId }));
+            //Subject
+            CreateMap<EditSubjectDTO, Subject>();
+
+            CreateMap<EditClassroomDTO, Classroom>()
+                .ForMember(ent => ent.Building, dto => dto.MapFrom(campo => new Building() { Id = campo.BuildingId }));
+            CreateMap<EditCalendarDTO, Model.Entities.Calendar>()
+                .ForMember(dto => dto.PeriodInit, ent => ent.MapFrom(campo => DateTime.Parse(campo.PeriodInit)))
+                .ForMember(dto => dto.PeriodEnd, ent => ent.MapFrom(campo => DateTime.Parse(campo.PeriodEnd)));
+
+            
 
             //Delete Map
 

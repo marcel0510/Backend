@@ -7,7 +7,6 @@ using Model.Entities;
 using WebAPI.DTO;
 using WebAPI.DTO.AddDTO;
 using WebAPI.DTO.EditDTO;
-using WebAPI.DTO.ReadDTO.BuildingMapper;
 using WebAPI.DTO.ReadDTO.ClassroomMapper;
 using WebAPI.Services.Interfaces;
 
@@ -35,10 +34,34 @@ namespace WebAPI.Controllers
             return await _context.Classroom
                     .ProjectTo<GeneralClassroomDTO>(_mapper.ConfigurationProvider).ToListAsync();
         }
+        [HttpGet("byCalendar/{calendarId:int}")]
+        public async Task<ActionResult<IEnumerable<ClassroomDTO>>> GetClassroomsByCalendar(int calendarId)
+        {
+            var classrooms = await _context.Classroom
+                .ProjectTo<ClassroomDTO>(_mapper.ConfigurationProvider).ToArrayAsync();
+            var filteredClassrooms = new List<ClassroomDTO>();
+
+            foreach (var classroom in classrooms)
+            {
+                var filteredGroups = classroom.Groups.Where(g => g.CalendarId == calendarId).ToList();
+                var filteredClassroom = new ClassroomDTO()
+                {
+                    Id = classroom.Id,
+                    Code = classroom.Code,
+                    Name = classroom.Name,
+                    Capacity = classroom.Capacity,
+                    Floor = classroom.Floor,
+                    Building = classroom.Building,
+                    Groups = filteredGroups
+                };
+                filteredClassrooms.Add(filteredClassroom);
+            }
+            return filteredClassrooms;
+        }
 
 
         [HttpGet("{id:int}")]
-        public async Task<ActionResult<ClassroomDTO>> GetClasroom(int id)
+        public async Task<ActionResult<ClassroomDTO>> GetClassroom(int id)
         {
             if (_context.Classroom is null) { return NotFound(); }
             return await _context.Classroom

@@ -96,7 +96,6 @@ namespace WebAPI.Controllers
             var userDB = await _context.User.FirstOrDefaultAsync(u => u.Email == userDTO.Email);
             if (userDB is null) return Unauthorized(new {
                 isSuccess = false,
-                Message = "La contraseña o el correo no se han reconocido"
             });
 
             if (BCrypt.Net.BCrypt.Verify(userDTO.Password, userDB.Password))
@@ -107,13 +106,14 @@ namespace WebAPI.Controllers
                 {
                     isSuccess = true,
                     token,
-                    user,
+                    user.Id,
+                    user.Name,
+                    user.Role,
                 });
             }
             else return Ok(new
             {
                 isSuccess = false,
-                Message = "La contraseña o el correo no se han reconocido"
             }) ;
         }
     }
