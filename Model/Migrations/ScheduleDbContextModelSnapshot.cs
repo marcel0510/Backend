@@ -45,7 +45,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 25, 13, 57, 20, 714, DateTimeKind.Local).AddTicks(8512));
+                        .HasDefaultValue(new DateTime(2023, 7, 9, 19, 32, 28, 650, DateTimeKind.Local).AddTicks(9770));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -123,7 +123,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 25, 13, 57, 20, 715, DateTimeKind.Local).AddTicks(584));
+                        .HasDefaultValue(new DateTime(2023, 7, 9, 19, 32, 28, 651, DateTimeKind.Local).AddTicks(1442));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -210,7 +210,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 25, 13, 57, 20, 715, DateTimeKind.Local).AddTicks(2957));
+                        .HasDefaultValue(new DateTime(2023, 7, 9, 19, 32, 28, 651, DateTimeKind.Local).AddTicks(3992));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -436,6 +436,11 @@ namespace Model.Migrations
                         .HasColumnType("nvarchar(3)")
                         .HasColumnName("code");
 
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
                     b.HasKey("Id");
 
                     b.HasIndex("BuildingId");
@@ -447,61 +452,71 @@ namespace Model.Migrations
                         {
                             Id = 1,
                             BuildingId = 1,
-                            Code = "P1"
+                            Code = "P1",
+                            IsDeleted = false
                         },
                         new
                         {
                             Id = 2,
                             BuildingId = 1,
-                            Code = "P2"
+                            Code = "P2",
+                            IsDeleted = false
                         },
                         new
                         {
                             Id = 3,
                             BuildingId = 1,
-                            Code = "P3"
+                            Code = "P3",
+                            IsDeleted = false
                         },
                         new
                         {
                             Id = 4,
                             BuildingId = 2,
-                            Code = "P1"
+                            Code = "P1",
+                            IsDeleted = false
                         },
                         new
                         {
                             Id = 5,
                             BuildingId = 2,
-                            Code = "P2"
+                            Code = "P2",
+                            IsDeleted = false
                         },
                         new
                         {
                             Id = 6,
                             BuildingId = 2,
-                            Code = "P3"
+                            Code = "P3",
+                            IsDeleted = false
                         },
                         new
                         {
                             Id = 7,
                             BuildingId = 2,
-                            Code = "P4"
+                            Code = "P4",
+                            IsDeleted = false
                         },
                         new
                         {
                             Id = 8,
                             BuildingId = 2,
-                            Code = "P5"
+                            Code = "P5",
+                            IsDeleted = false
                         },
                         new
                         {
                             Id = 9,
                             BuildingId = 2,
-                            Code = "P6"
+                            Code = "P6",
+                            IsDeleted = false
                         },
                         new
                         {
                             Id = 10,
                             BuildingId = 2,
-                            Code = "P7"
+                            Code = "P7",
+                            IsDeleted = false
                         });
                 });
 
@@ -529,7 +544,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 25, 13, 57, 20, 715, DateTimeKind.Local).AddTicks(5737));
+                        .HasDefaultValue(new DateTime(2023, 7, 9, 19, 32, 28, 651, DateTimeKind.Local).AddTicks(6661));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -685,27 +700,11 @@ namespace Model.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CreatedBy")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasDefaultValue(1);
-
-                    b.Property<DateTime>("CreatedDate")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 25, 13, 57, 20, 715, DateTimeKind.Local).AddTicks(7838));
-
                     b.Property<string>("Day")
                         .IsRequired()
                         .HasMaxLength(10)
                         .HasColumnType("nvarchar(10)")
                         .HasColumnName("day");
-
-                    b.Property<int>("DeletedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("DeletedDate")
-                        .HasColumnType("datetime2");
 
                     b.Property<TimeSpan>("EndTime")
                         .HasColumnType("time")
@@ -724,12 +723,6 @@ namespace Model.Migrations
                         .HasColumnType("time")
                         .HasColumnName("startTime");
 
-                    b.Property<int>("UpdatedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdatedDate")
-                        .HasColumnType("datetime2");
-
                     b.HasKey("Id");
 
                     b.HasIndex("GroupId");
@@ -740,212 +733,128 @@ namespace Model.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedBy = 0,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Day = "Lunes",
-                            DeletedBy = 0,
-                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EndTime = new TimeSpan(0, 11, 0, 0, 0),
                             GroupId = 1,
                             IsDeleted = false,
-                            StartTime = new TimeSpan(0, 9, 0, 0, 0),
-                            UpdatedBy = 0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedBy = 0,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Day = "Martes",
-                            DeletedBy = 0,
-                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EndTime = new TimeSpan(0, 13, 0, 0, 0),
                             GroupId = 1,
                             IsDeleted = false,
-                            StartTime = new TimeSpan(0, 11, 0, 0, 0),
-                            UpdatedBy = 0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedBy = 0,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Day = "Lunes",
-                            DeletedBy = 0,
-                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EndTime = new TimeSpan(0, 13, 0, 0, 0),
                             GroupId = 2,
                             IsDeleted = false,
-                            StartTime = new TimeSpan(0, 11, 0, 0, 0),
-                            UpdatedBy = 0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedBy = 0,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Day = "Jueves",
-                            DeletedBy = 0,
-                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EndTime = new TimeSpan(0, 9, 0, 0, 0),
                             GroupId = 2,
                             IsDeleted = false,
-                            StartTime = new TimeSpan(0, 7, 0, 0, 0),
-                            UpdatedBy = 0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedBy = 0,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Day = "Martes",
-                            DeletedBy = 0,
-                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EndTime = new TimeSpan(0, 11, 0, 0, 0),
                             GroupId = 3,
                             IsDeleted = false,
-                            StartTime = new TimeSpan(0, 9, 0, 0, 0),
-                            UpdatedBy = 0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
                         },
                         new
                         {
                             Id = 6,
-                            CreatedBy = 0,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Day = "Viernes",
-                            DeletedBy = 0,
-                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EndTime = new TimeSpan(0, 11, 0, 0, 0),
                             GroupId = 3,
                             IsDeleted = false,
-                            StartTime = new TimeSpan(0, 10, 0, 0, 0),
-                            UpdatedBy = 0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            StartTime = new TimeSpan(0, 10, 0, 0, 0)
                         },
                         new
                         {
                             Id = 7,
-                            CreatedBy = 0,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Day = "Lunes",
-                            DeletedBy = 0,
-                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EndTime = new TimeSpan(0, 11, 0, 0, 0),
                             GroupId = 4,
                             IsDeleted = false,
-                            StartTime = new TimeSpan(0, 9, 0, 0, 0),
-                            UpdatedBy = 0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
                         },
                         new
                         {
                             Id = 8,
-                            CreatedBy = 0,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Day = "Martes",
-                            DeletedBy = 0,
-                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EndTime = new TimeSpan(0, 13, 0, 0, 0),
                             GroupId = 4,
                             IsDeleted = false,
-                            StartTime = new TimeSpan(0, 12, 0, 0, 0),
-                            UpdatedBy = 0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            StartTime = new TimeSpan(0, 12, 0, 0, 0)
                         },
                         new
                         {
                             Id = 9,
-                            CreatedBy = 0,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Day = "Jueves",
-                            DeletedBy = 0,
-                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EndTime = new TimeSpan(0, 11, 0, 0, 0),
                             GroupId = 5,
                             IsDeleted = false,
-                            StartTime = new TimeSpan(0, 9, 0, 0, 0),
-                            UpdatedBy = 0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
                         },
                         new
                         {
                             Id = 10,
-                            CreatedBy = 0,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Day = "Viernes",
-                            DeletedBy = 0,
-                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EndTime = new TimeSpan(0, 9, 0, 0, 0),
                             GroupId = 5,
                             IsDeleted = false,
-                            StartTime = new TimeSpan(0, 7, 0, 0, 0),
-                            UpdatedBy = 0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
                         },
                         new
                         {
                             Id = 11,
-                            CreatedBy = 0,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Day = "Viernes",
-                            DeletedBy = 0,
-                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EndTime = new TimeSpan(0, 13, 0, 0, 0),
                             GroupId = 6,
                             IsDeleted = false,
-                            StartTime = new TimeSpan(0, 11, 0, 0, 0),
-                            UpdatedBy = 0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
                         },
                         new
                         {
                             Id = 12,
-                            CreatedBy = 0,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Day = "Lunes",
-                            DeletedBy = 0,
-                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EndTime = new TimeSpan(0, 13, 0, 0, 0),
                             GroupId = 7,
                             IsDeleted = false,
-                            StartTime = new TimeSpan(0, 11, 0, 0, 0),
-                            UpdatedBy = 0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
                         },
                         new
                         {
                             Id = 13,
-                            CreatedBy = 0,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Day = "Miercoles",
-                            DeletedBy = 0,
-                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EndTime = new TimeSpan(0, 9, 0, 0, 0),
                             GroupId = 7,
                             IsDeleted = false,
-                            StartTime = new TimeSpan(0, 8, 0, 0, 0),
-                            UpdatedBy = 0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            StartTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
                             Id = 14,
-                            CreatedBy = 0,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Day = "Viernes",
-                            DeletedBy = 0,
-                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EndTime = new TimeSpan(0, 11, 0, 0, 0),
                             GroupId = 7,
                             IsDeleted = false,
-                            StartTime = new TimeSpan(0, 9, 0, 0, 0),
-                            UpdatedBy = 0,
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
                         });
                 });
 
@@ -977,7 +886,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 25, 13, 57, 20, 716, DateTimeKind.Local).AddTicks(676));
+                        .HasDefaultValue(new DateTime(2023, 7, 9, 19, 32, 28, 652, DateTimeKind.Local).AddTicks(904));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -1300,7 +1209,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 25, 13, 57, 20, 716, DateTimeKind.Local).AddTicks(3261));
+                        .HasDefaultValue(new DateTime(2023, 7, 9, 19, 32, 28, 652, DateTimeKind.Local).AddTicks(3982));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -1330,6 +1239,12 @@ namespace Model.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)")
                         .HasColumnName("password");
+
+                    b.Property<bool>("Reset")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false)
+                        .HasColumnName("reset");
 
                     b.Property<string>("Role")
                         .IsRequired()
@@ -1362,7 +1277,8 @@ namespace Model.Migrations
                             Email = "admin@gmail.com",
                             IsDeleted = false,
                             Name = "Admin",
-                            Password = "$2a$11$5OR/2JUFrc6U.Ctz1Kd6M.ylBVr5Nva2TUdX0N.TyLyerad0GzIwS",
+                            Password = "$2a$11$A8myGai5IYovFCkEwQ3pEuM4gH7SS4IZm.EMtrlUWEDF6Oe7Y1Sbq",
+                            Reset = false,
                             Role = "Admin",
                             UpdatedBy = 0,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)

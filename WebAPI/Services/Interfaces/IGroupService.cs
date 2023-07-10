@@ -13,6 +13,6 @@ namespace WebAPI.Services.Interfaces
         public Task<bool> DeleteGroupsByClassroom(ScheduleDbContext context, int classroomId, int userId);
         public Task<bool> GenereteNewCalendar(ScheduleDbContext context, IMapper mapper, int IdOldCalendar, int IdNewCalendar, int userId);
         public bool ValidateRepitedNames(List<CGroupDTO> groups, int subjectId, string name);
-        public List<int> ValidateOverlappingSchedules(ClassroomDTO classroom, List<AddSessionDTO> sessions);
+        public List<int> ValidateOverlappingSchedules(ClassroomDTO classroom, List<AddSessionDTO> sessions, int groupId, bool isEdit);
     }
 }

@@ -120,7 +120,7 @@ namespace WebAPI.Controllers
             await _context.SaveChangesAsync();
             return Ok(new { isSuccess = true });
         }
-
+       
         [HttpDelete("delete/{classroomId:int}/{userId:int}")]
         public async Task<ActionResult> DeleteClassroom(int classroomId, int userId)
         {

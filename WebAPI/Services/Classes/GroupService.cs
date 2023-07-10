@@ -63,9 +63,13 @@ namespace WebAPI.Services.Classes
                 .Where(g => g.CalendarId == IdOldCalendar)
                 .ToListAsync();
 
+           
+
             foreach (var group in groupsDto)
             {
+              
                 context.ChangeTracker.Clear();
+
                 group.CalendarId = IdNewCalendar;
                 var g = mapper.Map<Group>(group);
                 g.Id = 0;
@@ -95,7 +99,7 @@ namespace WebAPI.Services.Classes
             }
             return false;
         }
-        public List<int> ValidateOverlappingSchedules(ClassroomDTO classroom, List<AddSessionDTO> sessions)
+        public List<int> ValidateOverlappingSchedules(ClassroomDTO classroom, List<AddSessionDTO> sessions, int groupId, bool isEdit)
         {
             var Schedule = new int[13, 5]; //13 filas y 5 columnas
             var sessionsSchedule = new int[13, 5]; //13 filas y 5 columnas
@@ -109,22 +113,55 @@ namespace WebAPI.Services.Classes
                     sessionsSchedule[i, j] = 0;
                 }
             }
-            //Llena la matriz con los grupos del aula
-            foreach (var group in classroom.Groups) {
-                foreach(var session in group.Sessions)
+            //Llenar la matriz con los grupos
+            //Si es edicion se llena sin el grupo que se edita
+            if (isEdit)
+            {
+
+                foreach (var group in classroom.Groups)
                 {
-                    var startHour = int.Parse(session.StartTime.Substring(0, 2));
-                    var endHour = int.Parse(session.EndTime.Substring(0, 2));
-                    var duration = endHour - startHour;
-                    
-                    for(int i = 0; i < duration; i++)
+                    foreach (var session in group.Sessions)
                     {
-                        var row = startHour - 7 + i;
-                        var col = (int)session.Day;
-                        Schedule[row, col] = group.Id;
+                        if (group.Id != groupId)
+                        {
+                            var startHour = int.Parse(session.StartTime.Substring(0, 2));
+                            var endHour = int.Parse(session.EndTime.Substring(0, 2));
+                            var duration = endHour - startHour;
+
+                            for (int i = 0; i < duration; i++)
+                            {
+                                var row = startHour - 7 + i;
+                                var col = (int)session.Day;
+                                Schedule[row, col] = group.Id;
+                            }
+                        }
+
                     }
                 }
             }
+            else
+            {
+                foreach (var group in classroom.Groups)
+                {
+                    foreach (var session in group.Sessions)
+                    {
+                       
+                            var startHour = int.Parse(session.StartTime.Substring(0, 2));
+                            var endHour = int.Parse(session.EndTime.Substring(0, 2));
+                            var duration = endHour - startHour;
+
+                            for (int i = 0; i < duration; i++)
+                            {
+                                var row = startHour - 7 + i;
+                                var col = (int)session.Day;
+                                Schedule[row, col] = group.Id;
+                            }
+                        
+
+                    }
+                }
+            }
+        
             //Llenar la matriz con el nuevo grupo
             foreach(var session in sessions)
             {
@@ -153,6 +190,9 @@ namespace WebAPI.Services.Classes
             return result;
         }
 
-        
+        public List<int> ValidateOverlappingSchedulesOnEdit(ClassroomDTO classroom, List<AddSessionDTO> sessions)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

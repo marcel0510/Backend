@@ -11,6 +11,7 @@ namespace WebAPI.DTO.ReadDTO
         public string Name { get; set; }
         public string Email { get; set; }
         public Role Role { get; set; }
+        public bool Reset { get; set; }
     }
 
 

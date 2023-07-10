@@ -5,8 +5,6 @@ namespace Model.Entities
 {
     public class User: BaseEntity
     {
-    
-
         [EmailAddress]
         public string Email { get; set; }
 
@@ -23,5 +21,6 @@ namespace Model.Entities
          } 
         public string Name { get; set; }
         public Role Role { get; set; }
+        public bool Reset { get; set; }
     }
 }

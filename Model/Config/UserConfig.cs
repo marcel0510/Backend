@@ -44,6 +44,11 @@ namespace Model.Config
                 .HasMaxLength(10)
                 .HasColumnName("role");
 
+            builder.Property(u => u.Reset)
+                .IsRequired()
+                .HasColumnName("reset")
+                .HasDefaultValue(false);
+
             builder.Property(u => u.IsDeleted)
                 .HasDefaultValue(false);
             builder.Property(u => u.CreatedBy)

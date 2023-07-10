@@ -19,7 +19,7 @@ namespace WebAPI.Mapper
         public AutoMapperProfiles()
         {
             //Mapeado para ver datos
-            CreateMap<User, UserDTO>();
+            CreateMap<User, UserDTO>().ReverseMap();
             CreateMap<Session, SessionDTO>()
                 .ForMember(dto => dto.StartTime, ent => ent.MapFrom(campo => campo.StartTime.ToString(@"hh\:mm")))
                 .ForMember(dto => dto.EndTime, ent => ent.MapFrom(campo => "" + campo.EndTime.ToString(@"hh\:mm")));
@@ -61,7 +61,7 @@ namespace WebAPI.Mapper
             //Para edificios
             CreateMap<AddBuildingDTO, Building>();
             CreateMap<AddFloorDTO, Floor>();
-                
+
             //Para usuarios
             CreateMap<AddUserDTO, User>();
             //Para materias
@@ -113,6 +113,7 @@ namespace WebAPI.Mapper
                 .ForMember(dto => dto.PeriodInit, ent => ent.MapFrom(campo => DateTime.Parse(campo.PeriodInit)))
                 .ForMember(dto => dto.PeriodEnd, ent => ent.MapFrom(campo => DateTime.Parse(campo.PeriodEnd)));
 
+     
             
 
             //Delete Map
@@ -126,8 +127,8 @@ namespace WebAPI.Mapper
                 .ForMember(dto => dto.ClassroomId, ent => ent.MapFrom(campo => campo.Classroom.Id))
                 .ForMember(dto => dto.CalendarId, ent => ent.MapFrom(campo => campo.Calendar.Id));
             CreateMap<SessionDTO, AddSessionDTO>()
-                .ForMember(ent => ent.StartTime, dto => dto.MapFrom(campo => campo.StartTime + ":00"))
-                .ForMember(ent => ent.EndTime, dto => dto.MapFrom(campo => campo.EndTime + ":00"));
+                .ForMember(ent => ent.StartTime, dto => dto.MapFrom(campo => campo.StartTime))
+                .ForMember(ent => ent.EndTime, dto => dto.MapFrom(campo => campo.EndTime));
 
 
         }

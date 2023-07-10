@@ -69,6 +69,7 @@ builder.Services.AddScoped<IClassroomService, ClassroomService>();
 builder.Services.AddScoped<IGroupService, GroupService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 
+
 var app = builder.Build();
 
 //Agregar configuracion de token

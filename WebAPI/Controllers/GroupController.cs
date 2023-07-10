@@ -53,7 +53,7 @@ namespace WebAPI.Controllers
 
             var groupExists = _groupService.ValidateRepitedNames(classroomDTO.Groups, groupDTO.SubjectId, groupDTO.Name);
             if (groupExists) return Ok(new { isSuccess = false, errorType = 1 });
-            var overlappingExists = _groupService.ValidateOverlappingSchedules(classroomDTO, groupDTO.Sessions);
+            var overlappingExists = _groupService.ValidateOverlappingSchedules(classroomDTO, groupDTO.Sessions, 0, false);
             if(overlappingExists.Count != 0) return Ok(new {isSuccess = false, errorType = 2, overlappingGrs = overlappingExists.Distinct() });
             var group = _mapper.Map<Group>(groupDTO);
             _context.Entry(group.Subject).State = EntityState.Unchanged;        
@@ -70,14 +70,14 @@ namespace WebAPI.Controllers
             var classroomDTO = await _context.Classroom
                 .ProjectTo<ClassroomDTO>(_mapper.ConfigurationProvider).FirstOrDefaultAsync(c => c.Id == groupDTO.ClassroomId);
             var groupExists = _groupService.ValidateRepitedNames(classroomDTO.Groups, groupDTO.SubjectId, groupDTO.Name);
-
-            if(groupExists)
+            var overlappingExists = _groupService.ValidateOverlappingSchedules(classroomDTO, groupDTO.Sessions, groupDTO.Id, true);
+            if (overlappingExists.Count != 0) return Ok(new { isSuccess = false, errorType = 2, overlappingGrs = overlappingExists.Distinct() });
+            if (groupExists)
             {
                 var groupDB1 = await _context.Group.AsTracking().Include(g => g.Sessions).FirstOrDefaultAsync(g => g.Id == groupDTO.Id);
                 var isTheSame = groupDB1.SubjectId == groupDTO.SubjectId && groupDB1.Name == groupDTO.Name;
                 if(isTheSame)
                 {
-
                     var updatedSessions1 = _mapper.Map<List<Session>>(groupDTO.Sessions);
                     groupDB1 = _mapper.Map(groupDTO, groupDB1);
                     groupDB1.Sessions.Clear();

@@ -12,8 +12,8 @@ using Model;
 namespace Model.Migrations
 {
     [DbContext(typeof(ScheduleDbContext))]
-    [Migration("20230626193819_DB")]
-    partial class DB
+    [Migration("20230710003228_db")]
+    partial class db
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,7 +48,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 26, 14, 38, 19, 440, DateTimeKind.Local).AddTicks(4919));
+                        .HasDefaultValue(new DateTime(2023, 7, 9, 19, 32, 28, 650, DateTimeKind.Local).AddTicks(9770));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -126,7 +126,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 26, 14, 38, 19, 440, DateTimeKind.Local).AddTicks(7370));
+                        .HasDefaultValue(new DateTime(2023, 7, 9, 19, 32, 28, 651, DateTimeKind.Local).AddTicks(1442));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -213,7 +213,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 26, 14, 38, 19, 441, DateTimeKind.Local).AddTicks(199));
+                        .HasDefaultValue(new DateTime(2023, 7, 9, 19, 32, 28, 651, DateTimeKind.Local).AddTicks(3992));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -547,7 +547,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 26, 14, 38, 19, 441, DateTimeKind.Local).AddTicks(4009));
+                        .HasDefaultValue(new DateTime(2023, 7, 9, 19, 32, 28, 651, DateTimeKind.Local).AddTicks(6661));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -889,7 +889,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 26, 14, 38, 19, 441, DateTimeKind.Local).AddTicks(8994));
+                        .HasDefaultValue(new DateTime(2023, 7, 9, 19, 32, 28, 652, DateTimeKind.Local).AddTicks(904));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -1212,7 +1212,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 6, 26, 14, 38, 19, 442, DateTimeKind.Local).AddTicks(2076));
+                        .HasDefaultValue(new DateTime(2023, 7, 9, 19, 32, 28, 652, DateTimeKind.Local).AddTicks(3982));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -1242,6 +1242,12 @@ namespace Model.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)")
                         .HasColumnName("password");
+
+                    b.Property<bool>("Reset")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false)
+                        .HasColumnName("reset");
 
                     b.Property<string>("Role")
                         .IsRequired()
@@ -1274,7 +1280,8 @@ namespace Model.Migrations
                             Email = "admin@gmail.com",
                             IsDeleted = false,
                             Name = "Admin",
-                            Password = "$2a$11$zE6/8q1MCEuMxrXSVCoMrutIz1r4Uoo0OrnxgyhQT82sOMdwf9PaO",
+                            Password = "$2a$11$A8myGai5IYovFCkEwQ3pEuM4gH7SS4IZm.EMtrlUWEDF6Oe7Y1Sbq",
+                            Reset = false,
                             Role = "Admin",
                             UpdatedBy = 0,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
