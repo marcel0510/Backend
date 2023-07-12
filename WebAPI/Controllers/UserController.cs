@@ -140,7 +140,9 @@ namespace WebAPI.Controllers
         public async Task<ActionResult> ValidateUser(ValidateUserDTO userDTO)
         {
             var userDB = await _context.User.FirstOrDefaultAsync(u => u.Email == userDTO.Email);
- 
+
+            if (userDB is null) return Ok(new { isSuccess = false, errorType = 5 });
+
             if (BCrypt.Net.BCrypt.Verify(userDTO.Password, userDB.Password))
             {
                 var token = _tokenService.GetToken(userDB);

@@ -48,6 +48,7 @@ namespace WebAPI.Controllers
                 {
                     Id = classroom.Id,
                     Code = classroom.Code,
+                    IsLab = classroom.IsLab,
                     Name = classroom.Name,
                     Capacity = classroom.Capacity,
                     Floor = classroom.Floor,

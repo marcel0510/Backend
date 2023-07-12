@@ -24,7 +24,6 @@ namespace Model.Config
 
             builder.Property(c => c.IsLab)
                 .IsRequired()
-                .HasDefaultValue(false)
                 .HasColumnName("isLab");
 
             builder.Property(c => c.Name)

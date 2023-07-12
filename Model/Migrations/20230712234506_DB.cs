@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Model.Migrations
 {
     /// <inheritdoc />
-    public partial class db : Migration
+    public partial class DB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -23,7 +23,7 @@ namespace Model.Migrations
                     name = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 7, 9, 19, 32, 28, 650, DateTimeKind.Local).AddTicks(9770)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 7, 12, 18, 45, 6, 701, DateTimeKind.Local).AddTicks(8981)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -45,7 +45,7 @@ namespace Model.Migrations
                     periodEnd = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 7, 9, 19, 32, 28, 651, DateTimeKind.Local).AddTicks(1442)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 7, 12, 18, 45, 6, 702, DateTimeKind.Local).AddTicks(1156)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -71,7 +71,7 @@ namespace Model.Migrations
                     IsLab = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 7, 9, 19, 32, 28, 652, DateTimeKind.Local).AddTicks(904)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 7, 12, 18, 45, 6, 703, DateTimeKind.Local).AddTicks(1092)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -95,7 +95,7 @@ namespace Model.Migrations
                     reset = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 7, 9, 19, 32, 28, 652, DateTimeKind.Local).AddTicks(3982)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 7, 12, 18, 45, 6, 703, DateTimeKind.Local).AddTicks(4061)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -113,14 +113,14 @@ namespace Model.Migrations
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     code = table.Column<string>(type: "nvarchar(7)", maxLength: 7, nullable: false),
-                    isLab = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
+                    isLab = table.Column<bool>(type: "bit", nullable: false),
                     name = table.Column<string>(type: "nvarchar(60)", maxLength: 60, nullable: true),
                     Capacity = table.Column<int>(type: "int", nullable: false),
                     floor = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false),
                     buildingId = table.Column<int>(type: "int", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 7, 9, 19, 32, 28, 651, DateTimeKind.Local).AddTicks(3992)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 7, 12, 18, 45, 6, 702, DateTimeKind.Local).AddTicks(3379)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -170,7 +170,7 @@ namespace Model.Migrations
                     CalendarId = table.Column<int>(type: "int", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 7, 9, 19, 32, 28, 651, DateTimeKind.Local).AddTicks(6661)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 7, 12, 18, 45, 6, 702, DateTimeKind.Local).AddTicks(6706)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -234,149 +234,30 @@ namespace Model.Migrations
             migrationBuilder.InsertData(
                 table: "Calendar",
                 columns: new[] { "id", "DeletedBy", "DeletedDate", "period", "periodEnd", "periodInit", "UpdatedBy", "UpdatedDate" },
-                values: new object[] { 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "2022B", new DateTime(2023, 3, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 8, 23, 0, 0, 0, 0, DateTimeKind.Unspecified), 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
-
-            migrationBuilder.InsertData(
-                table: "Subject",
-                columns: new[] { "id", "alias", "code", "DeletedBy", "DeletedDate", "name", "NumCredits", "NumHours", "NumSemester", "UpdatedBy", "UpdatedDate" },
-                values: new object[,]
-                {
-                    { 1, null, "ITID843", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "ADMINISTRACION DE REDES", 3, 4, 8, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 2, null, "ITID822", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "EVALUACION DE REDES", 3, 4, 8, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 3, null, "ITID801", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "HACKING ETICO", 2, 3, 8, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 4, "WLAN", "ITID832", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "REDES DE AREA LOCAL INALAMBRICAS", 3, 3, 8, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 5, null, "ITID753", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "APLICACIONES WEB Y MOVILES", 3, 4, 7, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 6, null, "ITID742", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "REDES E INTRANETS", 3, 4, 7, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 7, null, "ITID713", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "APLICACIONES DISTRIBUIDAS", 2, 3, 7, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 8, null, "ITID623", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "REDES DE AREA LOCAL", 2, 3, 6, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Subject",
-                columns: new[] { "id", "alias", "code", "DeletedBy", "DeletedDate", "IsLab", "name", "NumCredits", "NumHours", "NumSemester", "UpdatedBy", "UpdatedDate" },
-                values: new object[] { 9, null, "ITID623L", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "LABORATORIO REDES DE AREA LOCAL", 2, 2, 6, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
-
-            migrationBuilder.InsertData(
-                table: "Subject",
-                columns: new[] { "id", "alias", "code", "DeletedBy", "DeletedDate", "name", "NumCredits", "NumHours", "NumSemester", "UpdatedBy", "UpdatedDate" },
-                values: new object[] { 10, null, "ITID723", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "REDES DE AREA EXTENDIDA", 2, 3, 6, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
-
-            migrationBuilder.InsertData(
-                table: "Subject",
-                columns: new[] { "id", "alias", "code", "DeletedBy", "DeletedDate", "IsLab", "name", "NumCredits", "NumHours", "NumSemester", "UpdatedBy", "UpdatedDate" },
-                values: new object[] { 11, null, "ITID723L", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "LABORATORIO REDES DE AREA LOCAL", 2, 2, 6, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
-
-            migrationBuilder.InsertData(
-                table: "Subject",
-                columns: new[] { "id", "alias", "code", "DeletedBy", "DeletedDate", "name", "NumCredits", "NumHours", "NumSemester", "UpdatedBy", "UpdatedDate" },
-                values: new object[] { 12, null, "ITID524", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "TRANSMISION DIGITAL", 2, 2, 5, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
-
-            migrationBuilder.InsertData(
-                table: "Subject",
-                columns: new[] { "id", "alias", "code", "DeletedBy", "DeletedDate", "IsLab", "name", "NumCredits", "NumHours", "NumSemester", "UpdatedBy", "UpdatedDate" },
-                values: new object[] { 13, null, "ITID524L", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), true, "LABORATORIO TRANSMISION DIGITAL", 2, 2, 5, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
-
-            migrationBuilder.InsertData(
-                table: "Subject",
-                columns: new[] { "id", "alias", "code", "DeletedBy", "DeletedDate", "name", "NumCredits", "NumHours", "NumSemester", "UpdatedBy", "UpdatedDate" },
-                values: new object[,]
-                {
-                    { 14, null, "ITID452", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "SISTEMAS OPERATIVOS", 3, 3, 4, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 15, null, "ITID433", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "PROGRAMACION AVANZADA", 2, 3, 4, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
-                });
+                values: new object[] { 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "2023A", new DateTime(2023, 9, 30, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 4, 3, 0, 0, 0, 0, DateTimeKind.Unspecified), 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "User",
                 columns: new[] { "id", "DeletedBy", "DeletedDate", "email", "name", "password", "role", "UpdatedBy", "UpdatedDate" },
-                values: new object[] { 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin@gmail.com", "Admin", "$2a$11$A8myGai5IYovFCkEwQ3pEuM4gH7SS4IZm.EMtrlUWEDF6Oe7Y1Sbq", "Admin", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
-
-            migrationBuilder.InsertData(
-                table: "Classroom",
-                columns: new[] { "id", "buildingId", "Capacity", "code", "DeletedBy", "DeletedDate", "floor", "isLab", "name", "UpdatedBy", "UpdatedDate" },
-                values: new object[] { 1, 2, 25, "E023", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P6", true, "Laboratorioa FIEE CEC 1", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
-
-            migrationBuilder.InsertData(
-                table: "Classroom",
-                columns: new[] { "id", "buildingId", "Capacity", "code", "DeletedBy", "DeletedDate", "floor", "name", "UpdatedBy", "UpdatedDate" },
-                values: new object[] { 2, 2, 35, "E028", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P5", null, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
-
-            migrationBuilder.InsertData(
-                table: "Classroom",
-                columns: new[] { "id", "buildingId", "Capacity", "code", "DeletedBy", "DeletedDate", "floor", "isLab", "name", "UpdatedBy", "UpdatedDate" },
-                values: new object[] { 3, 2, 25, "E026", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P6", true, "Laboratorio FIEE CEC 2", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
-
-            migrationBuilder.InsertData(
-                table: "Classroom",
-                columns: new[] { "id", "buildingId", "Capacity", "code", "DeletedBy", "DeletedDate", "floor", "name", "UpdatedBy", "UpdatedDate" },
-                values: new object[] { 4, 1, 20, "E002", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P2", null, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
-
-            migrationBuilder.InsertData(
-                table: "Classroom",
-                columns: new[] { "id", "buildingId", "Capacity", "code", "DeletedBy", "DeletedDate", "floor", "isLab", "name", "UpdatedBy", "UpdatedDate" },
-                values: new object[] { 5, 2, 20, "LABINTC", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P7", true, "LABORATORIO DE INTERCONECTIVIDAD", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
-
-            migrationBuilder.InsertData(
-                table: "Classroom",
-                columns: new[] { "id", "buildingId", "Capacity", "code", "DeletedBy", "DeletedDate", "floor", "name", "UpdatedBy", "UpdatedDate" },
-                values: new object[,]
-                {
-                    { 6, 1, 20, "E003", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P2", null, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 7, 2, 20, "E022", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P6", null, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 8, 2, 20, "E022", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P3", null, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 9, 1, 20, "E001", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P2", null, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 10, 2, 20, "E004", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "P7", null, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
-                });
+                values: new object[] { 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin@gmail.com", "Admin", "$2a$11$GM76/V0lgQIpAqg/ANq.Ie4d1zfmHAQHaxOFDMnbgxSwDDjKrQUV2", "Admin", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Floor",
                 columns: new[] { "id", "BuildingId", "code" },
                 values: new object[,]
                 {
-                    { 1, 1, "P1" },
-                    { 2, 1, "P2" },
-                    { 3, 1, "P3" },
-                    { 4, 2, "P1" },
-                    { 5, 2, "P2" },
-                    { 6, 2, "P3" },
-                    { 7, 2, "P4" },
-                    { 8, 2, "P5" },
-                    { 9, 2, "P6" },
-                    { 10, 2, "P7" }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Group",
-                columns: new[] { "id", "CalendarId", "classroomId", "DeletedBy", "DeletedDate", "name", "subjectId", "UpdatedBy", "UpdatedDate" },
-                values: new object[,]
-                {
-                    { 1, 1, 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 2, 1, 2, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 2, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 3, 1, 3, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 3, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 4, 1, 4, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 6, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 5, 1, 4, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 7, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 6, 1, 4, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 4, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 7, 1, 4, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 14, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Session",
-                columns: new[] { "id", "day", "endTime", "groupId", "startTime" },
-                values: new object[,]
-                {
-                    { 1, "Lunes", new TimeSpan(0, 11, 0, 0, 0), 1, new TimeSpan(0, 9, 0, 0, 0) },
-                    { 2, "Martes", new TimeSpan(0, 13, 0, 0, 0), 1, new TimeSpan(0, 11, 0, 0, 0) },
-                    { 3, "Lunes", new TimeSpan(0, 13, 0, 0, 0), 2, new TimeSpan(0, 11, 0, 0, 0) },
-                    { 4, "Jueves", new TimeSpan(0, 9, 0, 0, 0), 2, new TimeSpan(0, 7, 0, 0, 0) },
-                    { 5, "Martes", new TimeSpan(0, 11, 0, 0, 0), 3, new TimeSpan(0, 9, 0, 0, 0) },
-                    { 6, "Viernes", new TimeSpan(0, 11, 0, 0, 0), 3, new TimeSpan(0, 10, 0, 0, 0) },
-                    { 7, "Lunes", new TimeSpan(0, 11, 0, 0, 0), 4, new TimeSpan(0, 9, 0, 0, 0) },
-                    { 8, "Martes", new TimeSpan(0, 13, 0, 0, 0), 4, new TimeSpan(0, 12, 0, 0, 0) },
-                    { 9, "Jueves", new TimeSpan(0, 11, 0, 0, 0), 5, new TimeSpan(0, 9, 0, 0, 0) },
-                    { 10, "Viernes", new TimeSpan(0, 9, 0, 0, 0), 5, new TimeSpan(0, 7, 0, 0, 0) },
-                    { 11, "Viernes", new TimeSpan(0, 13, 0, 0, 0), 6, new TimeSpan(0, 11, 0, 0, 0) },
-                    { 12, "Lunes", new TimeSpan(0, 13, 0, 0, 0), 7, new TimeSpan(0, 11, 0, 0, 0) },
-                    { 13, "Miercoles", new TimeSpan(0, 9, 0, 0, 0), 7, new TimeSpan(0, 8, 0, 0, 0) },
-                    { 14, "Viernes", new TimeSpan(0, 11, 0, 0, 0), 7, new TimeSpan(0, 9, 0, 0, 0) }
+                    { 1, 1, "S1" },
+                    { 2, 1, "PB" },
+                    { 3, 1, "P1" },
+                    { 4, 1, "P2" },
+                    { 5, 2, "PB" },
+                    { 6, 2, "MZ" },
+                    { 7, 2, "P3" },
+                    { 8, 2, "P4" },
+                    { 9, 2, "P5" },
+                    { 10, 2, "P6" },
+                    { 11, 2, "P7" },
+                    { 12, 2, "P8" }
                 });
 
             migrationBuilder.CreateIndex(
