@@ -3,6 +3,7 @@ using AutoMapper.QueryableExtensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Model;
+using Model.DAL.Interfaces;
 using Model.Entities;
 using Model.Enum;
 using Newtonsoft.Json.Linq;
@@ -18,120 +19,97 @@ namespace WebAPI.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly ScheduleDbContext _context;
-        private readonly IMapper _mapper;
+        private readonly IUserDAL _userDAL;
         private readonly ITokenService _tokenService;
-        public UserController(ScheduleDbContext context, IMapper mapper, ITokenService tokenService)
+        private readonly IMapper _mapper;
+        public UserController(IUserDAL userDAL, ITokenService tokenService, IMapper mapper)
         {
-            _context = context;
-            _mapper = mapper;
+            _userDAL = userDAL;
             _tokenService = tokenService;
+            _mapper = mapper;
         }
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsers()
         {
-            if (_context.Building is null) { return NotFound(); }
-            return await _context.User
-                .ProjectTo<UserDTO>(_mapper.ConfigurationProvider).ToArrayAsync();
+            var Users = _userDAL.GetAll();
+            return await Users.ProjectTo<UserDTO>(_mapper.ConfigurationProvider).ToArrayAsync();
         }
 
         [HttpGet("{id:int}")]
         public async Task<ActionResult<UserDTO>> GetUser(int id)
         {
-            if (_context.User is null) { return NotFound(); }
-            var user = await _context.User.FirstOrDefaultAsync(u => u.Id == id);
-            var UserDTO = _mapper.Map<UserDTO>(user);
+            var User = await _userDAL.GetById(id);
+            var UserDTO = _mapper.Map<UserDTO>(User);
             return UserDTO;
         }
 
         [HttpPost("new")]
         public async Task<ActionResult> AddUser(AddUserDTO userDTO)
         {
-            var userExists = await _context.User.AnyAsync(u => u.Email.ToLower() == userDTO.Email.ToLower());
-            var userRoleExists = await _context.User.AnyAsync(u => u.Role == userDTO.Role);
-            if (userExists) return Ok(new { isSuccess = false, errorType = 1 });
-            if (userRoleExists) return Ok(new { isSuccess = false, errorType = 2 });
-            var userDB = _mapper.Map<User>(userDTO);
-            _context.Add(userDB);
-            await _context.SaveChangesAsync();
-            var token = _tokenService.GetToken(userDB);
-            var user = await _context.User.FirstOrDefaultAsync(u => u.Email == userDTO.Email);
-            return Ok(new
+           
+            var user = _mapper.Map<User>(userDTO);
+            var request = await _userDAL.Add(user);
+
+            if (request.Ok)
             {
-                isSuccess = true,
-                token,
-                user.Id,
-                user.Name,
-                user.Role,
-            });
+                var User = await _userDAL.GetByEmail(userDTO.Email);
+                var token = _tokenService.GetToken(User);
+                return Ok(new
+                {
+                    isSuccess = true,
+                    token,
+                    User.Id,
+                    User.Name,
+                    User.Role,
+                });
+            }
+            else
+            {
+                return Ok(new { isSuccess = false, errorType = request.ErrorType });
+            }
+           
         }
 
         [HttpPut("update")]
         public async Task<ActionResult> UpdateUser(UserDTO userDTO)
         {
 
-            var userMailExists = await _context.User.AnyAsync(u => u.Email.ToLower() == userDTO.Email.ToLower() && u.Id != userDTO.Id);
-            var userRoleExists = await _context.User.AnyAsync(u => u.Role == userDTO.Role && userDTO.Role != Role.Admin && u.Id != userDTO.Id );
+            var user = await _userDAL.GetForUpdate(userDTO.Id);
+            user = _mapper.Map(userDTO, user);
+            var request = await _userDAL.Update(user);
 
-
-            if (userMailExists) return Ok(new { isSuccess = false, errorType = 1 });
-            if (userRoleExists) return Ok(new { isSuccess = false, errorType = 2 });
-
-            var userDB = await _context.User.AsTracking().FirstOrDefaultAsync(b => b.Id == userDTO.Id);
-            userDB = _mapper.Map(userDTO, userDB);
-            userDB.UpdatedDate = DateTime.Now;
-            await _context.SaveChangesAsync();
-            return Ok(new { isSuccess = true });
-
-
+            if(request.Ok) return Ok(new { isSuccess = true });
+            else return Ok(new { isSuccess = false, errorType = request.ErrorType });
         }
 
         [HttpDelete("delete/{usrId:int}/{userId:int}")]
         public async Task<ActionResult> DeleteUser(int usrId, int userId)
         {
-            var userDB = await _context.User.AsTracking().FirstOrDefaultAsync(b => b.Id == usrId);
-            if (usrId == 1) return Ok(new { isSuccess = false, errorType = 0 });
-            userDB.IsDeleted = true;
-            userDB.DeletedDate = DateTime.Now;
-            userDB.DeletedBy = userId;
-            await _context.SaveChangesAsync();
-            return Ok(new { isSuccess = true });
+            var ok = await _userDAL.Delete(usrId, userId);
+            if(ok) return Ok(new { isSuccess = true });
+            else return Ok(new { isSuccess = false, errorType = 0 });
         }
 
 
         [HttpPut("update/password/")]
         public async Task<ActionResult> UpdatePasswordUser(EditPassword password)
         {
-            var userDB = await _context.User.AsTracking().FirstOrDefaultAsync(b => b.Id == password.UserId);
 
             if (password.IsRestore)
             {
-                userDB.Password = password.NewPassword;
-                userDB.Reset = true;
-                await _context.SaveChangesAsync();
-                return Ok(new { isSuccess = true });
+                var OK = _userDAL.RestorePassword(password.UserId, password.NewPassword, true);
+                return Ok(new { isSuccess = OK });
             }
 
             if(password.OldPassword != null)
             {
-                if (BCrypt.Net.BCrypt.Verify(password.OldPassword, userDB.Password))
-                {
-                    if (BCrypt.Net.BCrypt.Verify(password.NewPassword, userDB.Password))
-                    {
-                        return Ok(new { isSuccess = false, errorType = 4 });
-                    }
-
-                    userDB.Password = password.NewPassword;
-                    await _context.SaveChangesAsync();
-                    return Ok(new { isSuccess = true });
-                }
-                else return Ok(new { isSuccess = false, errorType = 3 });
+                var request = await _userDAL.ChangePassword(password.UserId, password.OldPassword, password.NewPassword);
+                if (request.Ok) return Ok(new { isSuccess = true });
+                else Ok(new { isSuccess = false, errorType = request.ErrorType });
             }
 
-            userDB.Password = password.NewPassword;
-            userDB.Reset = false;
-            await _context.SaveChangesAsync();
-            return Ok(new { isSuccess = true });
+            var ok = await _userDAL.RestorePassword(password.UserId, password.NewPassword, false);
+            return Ok(new { isSuccess = ok });
 
         }
 
@@ -139,22 +117,20 @@ namespace WebAPI.Controllers
         [HttpPost("validate")]
         public async Task<ActionResult> ValidateUser(ValidateUserDTO userDTO)
         {
-            var userDB = await _context.User.FirstOrDefaultAsync(u => u.Email == userDTO.Email);
+            var user = await _userDAL.GetByEmail(userDTO.Email);
 
-            if (userDB is null) return Ok(new { isSuccess = false, errorType = 5 });
-
-            if (BCrypt.Net.BCrypt.Verify(userDTO.Password, userDB.Password))
+            if (BCrypt.Net.BCrypt.Verify(userDTO.Password, user.Password))
             {
-                var token = _tokenService.GetToken(userDB);
-                var user = _mapper.Map<UserDTO>(userDB);
+                var token = _tokenService.GetToken(user);
+                var usr = _mapper.Map<UserDTO>(user);
                 return Ok(new
                 {
                     isSuccess = true,
                     token,
-                    user.Id,
-                    user.Name,
-                    user.Role,
-                    user.Reset
+                    usr.Id,
+                    usr.Name,
+                    usr.Role,
+                    usr.Reset
                 });
             }
             else return Ok(new

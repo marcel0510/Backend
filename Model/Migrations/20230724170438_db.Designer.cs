@@ -12,8 +12,8 @@ using Model;
 namespace Model.Migrations
 {
     [DbContext(typeof(ScheduleDbContext))]
-    [Migration("20230712234506_DB")]
-    partial class DB
+    [Migration("20230724170438_db")]
+    partial class db
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,7 +48,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 7, 12, 18, 45, 6, 701, DateTimeKind.Local).AddTicks(8981));
+                        .HasDefaultValue(new DateTime(2023, 7, 24, 12, 4, 38, 563, DateTimeKind.Local).AddTicks(2638));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -126,7 +126,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 7, 12, 18, 45, 6, 702, DateTimeKind.Local).AddTicks(1156));
+                        .HasDefaultValue(new DateTime(2023, 7, 24, 12, 4, 38, 563, DateTimeKind.Local).AddTicks(5588));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -213,7 +213,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 7, 12, 18, 45, 6, 702, DateTimeKind.Local).AddTicks(3379));
+                        .HasDefaultValue(new DateTime(2023, 7, 24, 12, 4, 38, 563, DateTimeKind.Local).AddTicks(8544));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -252,6 +252,25 @@ namespace Model.Migrations
                     b.HasIndex("BuildingId");
 
                     b.ToTable("Classroom", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            BuildingId = 1,
+                            Capacity = 15,
+                            Code = "E006A",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "Laboratorio de Electrotécnica",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
                 });
 
             modelBuilder.Entity("Model.Entities.Floor", b =>
@@ -394,7 +413,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 7, 12, 18, 45, 6, 702, DateTimeKind.Local).AddTicks(6706));
+                        .HasDefaultValue(new DateTime(2023, 7, 24, 12, 4, 38, 564, DateTimeKind.Local).AddTicks(3078));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -432,6 +451,23 @@ namespace Model.Migrations
                     b.HasIndex("SubjectId");
 
                     b.ToTable("Group", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CalendarId = 1,
+                            ClassroomId = 1,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-1",
+                            SubjectId = 1,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
                 });
 
             modelBuilder.Entity("Model.Entities.Session", b =>
@@ -471,6 +507,17 @@ namespace Model.Migrations
                     b.HasIndex("GroupId");
 
                     b.ToTable("Session", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 1,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        });
                 });
 
             modelBuilder.Entity("Model.Entities.Subject", b =>
@@ -489,8 +536,8 @@ namespace Model.Migrations
 
                     b.Property<string>("Code")
                         .IsRequired()
-                        .HasMaxLength(8)
-                        .HasColumnType("nvarchar(8)")
+                        .HasMaxLength(12)
+                        .HasColumnType("nvarchar(12)")
                         .HasColumnName("code");
 
                     b.Property<int>("CreatedBy")
@@ -501,7 +548,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 7, 12, 18, 45, 6, 703, DateTimeKind.Local).AddTicks(1092));
+                        .HasDefaultValue(new DateTime(2023, 7, 24, 12, 4, 38, 564, DateTimeKind.Local).AddTicks(9177));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -547,6 +594,42 @@ namespace Model.Migrations
                         .HasFilter("isDeleted = 'false'");
 
                     b.ToTable("Subject", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Code = "IEED272L",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsLab = false,
+                            Name = "LABORATORIO ELECTROTECNIA",
+                            NumCredits = 2,
+                            NumHours = 2,
+                            NumSemester = 2,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Code = "IEED353L",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            IsLab = false,
+                            Name = "LABORATORIO FUNDAMENTOS DE CIRCUITOS ELECTRICOS",
+                            NumCredits = 2,
+                            NumHours = 2,
+                            NumSemester = 3,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
                 });
 
             modelBuilder.Entity("Model.Entities.User", b =>
@@ -566,7 +649,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 7, 12, 18, 45, 6, 703, DateTimeKind.Local).AddTicks(4061));
+                        .HasDefaultValue(new DateTime(2023, 7, 24, 12, 4, 38, 565, DateTimeKind.Local).AddTicks(3260));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -634,7 +717,7 @@ namespace Model.Migrations
                             Email = "admin@gmail.com",
                             IsDeleted = false,
                             Name = "Admin",
-                            Password = "$2a$11$GM76/V0lgQIpAqg/ANq.Ie4d1zfmHAQHaxOFDMnbgxSwDDjKrQUV2",
+                            Password = "$2a$11$t08e60wy4AryxSxnA4.ZwOXV.mmE4A4M1pPF5QMcOaRayxVrXwfFu",
                             Reset = false,
                             Role = "Admin",
                             UpdatedBy = 0,

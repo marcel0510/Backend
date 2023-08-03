@@ -7,5 +7,6 @@
         public int ClassroomId { get; set; }
         public int CalendarId { get; set; }
         public List<AddSessionDTO> Sessions { get; set; }
+        public int CreatedBy { get; set; }  
     }
 }

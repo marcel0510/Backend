@@ -22,7 +22,7 @@ namespace Model.Config
                 .HasColumnName("id");
             builder.Property(s => s.Code)
                 .IsRequired()
-                .HasMaxLength(8)
+                .HasMaxLength(12)
                 .HasColumnName("code");
 
             builder.Property(s => s.Name)

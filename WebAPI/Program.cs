@@ -1,13 +1,13 @@
  //1. Importamos el paquete necesario
 using Microsoft.EntityFrameworkCore;
 using Model;
-using WebAPI.Services.Interfaces;
-using WebAPI.Services.Classes;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using WebAPI.Secutiry;
+using Model.DAL.Interfaces;
+using Model.DAL.Classes;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,7 +21,6 @@ var configuration = builder.Configuration;
 builder.Services.AddDbContext<ScheduleDbContext>(options =>
 {
     options.UseSqlServer(connectionString);
-    //Comportamiento Tracking por defecto para mejorar la eficiencia de la aplicacion
     options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 });
 // Add services to the container.
@@ -31,7 +30,6 @@ builder.Services.AddControllers().AddJsonOptions(options =>
     //Que se ignoren los ciclos que contienen unas a otras
     options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
 });
-
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -64,11 +62,13 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 //Agregar el AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
 
-builder.Services.AddScoped<IBuildingService, BuildingService>();
-builder.Services.AddScoped<IClassroomService, ClassroomService>();
-builder.Services.AddScoped<IGroupService, GroupService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
-
+builder.Services.AddScoped<IBuildingDAL, BuildingDAL>();
+builder.Services.AddScoped<ICalendarDAL, CalendarDAL>();
+builder.Services.AddScoped<IClassroomDAL, ClassroomDAL>();
+builder.Services.AddScoped<IGroupDAL, GroupDAL>();
+builder.Services.AddScoped<ISubjectDAL, SubjectDAL>();
+builder.Services.AddScoped<IUserDAL, UserDAL>();
 
 var app = builder.Build();
 
