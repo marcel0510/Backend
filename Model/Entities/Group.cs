@@ -1,8 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace Model.Entities
+﻿namespace Model.Entities
 {
     public class Group: BaseEntity
     {

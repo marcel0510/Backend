@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
-using Model.Enum;
+﻿using Model.Enum;
 
 namespace Model.Entities
 {
@@ -13,6 +10,5 @@ namespace Model.Entities
         public TimeSpan EndTime { get; set; }
         public int GroupId { get; set; }
         public Group Group { get; set; }
-        public bool IsDeleted { get; set; }
     }
 }
