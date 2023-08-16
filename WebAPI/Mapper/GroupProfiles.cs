@@ -1,10 +1,9 @@
 ﻿using AutoMapper;
 using Model.Entities;
 using System.Globalization;
-using WebAPI.DTO.AddDTO.AddGroupMapper;
-using WebAPI.DTO.EditDTO;
-using WebAPI.DTO.ReadDTO;
-using WebAPI.DTO.ReadDTO.GroupMapper;
+using WebAPI.DTO.ManDTO;
+using WebAPI.DTO.QueryDTO;
+using WebAPI.DTO.QueryDTO.GroupMapper;
 
 namespace WebAPI.Mapper
 {
@@ -24,11 +23,15 @@ namespace WebAPI.Mapper
             CreateMap<Group, GeneralGroupDTO>();
 
             //Para agregado
-            CreateMap<AddGroupDTO, Group>()
+            CreateMap<ManGroupDTO, Group>()
                .ForMember(ent => ent.Subject, dto => dto.MapFrom(campo => new Subject() { Id = campo.SubjectId }))
                .ForMember(ent => ent.Classroom, dto => dto.MapFrom(campo => new Classroom() { Id = campo.ClassroomId }))
-               .ForMember(ent => ent.Calendar, dto => dto.MapFrom(campo => new Model.Entities.Calendar() { Id = campo.CalendarId }));
-            CreateMap<AddSessionDTO, Session>()
+               .ForMember(ent => ent.Calendar, dto => dto.MapFrom(campo => new Model.Entities.Calendar() { Id = campo.CalendarId }))
+               .ForMember(ent => ent.Id, dto => dto.Condition(campo => campo.Id.HasValue))
+               .ForMember(ent => ent.CreatedBy, dto => dto.Condition(campo => campo.CreatedBy.HasValue))
+               .ForMember(ent => ent.UpdatedBy, dto => dto.Condition(campo => campo.UpdatedBy.HasValue));
+
+            CreateMap<ManSessionDTO, Session>()
                 .ForMember(ent => ent.StartTime,
                 dto => dto.MapFrom(campo => new TimeSpan(
                         DateTime.ParseExact(campo.StartTime, "HH:mm", CultureInfo.InvariantCulture).Hour,
@@ -42,10 +45,7 @@ namespace WebAPI.Mapper
                         DateTime.ParseExact(campo.EndTime, "HH:mm", CultureInfo.InvariantCulture).Second
                     )));
 
-            CreateMap<EditGroupDTO, Group>()
-               .ForMember(ent => ent.Subject, dto => dto.MapFrom(campo => new Subject() { Id = campo.SubjectId }))
-               .ForMember(ent => ent.Classroom, dto => dto.MapFrom(campo => new Classroom() { Id = campo.ClassroomId }))
-               .ForMember(ent => ent.Calendar, dto => dto.MapFrom(campo => new Model.Entities.Calendar() { Id = campo.CalendarId }));
+           
         }
     }
 }

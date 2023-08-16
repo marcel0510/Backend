@@ -5,6 +5,6 @@
         public string Period { get; set; }
         public DateTime PeriodInit { get; set; }
         public DateTime PeriodEnd { get; set;}
-        List<Group> Groups { get; set; }
+        public List<Group> Groups { get; set; }
     }
 }

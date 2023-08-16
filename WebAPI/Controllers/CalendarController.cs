@@ -5,9 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Model.DAL.Interfaces;
 using Model.Entities;
-using WebAPI.DTO.AddDTO;
-using WebAPI.DTO.EditDTO;
-using WebAPI.DTO.ReadDTO;
+using WebAPI.DTO.ManDTO;
+using WebAPI.DTO.QueryDTO;
 
 namespace WebAPI.Controllers
 {
@@ -40,23 +39,23 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("new")]
-        public async Task<ActionResult> AddCalendar(AddCalendarDTO calendarDTO)
+        public async Task<ActionResult> AddCalendar(ManCalendarDTO calendarDTO)
         {
             var calendar = _mapper.Map<Calendar>(calendarDTO);
-            var request = await _calendarDAL.Add(calendar, calendarDTO.NeedsCopy, calendarDTO.CalendarId);
-            if(request.Ok) return Ok(new { isSuccess = true });
-            else return Ok(new { isSuccess = false, errorType = request.ErrorType });
+            var response = await _calendarDAL.Add(calendar, calendarDTO.NeedsCopy, calendarDTO.CalendarId);
+            if(response.Ok) return Ok(new { isSuccess = true });
+            else return Ok(new { isSuccess = false, errorType = response.ErrorType });
 
         }
 
         [HttpPut("update")]
-        public async Task<ActionResult> UpdatCalendar(EditCalendarDTO calendarDTO)
+        public async Task<ActionResult> UpdatCalendar(ManCalendarDTO calendarDTO)
         {
-            var calendar = await _calendarDAL.Get(calendarDTO.Id);
+            var calendar = await _calendarDAL.GetForUpdate((int)calendarDTO.Id);
             calendar = _mapper.Map(calendarDTO, calendar);
-            var request = await _calendarDAL.Update(calendar);
-            if (request.Ok) return Ok(new { isSuccess = true });
-            else return Ok(new { isSuccess = false, errorType = request.ErrorType });
+            var response = await _calendarDAL.Update(calendar);
+            if (response.Ok) return Ok(new { isSuccess = true });
+            else return Ok(new { isSuccess = false, errorType = response.ErrorType });
         }
 
         [HttpDelete("delete/{calendarId:int}/{userId:int}")]

@@ -10,5 +10,7 @@ namespace Model.Entities
         public TimeSpan EndTime { get; set; }
         public int GroupId { get; set; }
         public Group Group { get; set; }
+        public bool IsDeleted { get; set; }
+
     }
 }

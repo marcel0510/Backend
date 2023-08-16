@@ -3,11 +3,10 @@ using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Microsoft.EntityFrameworkCore;
 using Model.Entities;
-using WebAPI.DTO.AddDTO;
-using WebAPI.DTO.EditDTO;
-using WebAPI.DTO.ReadDTO.SubjectMapper;
+using WebAPI.DTO.QueryDTO;
 using Microsoft.AspNetCore.Authorization;
 using Model.DAL.Interfaces;
+using WebAPI.DTO.ManDTO;
 
 namespace WebAPI.Controllers
 {
@@ -42,22 +41,22 @@ namespace WebAPI.Controllers
 
         [HttpPost("new")]
         
-        public async Task<ActionResult> AddSubject(AddSubjectDTO subjectDTO)
+        public async Task<ActionResult> AddSubject(ManSubjectDTO subjectDTO)
         {
             var subject = _mapper.Map<Subject>(subjectDTO);
-            var request = await _subjectDAL.Add(subject);
-            if (request.Ok) return Ok(new { isSuccess = true });
-            else return Ok(new { isSuccess = false, errorType = request.ErrorType });
+            var response = await _subjectDAL.Add(subject);
+            if (response.Ok) return Ok(new { isSuccess = true });
+            else return Ok(new { isSuccess = false, errorType = response.ErrorType });
         }
 
         [HttpPut("update")]
-        public async Task<ActionResult> UpdateSubject(EditSubjectDTO subjectDTO)
+        public async Task<ActionResult> UpdateSubject(ManSubjectDTO subjectDTO)
         {
-            var subject = await _subjectDAL.Get(subjectDTO.Id);
+            var subject = await _subjectDAL.GetForUpdate((int)subjectDTO.Id);
             subject = _mapper.Map(subjectDTO, subject);
-            var request = await _subjectDAL.Update(subject);
-            if (request.Ok) return Ok(new { isSuccess = true });
-            else return Ok(new { isSuccess = false, errorType = request.ErrorType });
+            var response = await _subjectDAL.Update(subject);
+            if (response.Ok) return Ok(new { isSuccess = true });
+            else return Ok(new { isSuccess = false, errorType = response.ErrorType });
         }
 
         [HttpDelete("delete/{subjectId:int}/{userId:int}")]

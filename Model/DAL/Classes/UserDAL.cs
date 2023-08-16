@@ -30,56 +30,56 @@ namespace Model.DAL.Classes
             return await _context.User.AsTracking().FirstOrDefaultAsync(u => u.Id == id);
         }
        
-        public async Task<Request> Add(User newUser)
+        public async Task<Response> Add(User newUser)
         {
-            var request = new Request();
+            var response = new Response();
             var doesUserExists = await _context.User.AnyAsync(u => u.Email == newUser.Email);
             if(doesUserExists)
             {
-                request.Ok = false;
-                request.ErrorType = 1;
-                return request;
+                response.Ok = false;
+                response.ErrorType = 1;
+                return response;
             }
             var doesRoleExists = await _context.User.AnyAsync(u => u.Role == newUser.Role);
             if(doesRoleExists)
             {
-                request.Ok = false;
-                request.ErrorType = 2;
-                return request;
+                response.Ok = false;
+                response.ErrorType = 2;
+                return response;
             }
 
             newUser.CreatedDate = DateTime.Now;
             _context.Add(newUser);
             await _context.SaveChangesAsync();
 
-            request.Ok = true;
-            return request;
+            response.Ok = true;
+            return response;
         }
 
-        public async Task<Request> Update(User updatedUser)
+        public async Task<Response> Update(User updatedUser)
         {
-            var request = new Request();
+            var response = new Response();
             var doesUserExists = await _context.User.AnyAsync(u => u.Email.ToLower() == updatedUser.Email.ToLower() && u.Id != updatedUser.Id);
             if (doesUserExists)
             {
-                request.Ok = false;
-                request.ErrorType = 1;
-                return request;
+                response.Ok = false;
+                response.ErrorType = 1;
+                return response;
             }
             var doesRoleExists = await _context.User.AnyAsync(u => u.Role == updatedUser.Role && u.Id != updatedUser.Id);
             if (doesRoleExists)
             {
-                request.Ok = false;
-                request.ErrorType = 2;
-                return request;
+                response.Ok = false;
+                response.ErrorType = 2;
+                return response;
             }
 
 
             updatedUser.UpdatedDate = DateTime.Now;
             await _context.SaveChangesAsync();
 
-            request.Ok = true;
-            return request;
+            response.Ok = true;
+            return response;
         }
 
         public async Task<bool> Delete(int usrId, int userId)
@@ -94,30 +94,30 @@ namespace Model.DAL.Classes
 
         }
 
-        public async Task<Request> ChangePassword(int id, string oldPassword, string newPassword)
+        public async Task<Response> ChangePassword(int id, string oldPassword, string newPassword)
         {
-            var request = new Request();
+            var response = new Response();
             var user = await _context.User.AsTracking().FirstOrDefaultAsync(u => u.Id == id);   
 
             if (BCrypt.Net.BCrypt.Verify(oldPassword, user.Password))
             {
                 if (BCrypt.Net.BCrypt.Verify(newPassword, user.Password))
                 {
-                    request.Ok = false;
-                    request.ErrorType = 4;
-                    return request;
+                    response.Ok = false;
+                    response.ErrorType = 4;
+                    return response;
                 }
 
                 user.Password = newPassword;
                 await _context.SaveChangesAsync();
-                request.Ok = true;
-                return request;
+                response.Ok = true;
+                return response;
             }
             else
             {
-                request.Ok = false;
-                request.ErrorType = 3;
-                return request;
+                response.Ok = false;
+                response.ErrorType = 3;
+                return response;
             }
         }
 
@@ -128,6 +128,18 @@ namespace Model.DAL.Classes
             user.Reset = isRestored;
             await _context.SaveChangesAsync();
             return true;
+        }
+
+        public async Task<User> Validate(string email, string password)
+        {
+            var user = await _context.User.FirstOrDefaultAsync(u => u.Email == email);
+            if (BCrypt.Net.BCrypt.Verify(password, user.Password))
+            {
+                return user;
+
+            }
+            return null;
+
         }
     }
 }

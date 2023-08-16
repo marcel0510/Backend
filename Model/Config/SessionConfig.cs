@@ -33,13 +33,13 @@ namespace Model.Config
                 .HasColumnType("time")
                 .HasColumnName("endTime");
 
-            builder.Property(g => g.GroupId)
+            builder.Property(s => s.GroupId)
                 .IsRequired()
                 .HasColumnName("groupId");
 
             builder.Property(s => s.IsDeleted)
                 .HasDefaultValue(false);
-            
+
         }
     }
 }

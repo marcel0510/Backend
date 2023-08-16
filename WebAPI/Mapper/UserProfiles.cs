@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Model.Entities;
-using WebAPI.DTO.AddDTO;
-using WebAPI.DTO.ReadDTO;
+using WebAPI.DTO.ManDTO;
+using WebAPI.DTO.QueryDTO;
 
 namespace WebAPI.Mapper
 {
@@ -9,8 +9,8 @@ namespace WebAPI.Mapper
     {
         public UserProfiles() {
 
-            CreateMap<User, UserDTO>().ReverseMap();
-            CreateMap<AddUserDTO, User>();
+            CreateMap<User, UserDTO>();
+            CreateMap<ManUserDTO, User>();
 
         }
     }

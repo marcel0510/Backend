@@ -3,10 +3,9 @@ using Model.Entities;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper.QueryableExtensions;
 using AutoMapper;
-using WebAPI.DTO.AddDTO.AddGroupMapper;
-using WebAPI.DTO.EditDTO;
-using WebAPI.DTO.ReadDTO.GroupMapper;
+using WebAPI.DTO.QueryDTO.GroupMapper;
 using Model.DAL.Interfaces;
+using WebAPI.DTO.ManDTO;
 
 namespace WebAPI.Controllers
 {
@@ -39,27 +38,27 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("new")]
-        public async Task<ActionResult<bool>> AddGroup(AddGroupDTO groupDTO)
+        public async Task<ActionResult<bool>> AddGroup(ManGroupDTO groupDTO)
         {
             var group = _mapper.Map<Group>(groupDTO);
-            var request = await _groupDAL.Add(group);
+            var response = await _groupDAL.Add(group);
 
-            if(request.Ok) return Ok(new { isSuccess = true });
-            else return Ok(new { isSuccess = false, errorType = request.ErrorType, overlappingGrs = request.Groups.Distinct() });
+            if(response.Ok) return Ok(new { isSuccess = true });
+            else return Ok(new { isSuccess = false, errorType = response.ErrorType, overlappingGrs = response.Groups.Distinct() });
         }
 
         [HttpPut("update")]
-        public async Task<ActionResult<bool>> UpdateGroup(EditGroupDTO groupDTO)
+        public async Task<ActionResult<bool>> UpdateGroup(ManGroupDTO groupDTO)
         {
-            var group = await _groupDAL.Get(groupDTO.Id);
+            var group = await _groupDAL.GetForUpdate((int)groupDTO.Id);
             var updatedSessions = _mapper.Map<List<Session>>(groupDTO.Sessions);
             group = _mapper.Map(groupDTO, group);
             group.Sessions.Clear();
             group.Sessions = updatedSessions;
-            var request = await _groupDAL.Update(group);
+            var response = await _groupDAL.Update(group);
 
-            if (request.Ok) return Ok(new { isSuccess = true });
-            else return Ok(new { isSuccess = false, errorType = request.ErrorType, overlappingGrs = request.Groups.Distinct() });
+            if (response.Ok) return Ok(new { isSuccess = true });
+            else return Ok(new { isSuccess = false, errorType = response.ErrorType, overlappingGrs = response.Groups.Distinct() });
 
         }
 

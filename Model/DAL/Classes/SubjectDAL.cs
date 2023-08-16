@@ -21,19 +21,19 @@ namespace Model.DAL.Classes
         {
             return _context.Subject;
         }
-        public Task<Subject> Get(int id)
+        public Task<Subject> GetForUpdate(int id)
         {
             return _context.Subject.AsTracking().FirstOrDefaultAsync(s => s.Id == id);
         }
-        public async Task<Request> Add(Subject newSubject)
+        public async Task<Response> Add(Subject newSubject)
         {
-            var request = new Request();
+            var response = new Response();
             var doesSubjectExists = await _context.Subject.AnyAsync(s => s.Code.ToLower() == newSubject.Code.ToLower());
             if(doesSubjectExists)
             {
-                request.Ok = false;
-                request.ErrorType = 1;
-                return request;
+                response.Ok = false;
+                response.ErrorType = 1;
+                return response;
             }
 
             if (newSubject.Alias == "") newSubject.Alias = null;
@@ -42,28 +42,28 @@ namespace Model.DAL.Classes
             await _context.SaveChangesAsync();
 
 
-            request.Ok = true;
-            return request;
+            response.Ok = true;
+            return response;
 
         }
-        public async Task<Request> Update(Subject updatedSubject)
+        public async Task<Response> Update(Subject updatedSubject)
         {
-            var request = new Request();
+            var response = new Response();
             var doesSubjectExists = await _context.Subject.AnyAsync(s => s.Code.ToLower() == updatedSubject.Code.ToLower() &&
                                                                          s.Id != updatedSubject.Id);
             if (doesSubjectExists)
             {
-                request.Ok = false;
-                request.ErrorType = 2;
-                return request;
+                response.Ok = false;
+                response.ErrorType = 2;
+                return response;
             }
             if (updatedSubject.Alias == "") updatedSubject.Alias = null;
             updatedSubject.UpdatedDate = DateTime.Now;
 
             await _context.SaveChangesAsync();
 
-            request.Ok = true;
-            return request;
+            response.Ok = true;
+            return response;
         }
 
         public async Task<bool> Delete(int subjectId, int userId)

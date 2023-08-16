@@ -45,7 +45,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 7, 24, 12, 4, 38, 563, DateTimeKind.Local).AddTicks(2638));
+                        .HasDefaultValue(new DateTime(2023, 8, 16, 12, 45, 9, 430, DateTimeKind.Local).AddTicks(1184));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -123,7 +123,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 7, 24, 12, 4, 38, 563, DateTimeKind.Local).AddTicks(5588));
+                        .HasDefaultValue(new DateTime(2023, 8, 16, 12, 45, 9, 430, DateTimeKind.Local).AddTicks(3359));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -210,7 +210,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 7, 24, 12, 4, 38, 563, DateTimeKind.Local).AddTicks(8544));
+                        .HasDefaultValue(new DateTime(2023, 8, 16, 12, 45, 9, 430, DateTimeKind.Local).AddTicks(5553));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -255,7 +255,7 @@ namespace Model.Migrations
                         {
                             Id = 1,
                             BuildingId = 1,
-                            Capacity = 15,
+                            Capacity = 12,
                             Code = "E006A",
                             CreatedBy = 0,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -264,7 +264,1714 @@ namespace Model.Migrations
                             Floor = "P1",
                             IsDeleted = false,
                             IsLab = true,
-                            Name = "Laboratorio de Electrotécnica",
+                            Name = "LAB. CIRCUITOS ELECTRICOS A",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            BuildingId = 1,
+                            Capacity = 12,
+                            Code = "E006B",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. CIRCUITOS ELECTRICOS B",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            BuildingId = 1,
+                            Capacity = 12,
+                            Code = "E007A",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. CIRCUITOS ELECTRICOS C",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            BuildingId = 1,
+                            Capacity = 12,
+                            Code = "E007B",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. CIRCUITOS ELECTRICOS D",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            BuildingId = 1,
+                            Capacity = 16,
+                            Code = "E008",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. CIRCUITOS ELECTRICOS",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 6,
+                            BuildingId = 1,
+                            Capacity = 20,
+                            Code = "E008",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. ALTA FRECUENCIA",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 7,
+                            BuildingId = 1,
+                            Capacity = 12,
+                            Code = "E018",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. DISPOSITIVOS ELECTRONICOS",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 8,
+                            BuildingId = 1,
+                            Capacity = 12,
+                            Code = "E019",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. DISPOSITIVOS ELECTRONICOS",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 9,
+                            BuildingId = 1,
+                            Capacity = 4,
+                            Code = "E020",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB.COMUNICACION ANALOGICA",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 10,
+                            BuildingId = 1,
+                            Capacity = 50,
+                            Code = "E021",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 11,
+                            BuildingId = 1,
+                            Capacity = 8,
+                            Code = "E001",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 12,
+                            BuildingId = 1,
+                            Capacity = 16,
+                            Code = "E001",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. REDES 2",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 13,
+                            BuildingId = 1,
+                            Capacity = 18,
+                            Code = "E002",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. REDES 1",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 14,
+                            BuildingId = 1,
+                            Capacity = 10,
+                            Code = "E004",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. SISTEMAS DIGITALES A",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 15,
+                            BuildingId = 1,
+                            Capacity = 4,
+                            Code = "E005",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. SISTEMAS DIGITALES B",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 16,
+                            BuildingId = 1,
+                            Capacity = 25,
+                            Code = "E006",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. SISTEMAS DIGITALES",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 17,
+                            BuildingId = 1,
+                            Capacity = 20,
+                            Code = "E012",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. CONECTIVIDAD DE REDES",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 18,
+                            BuildingId = 1,
+                            Capacity = 30,
+                            Code = "E013",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. DE SISTEMAS DE CONTROL",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 19,
+                            BuildingId = 1,
+                            Capacity = 25,
+                            Code = "E014",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. DE SISTEMAS MICROPROCESADOS",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 20,
+                            BuildingId = 1,
+                            Capacity = 6,
+                            Code = "E015",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. INVEST. EN CONTROL CON MICROPROCESADORES",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 21,
+                            BuildingId = 1,
+                            Capacity = 200,
+                            Code = "E020",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "AULA MAGNA ELECTRICA",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 22,
+                            BuildingId = 1,
+                            Capacity = 10,
+                            Code = "E002",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "PB",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. CONTROL INDUSTRIAL",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 23,
+                            BuildingId = 1,
+                            Capacity = 6,
+                            Code = "E003",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "PB",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. AUTOMATIZACION USANDO PLCS",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 24,
+                            BuildingId = 1,
+                            Capacity = 9,
+                            Code = "E007",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "PB",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. ELECTRONICA DE POTENCIA",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 25,
+                            BuildingId = 1,
+                            Capacity = 12,
+                            Code = "E008",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "PB",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. CONTROL MAQUINAS",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 26,
+                            BuildingId = 1,
+                            Capacity = 11,
+                            Code = "E026",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "PB",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. DE PROTECCIONES ELECTRICAS (LABPE)",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 27,
+                            BuildingId = 1,
+                            Capacity = 20,
+                            Code = "E001",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "S1",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 28,
+                            BuildingId = 1,
+                            Capacity = 50,
+                            Code = "E004",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "S1",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 29,
+                            BuildingId = 1,
+                            Capacity = 42,
+                            Code = "E005",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "S1",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 30,
+                            BuildingId = 1,
+                            Capacity = 50,
+                            Code = "E011",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "S1",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. MAQUINAS ELECTRICAS",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 31,
+                            BuildingId = 1,
+                            Capacity = 11,
+                            Code = "E012A",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "S1",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. DE SISTEMAS ELÉCTRICOS DE POTENCIA",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 32,
+                            BuildingId = 1,
+                            Capacity = 9,
+                            Code = "E012B",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "S1",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. DE DISTRIBUCIÓN",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 33,
+                            BuildingId = 1,
+                            Capacity = 25,
+                            Code = "E017",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "S1",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. ALTO VOLTAJE",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 34,
+                            BuildingId = 2,
+                            Capacity = 22,
+                            Code = "E002",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "MZ",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 35,
+                            BuildingId = 2,
+                            Capacity = 4,
+                            Code = "E004",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "MZ",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. DE MANDOS NEUMATICOS",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 36,
+                            BuildingId = 2,
+                            Capacity = 22,
+                            Code = "E001",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 37,
+                            BuildingId = 2,
+                            Capacity = 12,
+                            Code = "E002",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 38,
+                            BuildingId = 2,
+                            Capacity = 12,
+                            Code = "E003",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 39,
+                            BuildingId = 2,
+                            Capacity = 12,
+                            Code = "E004",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 40,
+                            BuildingId = 2,
+                            Capacity = 12,
+                            Code = "E006",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 41,
+                            BuildingId = 2,
+                            Capacity = 12,
+                            Code = "E007",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 42,
+                            BuildingId = 2,
+                            Capacity = 12,
+                            Code = "E008",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 43,
+                            BuildingId = 2,
+                            Capacity = 12,
+                            Code = "E009",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 44,
+                            BuildingId = 2,
+                            Capacity = 12,
+                            Code = "E010",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 45,
+                            BuildingId = 2,
+                            Capacity = 12,
+                            Code = "E011",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 46,
+                            BuildingId = 2,
+                            Capacity = 12,
+                            Code = "E012",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 47,
+                            BuildingId = 2,
+                            Capacity = 12,
+                            Code = "E013",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 48,
+                            BuildingId = 2,
+                            Capacity = 12,
+                            Code = "E014",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P1",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 49,
+                            BuildingId = 2,
+                            Capacity = 196,
+                            Code = "E019",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "AULA MAGNA QUIMICA",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 50,
+                            BuildingId = 2,
+                            Capacity = 15,
+                            Code = "E004",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. INVEST. PROCESOS",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 51,
+                            BuildingId = 2,
+                            Capacity = 29,
+                            Code = "E005",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 52,
+                            BuildingId = 2,
+                            Capacity = 23,
+                            Code = "E009",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 53,
+                            BuildingId = 2,
+                            Capacity = 56,
+                            Code = "E021",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 54,
+                            BuildingId = 2,
+                            Capacity = 54,
+                            Code = "E022",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 55,
+                            BuildingId = 2,
+                            Capacity = 50,
+                            Code = "E023",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 56,
+                            BuildingId = 2,
+                            Capacity = 40,
+                            Code = "E030",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P2",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. DE COMPUTACION",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 57,
+                            BuildingId = 2,
+                            Capacity = 41,
+                            Code = "E001",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P3",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 58,
+                            BuildingId = 2,
+                            Capacity = 50,
+                            Code = "E002",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P3",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 59,
+                            BuildingId = 2,
+                            Capacity = 29,
+                            Code = "E014",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P3",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. COMPUTACION QUIMICA",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 60,
+                            BuildingId = 2,
+                            Capacity = 29,
+                            Code = "E016",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P3",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. CENTRO COMPUTO AGROIND",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 61,
+                            BuildingId = 2,
+                            Capacity = 56,
+                            Code = "E021",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P3",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 62,
+                            BuildingId = 2,
+                            Capacity = 54,
+                            Code = "E022",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P3",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 63,
+                            BuildingId = 2,
+                            Capacity = 50,
+                            Code = "E023",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P3",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 64,
+                            BuildingId = 2,
+                            Capacity = 20,
+                            Code = "E004",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P4",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. TERMODINAMICA",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 65,
+                            BuildingId = 2,
+                            Capacity = 20,
+                            Code = "E005",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P4",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. TERMODINAMICA",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 66,
+                            BuildingId = 2,
+                            Capacity = 20,
+                            Code = "E006",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P4",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. TERMODINAMICA",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 67,
+                            BuildingId = 2,
+                            Capacity = 20,
+                            Code = "E007",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P4",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. TERMODINAMICA",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 68,
+                            BuildingId = 2,
+                            Capacity = 20,
+                            Code = "E008",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P4",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. TERMODINAMICA",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 69,
+                            BuildingId = 2,
+                            Capacity = 19,
+                            Code = "E009",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P4",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 70,
+                            BuildingId = 2,
+                            Capacity = 25,
+                            Code = "E013",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P4",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. FISICO-QUIMICA",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 71,
+                            BuildingId = 2,
+                            Capacity = 48,
+                            Code = "E020",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P4",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 72,
+                            BuildingId = 2,
+                            Capacity = 48,
+                            Code = "E021",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P4",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 73,
+                            BuildingId = 2,
+                            Capacity = 48,
+                            Code = "E022",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P4",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 74,
+                            BuildingId = 2,
+                            Capacity = 48,
+                            Code = "E023",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P4",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 75,
+                            BuildingId = 2,
+                            Capacity = 48,
+                            Code = "E010",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P5",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "Lab. Petroleos",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 76,
+                            BuildingId = 2,
+                            Capacity = 48,
+                            Code = "E020",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P5",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 77,
+                            BuildingId = 2,
+                            Capacity = 50,
+                            Code = "E027",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P5",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 78,
+                            BuildingId = 2,
+                            Capacity = 48,
+                            Code = "E028",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P5",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 79,
+                            BuildingId = 2,
+                            Capacity = 48,
+                            Code = "E029",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P5",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 80,
+                            BuildingId = 2,
+                            Capacity = 8,
+                            Code = "E002",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P6",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. DE SENSORES Y TRANSDUCTORES",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 81,
+                            BuildingId = 2,
+                            Capacity = 6,
+                            Code = "E003",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P6",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. INSTRUMENTACIÓN INDUSTRIAL",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 82,
+                            BuildingId = 2,
+                            Capacity = 6,
+                            Code = "E004",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P6",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. DE SCADA",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 83,
+                            BuildingId = 2,
+                            Capacity = 20,
+                            Code = "E022",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P6",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. SALA E",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 84,
+                            BuildingId = 2,
+                            Capacity = 20,
+                            Code = "E023",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P6",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. SALA D",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 85,
+                            BuildingId = 2,
+                            Capacity = 20,
+                            Code = "E026",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P6",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. SALA C",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 86,
+                            BuildingId = 2,
+                            Capacity = 20,
+                            Code = "E027",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P6",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. SALA B",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 87,
+                            BuildingId = 2,
+                            Capacity = 20,
+                            Code = "E028",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P6",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. SALA A",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 88,
+                            BuildingId = 2,
+                            Capacity = 8,
+                            Code = "E001",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P7",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. COMUNICACIONES INALÁMBRICAS",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 89,
+                            BuildingId = 2,
+                            Capacity = 6,
+                            Code = "E002",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P7",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. SISTEMAS DE TRANSMISIÓN",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 90,
+                            BuildingId = 2,
+                            Capacity = 20,
+                            Code = "E003",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P8",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. SOFTWARE DEFINIDO POR RADIO",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 91,
+                            BuildingId = 2,
+                            Capacity = 30,
+                            Code = "E004",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P7",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. INTERCONECTIVIDAD",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 92,
+                            BuildingId = 2,
+                            Capacity = 18,
+                            Code = "E005",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P7",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. COMUNICACIONES UNIFICADAS",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 93,
+                            BuildingId = 2,
+                            Capacity = 8,
+                            Code = "E006",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P7",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. REDES INDUSTRIALES Y SCADA",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 94,
+                            BuildingId = 2,
+                            Capacity = 8,
+                            Code = "E008",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P7",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. DE INVEST. EN REDES Y SISTEMAS DISTRI",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 95,
+                            BuildingId = 2,
+                            Capacity = 6,
+                            Code = "E014",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P7",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. INVES. Y SIMULACION DE TELECOM",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 96,
+                            BuildingId = 2,
+                            Capacity = 6,
+                            Code = "E015",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P7",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. COMUNICACIONES OPTICAS",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 97,
+                            BuildingId = 2,
+                            Capacity = 30,
+                            Code = "E024",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P7",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 98,
+                            BuildingId = 2,
+                            Capacity = 32,
+                            Code = "E025",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P7",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 99,
+                            BuildingId = 2,
+                            Capacity = 38,
+                            Code = "E026",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P7",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 100,
+                            BuildingId = 2,
+                            Capacity = 6,
+                            Code = "E002",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "P8",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LABORATORIO DE ANTENAS",
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 101,
+                            BuildingId = 2,
+                            Capacity = 30,
+                            Code = "E001",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "PB",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 102,
+                            BuildingId = 2,
+                            Capacity = 18,
+                            Code = "E014",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "PB",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 103,
+                            BuildingId = 2,
+                            Capacity = 55,
+                            Code = "E020",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "PB",
+                            IsDeleted = false,
+                            IsLab = false,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 104,
+                            BuildingId = 2,
+                            Capacity = 10,
+                            Code = "E023",
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Floor = "PB",
+                            IsDeleted = false,
+                            IsLab = true,
+                            Name = "LAB. CONTROL DE PROCESOS",
                             UpdatedBy = 0,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
@@ -396,7 +2103,8 @@ namespace Model.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("CalendarId")
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("calendarId");
 
                     b.Property<int>("ClassroomId")
                         .HasColumnType("int")
@@ -410,7 +2118,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 7, 24, 12, 4, 38, 564, DateTimeKind.Local).AddTicks(3078));
+                        .HasDefaultValue(new DateTime(2023, 8, 16, 12, 45, 9, 430, DateTimeKind.Local).AddTicks(8870));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -545,7 +2253,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 7, 24, 12, 4, 38, 564, DateTimeKind.Local).AddTicks(9177));
+                        .HasDefaultValue(new DateTime(2023, 8, 16, 12, 45, 9, 431, DateTimeKind.Local).AddTicks(3222));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -602,7 +2310,7 @@ namespace Model.Migrations
                             DeletedBy = 0,
                             DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            IsLab = false,
+                            IsLab = true,
                             Name = "LABORATORIO ELECTROTECNIA",
                             NumCredits = 2,
                             NumHours = 2,
@@ -619,7 +2327,7 @@ namespace Model.Migrations
                             DeletedBy = 0,
                             DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDeleted = false,
-                            IsLab = false,
+                            IsLab = true,
                             Name = "LABORATORIO FUNDAMENTOS DE CIRCUITOS ELECTRICOS",
                             NumCredits = 2,
                             NumHours = 2,
@@ -646,7 +2354,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 7, 24, 12, 4, 38, 565, DateTimeKind.Local).AddTicks(3260));
+                        .HasDefaultValue(new DateTime(2023, 8, 16, 12, 45, 9, 431, DateTimeKind.Local).AddTicks(6193));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -714,7 +2422,7 @@ namespace Model.Migrations
                             Email = "admin@gmail.com",
                             IsDeleted = false,
                             Name = "Admin",
-                            Password = "$2a$11$t08e60wy4AryxSxnA4.ZwOXV.mmE4A4M1pPF5QMcOaRayxVrXwfFu",
+                            Password = "$2a$11$Ex.QtyWmeZ16sSA7h0z5EeASUpGr.fiKQs8KyGWhZVtzOdWNVXMYK",
                             Reset = false,
                             Role = "Admin",
                             UpdatedBy = 0,
@@ -747,7 +2455,7 @@ namespace Model.Migrations
             modelBuilder.Entity("Model.Entities.Group", b =>
                 {
                     b.HasOne("Model.Entities.Calendar", "Calendar")
-                        .WithMany()
+                        .WithMany("Groups")
                         .HasForeignKey("CalendarId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -787,6 +2495,11 @@ namespace Model.Migrations
                     b.Navigation("Classrooms");
 
                     b.Navigation("Floors");
+                });
+
+            modelBuilder.Entity("Model.Entities.Calendar", b =>
+                {
+                    b.Navigation("Groups");
                 });
 
             modelBuilder.Entity("Model.Entities.Classroom", b =>

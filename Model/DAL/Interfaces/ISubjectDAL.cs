@@ -11,9 +11,9 @@ namespace Model.DAL.Interfaces
     public interface ISubjectDAL
     {
         public DbSet<Subject> GetAll();
-        public Task<Subject> Get(int id);
-        public Task<Request> Add(Subject newSubject);
-        public Task<Request> Update(Subject updatedSubject);
+        public Task<Subject> GetForUpdate(int id);
+        public Task<Response> Update(Subject updatedSubject);
+        public Task<Response> Add(Subject newSubject);
         public Task<bool> Delete(int subjectId, int userId);
     }
 }

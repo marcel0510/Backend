@@ -5,10 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Model;
 using Model.Entities;
-using WebAPI.DTO.AddDTO.AddBuildingMapper;
-using WebAPI.DTO.EditDTO;
-using WebAPI.DTO.ReadDTO.BuildingMapper;
+using WebAPI.DTO.QueryDTO.BuildingMapper;
 using Model.DAL.Interfaces;
+using WebAPI.DTO.ManDTO;
 
 namespace WebAPI.Controllers
 {
@@ -40,28 +39,28 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("new")]
-        public async Task<ActionResult> AddBuilding(AddBuildingDTO buldingDTO)
+        public async Task<ActionResult> AddBuilding(ManBuildingDTO buldingDTO)
         {
             var building = _mapper.Map<Building>(buldingDTO);
-            var request = await _buildingDAL.Add(building);
-            if (request.Ok) return Ok(new { isSuccess = true });
-            else return Ok(new { isSuccess = false, errorType = request.ErrorType });
+            var response = await _buildingDAL.Add(building);
+            if (response.Ok) return Ok(new { isSuccess = true });
+            else return Ok(new { isSuccess = false, errorType = response.ErrorType });
         }
 
         [HttpPut("update")]
-        public async Task<ActionResult> UpdateBuilding(EditBuildingDTO buildingDTO)
+        public async Task<ActionResult> UpdateBuilding(ManBuildingDTO buildingDTO)
         {
 
-            var building = await _buildingDAL.GetForUpdate(buildingDTO.Id);
+            var building = await _buildingDAL.GetForUpdate((int)buildingDTO.Id);
             var updatedFloors = _mapper.Map<List<Floor>>(buildingDTO.Floors);
             building = _mapper.Map(buildingDTO, building);
             building.Floors.Clear();
             building.Floors = updatedFloors;
 
-            var request = await _buildingDAL.Update(building);
+            var response = await _buildingDAL.Update(building);
 
-            if (request.Ok) return Ok(new { isSuccess = true });
-            else return Ok(new { isSuccess = false, errorType = request.ErrorType });
+            if (response.Ok) return Ok(new { isSuccess = true });
+            else return Ok(new { isSuccess = false, errorType = response.ErrorType });
         }
 
         [HttpDelete("delete/{buildingId:int}/{userId:int}")]

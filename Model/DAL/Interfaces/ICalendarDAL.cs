@@ -6,9 +6,9 @@ namespace Model.DAL.Interfaces
     public interface ICalendarDAL
     {
         public DbSet<Calendar> GetAll();
-        public Task<Calendar> Get(int id);
-        public Task<Request> Add(Calendar newCalendar, bool NeedsCopy, int oldCalendarId);
-        public Task<Request> Update(Calendar updatedCalendar);
+        public Task<Calendar> GetForUpdate(int id);
+        public Task<Response> Update(Calendar updatedCalendar);
+        public Task<Response> Add(Calendar newCalendar, bool NeedsCopy, int oldCalendarId);
         public Task<bool> Delete(int calendarId, int userId);
     }
 }

@@ -17,21 +17,21 @@ namespace Model.DAL.Classes
             return _context.Classroom;
         }
        
-        public Task<Classroom> Get(int id)
+        public Task<Classroom> GetForUpdate(int id)
         {
             return _context.Classroom.AsTracking().FirstOrDefaultAsync(c => c.Id == id);
         }
-        public async Task<Request> Add(Classroom newClassroom)
+        public async Task<Response> Add(Classroom newClassroom)
         {
-            var request = new Request();
+            var response = new Response();
             var doesClassroomExist = await _context.Classroom.AnyAsync(c => c.BuildingId == newClassroom.BuildingId &&
                                                                        c.Code.ToLower() == newClassroom.Code.ToLower() &&
                                                                        c.Floor.ToLower() == newClassroom.Floor.ToLower());
             if (doesClassroomExist)
             {
-                request.Ok = false;
-                request.ErrorType = 1;
-                return request;
+                response.Ok = false;
+                response.ErrorType = 1;
+                return response;
             }
 
             if (!newClassroom.IsLab) newClassroom.Name = null;
@@ -41,22 +41,22 @@ namespace Model.DAL.Classes
             _context.Add(newClassroom);
             await _context.SaveChangesAsync();
 
-            request.Ok = true;
-            return request;
+            response.Ok = true;
+            return response;
 
         }
-        public async Task<Request> Update(Classroom updatedClassroom)
+        public async Task<Response> Update(Classroom updatedClassroom)
         {
-            var request = new Request();
+            var response = new Response();
             var doesClassroomExist = await _context.Classroom.AnyAsync(c => c.BuildingId == updatedClassroom.BuildingId &&
                                                                        c.Code.ToLower() == updatedClassroom.Code.ToLower() &&
                                                                        c.Floor.ToLower() == updatedClassroom.Floor.ToLower() &&
                                                                        c.Id != updatedClassroom.Id);
             if (doesClassroomExist)
             {
-                request.Ok = false;
-                request.ErrorType = 1;
-                return request;
+                response.Ok = false;
+                response.ErrorType = 1;
+                return response;
             }
 
             if (!updatedClassroom.IsLab) updatedClassroom.Name = null;
@@ -65,8 +65,8 @@ namespace Model.DAL.Classes
             _context.Entry(updatedClassroom.Building).State = EntityState.Unchanged;
             await _context.SaveChangesAsync();
 
-            request.Ok = true;
-            return request;
+            response.Ok = true;
+            return response;
         }
 
         public async Task<bool> Delete(int classroomId, int userId)

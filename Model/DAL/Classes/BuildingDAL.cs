@@ -22,40 +22,41 @@ namespace Model.DAL.Classes
             return _context.Building.AsTracking().Include(b => b.Floors).FirstOrDefaultAsync(b => b.Id == id);
 
         }
-        public async Task<Request> Add(Building newBuilding)
+        public async Task<Response> Add(Building newBuilding)
         {
-            var request = new Request();
+            var response = new Response();
             var doesBuildExist = await _context.Building.AnyAsync(b => b.Code.ToLower() == newBuilding.Code.ToLower());
             if (doesBuildExist)
             {
-                request.Ok = false;
-                request.ErrorType = 1;
-                return request;
+                response.Ok = false;
+                response.ErrorType = 1;
+                return response;
             }
 
             newBuilding.CreatedDate = DateTime.Now;
             _context.Add(newBuilding);
             await _context.SaveChangesAsync();
 
-            request.Ok = true;
-            return request;
+            response.Ok = true;
+            return response;
 
         }
-        public async Task<Request> Update(Building updatedBuilding)
+        public async Task<Response> Update(Building updatedBuilding)
         {
-            var request = new Request();
+            var response = new Response();
             var doesBuildExist = await _context.Building.AnyAsync(b => b.Code.ToLower() == updatedBuilding.Code.ToLower() && b.Id != updatedBuilding.Id);
             if (doesBuildExist)
             {
-                request.Ok = false;
-                request.ErrorType = 2;
-                return request;
+                response.Ok = false;
+                response.ErrorType = 2;
+                return response;
             }
+
             updatedBuilding.UpdatedDate = DateTime.Now;
 
             await _context.SaveChangesAsync();
-            request.Ok = true;
-            return request;
+            response.Ok = true;
+            return response;
 
         }
         public async Task<bool> Delete(int buildingId, int userId)
@@ -74,7 +75,6 @@ namespace Model.DAL.Classes
             await _context.SaveChangesAsync();
             return true;
         }
-
     
     }
 }

@@ -2,13 +2,10 @@
 using AutoMapper.QueryableExtensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Model;
 using Model.DAL.Interfaces;
 using Model.Entities;
-using WebAPI.DTO;
-using WebAPI.DTO.AddDTO;
-using WebAPI.DTO.EditDTO;
-using WebAPI.DTO.ReadDTO.ClassroomMapper;
+using WebAPI.DTO.ManDTO;
+using WebAPI.DTO.QueryDTO.ClassroomMapper;
 
 namespace WebAPI.Controllers
 {
@@ -66,23 +63,23 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("new")]
-        public async Task<ActionResult> AddClasroom(AddClassroomDTO classroomDTO)
+        public async Task<ActionResult> AddClasroom(ManClassroomDTO classroomDTO)
         {
             var classroom = _mapper.Map<Classroom>(classroomDTO);
-            var request = await _classroomDAL.Add(classroom);
-            if (request.Ok) return Ok(new { isSuccess = true });
-            else return Ok(new { isSuccess = false, errorType = request.ErrorType });
+            var response = await _classroomDAL.Add(classroom);
+            if (response.Ok) return Ok(new { isSuccess = true });
+            else return Ok(new { isSuccess = false, errorType = response.ErrorType });
         }
 
         [HttpPut("update")]
-        public async Task<ActionResult> UpdateClassroom(EditClassroomDTO classroomDTO)
+        public async Task<ActionResult> UpdateClassroom(ManClassroomDTO classroomDTO)
         {
 
-            var classroom = await _classroomDAL.Get(classroomDTO.Id);
+            var classroom = await _classroomDAL.GetForUpdate((int)classroomDTO.Id);
             classroom = _mapper.Map(classroomDTO, classroom);
-            var request = await _classroomDAL.Update(classroom);
-            if (request.Ok) return Ok(new { isSuccess = true });
-            else return Ok(new { isSuccess = false, errorType = request.ErrorType });
+            var response = await _classroomDAL.Update(classroom);
+            if (response.Ok) return Ok(new { isSuccess = true });
+            else return Ok(new { isSuccess = false, errorType = response.ErrorType });
         }
        
         [HttpDelete("delete/{classroomId:int}/{userId:int}")]

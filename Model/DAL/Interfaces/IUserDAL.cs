@@ -14,10 +14,11 @@ namespace Model.DAL.Interfaces
         public Task<User> GetById(int id);
         public Task<User> GetByEmail(string email);
         public Task<User> GetForUpdate(int id);
-        public Task<Request> Add(User newUser);
-        public Task<Request> Update(User updatedUser);
+        public Task<Response> Add(User newUser);
+        public Task<Response> Update(User updatedUser);
         public Task<bool> Delete(int ursId, int userId);
-        public Task<Request> ChangePassword(int id, string oldPassword, string newPassword);
+        public Task<Response> ChangePassword(int id, string oldPassword, string newPassword);
         public Task<bool> RestorePassword(int id, string newPassword, bool isRestored);
+        public Task<User> Validate(string email, string password);
     }
 }

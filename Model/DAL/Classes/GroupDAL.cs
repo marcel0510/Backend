@@ -24,38 +24,38 @@ namespace Model.DAL.Classes
             return  _context.Group;
         }
 
-        public async Task<Group> Get(int id)
+        public async Task<Group> GetForUpdate(int id)
         {
             return await _context.Group.AsTracking().Include(g => g.Sessions).FirstOrDefaultAsync(g => g.Id == id);
         }
 
-        public async Task<Request> Add(Group newGroup)
+        public async Task<Response> Add(Group newGroup)
         {
-            var request = new Request();
+            var response = new Response();
             var classroom = await _context.Classroom.Include(c => c.Groups).ThenInclude(g => g.Sessions)
                 .FirstOrDefaultAsync(c => c.Id == newGroup.Classroom.Id);
 
             var doesGroupExist = ValidateRepitedNames(classroom.Groups, newGroup.Subject.Id, newGroup.Name, 0, false);
             if (doesGroupExist)
             {
-                request.Ok = false;
-                request.ErrorType = 1;
-                return request;
+                response.Ok = false;
+                response.ErrorType = 1;
+                return response;
             }
             var groupOnThursday = ValidateNoThursday(newGroup.Sessions);
             if (groupOnThursday)
             {
-                request.Ok = false;
-                request.ErrorType = 3;
-                return request;
+                response.Ok = false;
+                response.ErrorType = 3;
+                return response;
             }
             var doesOverlappingExist = ValidateOverlappingSchedules(classroom, newGroup.Sessions, 0, false);
             if(doesOverlappingExist.Count != 0)
             {
-                request.Ok = false;
-                request.ErrorType = 2;
-                request.Groups = doesOverlappingExist;
-                return request;
+                response.Ok = false;
+                response.ErrorType = 2;
+                response.Groups = doesOverlappingExist;
+                return response;
             }
 
 
@@ -68,37 +68,37 @@ namespace Model.DAL.Classes
             _context.Add(newGroup);
             await _context.SaveChangesAsync();
 
-            request.Ok = true;
-            return request;
+            response.Ok = true;
+            return response;
         }
 
-        public async Task<Request> Update(Group updatedGroup)
+        public async Task<Response> Update(Group updatedGroup)
         {
-            var request = new Request();
+            var response = new Response();
             var classroom = await _context.Classroom.Include(c => c.Groups).ThenInclude(g => g.Sessions)
                 .FirstOrDefaultAsync(c => c.Id == updatedGroup.Classroom.Id);
 
             var doesGroupExist = ValidateRepitedNames(classroom.Groups, updatedGroup.Subject.Id, updatedGroup.Name, updatedGroup.Id, true);
             if (doesGroupExist)
             {
-                request.Ok = false;
-                request.ErrorType = 1;
-                return request;
+                response.Ok = false;
+                response.ErrorType = 1;
+                return response;
             }
             var groupOnThursday = ValidateNoThursday(updatedGroup.Sessions);
             if (groupOnThursday)
             {
-                request.Ok = false;
-                request.ErrorType = 3;
-                return request;
+                response.Ok = false;
+                response.ErrorType = 3;
+                return response;
             }
             var doesOverlappingExist = ValidateOverlappingSchedules(classroom, updatedGroup.Sessions, updatedGroup.Id, true);
             if (doesOverlappingExist.Count != 0)
             {
-                request.Ok = false;
-                request.ErrorType = 2;
-                request.Groups = doesOverlappingExist;
-                return request;
+                response.Ok = false;
+                response.ErrorType = 2;
+                response.Groups = doesOverlappingExist;
+                return response;
             }
 
             updatedGroup.UpdatedDate = DateTime.Now;
@@ -109,8 +109,8 @@ namespace Model.DAL.Classes
 
             await _context.SaveChangesAsync();
 
-            request.Ok = true;
-            return request;
+            response.Ok = true;
+            return response;
         }
 
         public async Task<bool> Delete(int groupId, int userId)

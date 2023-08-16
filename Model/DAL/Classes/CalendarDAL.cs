@@ -17,13 +17,13 @@ namespace Model.DAL.Classes
         {
             return _context.Calendar;
         }
-        public async Task<Calendar> Get(int id)
+        public async Task<Calendar> GetForUpdate(int id)
         {
             return await _context.Calendar.AsTracking().FirstOrDefaultAsync(c => c.Id == id);
         }
-        public async Task<Request> Add(Calendar newCalendar, bool NeedsCopy, int oldCalendarId)
+        public async Task<Response> Add(Calendar newCalendar, bool NeedsCopy, int oldCalendarId)
         {
-            var request = new Request();
+            var request = new Response();
             var doesCalendarExist = await _context.Calendar.AnyAsync(c => c.Period.ToLower() == newCalendar.Period.ToLower());
             if (doesCalendarExist)
             {
@@ -76,9 +76,9 @@ namespace Model.DAL.Classes
             request.Ok = true;
             return request;
         }
-        public async Task<Request> Update(Calendar updatedCalendar)
+        public async Task<Response> Update(Calendar updatedCalendar)
         {
-            var request = new Request();
+            var request = new Response();
             var doesCalendarExists = await _context.Calendar.AnyAsync(c => c.Period.ToLower() == updatedCalendar.Period.ToLower() && c.Id != updatedCalendar.Id);
             if (doesCalendarExists)
             {

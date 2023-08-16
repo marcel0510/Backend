@@ -9,6 +9,6 @@
         public Classroom Classroom { get; set; }
         public int CalendarId { get; set; }
         public Calendar Calendar { get; set; }
-        public List<Session> Sessions { get; set; } 
+        public List<Session> Sessions { get; set; }
     }
 }

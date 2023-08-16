@@ -6,5 +6,6 @@
         public string Code { get; set; }
         public int BuildingId { get; set; }
         public Building Building { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

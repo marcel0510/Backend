@@ -10,7 +10,7 @@ namespace Model.Config
         {
             builder.ToTable("Floor");
             builder.HasKey(b => b.Id);
-            builder.HasQueryFilter(f => !f.IsDeleted);
+            builder.HasQueryFilter(b => !b.IsDeleted);
 
 
             builder.Property(b => b.Id)
@@ -23,7 +23,7 @@ namespace Model.Config
                .HasMaxLength(3)
                .HasColumnName("code");
 
-            builder.Property(f => f.IsDeleted)
+            builder.Property(b => b.IsDeleted)
                 .HasDefaultValue(false);
         }
     }

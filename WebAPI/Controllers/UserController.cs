@@ -2,14 +2,10 @@
 using AutoMapper.QueryableExtensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Model;
 using Model.DAL.Interfaces;
 using Model.Entities;
-using Model.Enum;
-using Newtonsoft.Json.Linq;
-using WebAPI.DTO.AddDTO;
-using WebAPI.DTO.EditDTO;
-using WebAPI.DTO.ReadDTO;
+using WebAPI.DTO.ManDTO;
+using WebAPI.DTO.QueryDTO;
 using WebAPI.DTO.ValidateDTO;
 using WebAPI.Secutiry;
 
@@ -44,13 +40,13 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("new")]
-        public async Task<ActionResult> AddUser(AddUserDTO userDTO)
+        public async Task<ActionResult> AddUser(ManUserDTO userDTO)
         {
            
             var user = _mapper.Map<User>(userDTO);
-            var request = await _userDAL.Add(user);
+            var response = await _userDAL.Add(user);
 
-            if (request.Ok)
+            if (response.Ok)
             {
                 var User = await _userDAL.GetByEmail(userDTO.Email);
                 var token = _tokenService.GetToken(User);
@@ -65,21 +61,21 @@ namespace WebAPI.Controllers
             }
             else
             {
-                return Ok(new { isSuccess = false, errorType = request.ErrorType });
+                return Ok(new { isSuccess = false, errorType = response.ErrorType });
             }
            
         }
 
         [HttpPut("update")]
-        public async Task<ActionResult> UpdateUser(UserDTO userDTO)
+        public async Task<ActionResult> UpdateUser(ManUserDTO userDTO)
         {
 
-            var user = await _userDAL.GetForUpdate(userDTO.Id);
+            var user = await _userDAL.GetForUpdate((int)userDTO.Id);
             user = _mapper.Map(userDTO, user);
-            var request = await _userDAL.Update(user);
+            var response = await _userDAL.Update(user);
 
-            if(request.Ok) return Ok(new { isSuccess = true });
-            else return Ok(new { isSuccess = false, errorType = request.ErrorType });
+            if(response.Ok) return Ok(new { isSuccess = true });
+            else return Ok(new { isSuccess = false, errorType = response.ErrorType });
         }
 
         [HttpDelete("delete/{usrId:int}/{userId:int}")]
@@ -92,7 +88,7 @@ namespace WebAPI.Controllers
 
 
         [HttpPut("update/password/")]
-        public async Task<ActionResult> UpdatePasswordUser(EditPassword password)
+        public async Task<ActionResult> UpdatePasswordUser(ManPasswordDTO password)
         {
 
             if (password.IsRestore)
@@ -103,9 +99,9 @@ namespace WebAPI.Controllers
 
             if(password.OldPassword != null)
             {
-                var request = await _userDAL.ChangePassword(password.UserId, password.OldPassword, password.NewPassword);
-                if (request.Ok) return Ok(new { isSuccess = true });
-                else Ok(new { isSuccess = false, errorType = request.ErrorType });
+                var response = await _userDAL.ChangePassword(password.UserId, password.OldPassword, password.NewPassword);
+                if (response.Ok) return Ok(new { isSuccess = true });
+                else Ok(new { isSuccess = false, errorType = response.ErrorType });
             }
 
             var ok = await _userDAL.RestorePassword(password.UserId, password.NewPassword, false);
@@ -117,9 +113,9 @@ namespace WebAPI.Controllers
         [HttpPost("validate")]
         public async Task<ActionResult> ValidateUser(ValidateUserDTO userDTO)
         {
-            var user = await _userDAL.GetByEmail(userDTO.Email);
-
-            if (BCrypt.Net.BCrypt.Verify(userDTO.Password, user.Password))
+            var user = await _userDAL.Validate(userDTO.Email, userDTO.Password);
+            if (user is null) return Ok(new { isSuccess = false });
+            else
             {
                 var token = _tokenService.GetToken(user);
                 var usr = _mapper.Map<UserDTO>(user);
@@ -133,10 +129,6 @@ namespace WebAPI.Controllers
                     usr.Reset
                 });
             }
-            else return Ok(new
-            {
-                isSuccess = false,
-            }) ;
         }
     }
 }

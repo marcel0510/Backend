@@ -29,6 +29,11 @@ namespace Model.Config
             builder.Property(g => g.ClassroomId)
                 .IsRequired()
                 .HasColumnName("classroomId");
+
+            builder.Property(g => g.CalendarId)
+                .IsRequired()
+                .HasColumnName("calendarId");
+
             builder.Property(c => c.IsDeleted)
                 .HasDefaultValue(false);
             builder.Property(g => g.CreatedBy)

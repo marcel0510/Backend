@@ -1,8 +1,7 @@
 ﻿using AutoMapper;
 using Model.Entities;
-using WebAPI.DTO.AddDTO;
-using WebAPI.DTO.EditDTO;
-using WebAPI.DTO.ReadDTO.SubjectMapper;
+using WebAPI.DTO.ManDTO;
+using WebAPI.DTO.QueryDTO;
 
 namespace WebAPI.Mapper
 {
@@ -11,12 +10,12 @@ namespace WebAPI.Mapper
         public SubjectProfiles() {
 
             CreateMap<Subject, SubjectDTO>();
-            CreateMap<Group, SGroupDTO>();
-            CreateMap<Classroom, SClassroomDTO>();
 
-            CreateMap<AddSubjectDTO, Subject>();
+            CreateMap<ManSubjectDTO, Subject>()
+               .ForMember(ent => ent.Id, dto => dto.Condition(campo => campo.Id.HasValue))
+               .ForMember(ent => ent.CreatedBy, dto => dto.Condition(campo => campo.CreatedBy.HasValue))
+               .ForMember(ent => ent.UpdatedBy, dto => dto.Condition(campo => campo.UpdatedBy.HasValue));
 
-            CreateMap<EditSubjectDTO, Subject>();
 
         }
     }
