@@ -29,7 +29,7 @@ namespace Model.DAL.Classes
         {
             var response = new Response();
             var doesSubjectExists = await _context.Subject.AnyAsync(s => s.Code.ToLower() == newSubject.Code.ToLower());
-            if(doesSubjectExists)
+        if(doesSubjectExists)
             {
                 response.Ok = false;
                 response.ErrorType = 1;

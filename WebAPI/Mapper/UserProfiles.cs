@@ -10,7 +10,8 @@ namespace WebAPI.Mapper
         public UserProfiles() {
 
             CreateMap<User, UserDTO>();
-            CreateMap<ManUserDTO, User>();
+            CreateMap<ManUserDTO, User>()
+                .ForMember(ent => ent.Password, dto => dto.Condition(campo => campo.Password != null));
 
         }
     }

@@ -44,12 +44,14 @@ namespace Model.Seeding
             modelBuilder.Entity<Building>().HasData(electrica, quimica_electrica);
 
             //Pisos del edificio de Electrica
-            var s1 = new Floor() {
+            var s1 = new Floor()
+            {
                 Id = 1,
                 Code = "S1",
                 BuildingId = 1,
             };
-            var pbE = new Floor() {
+            var pbE = new Floor()
+            {
                 Id = 2,
                 Code = "PB",
                 BuildingId = 1
@@ -865,7 +867,7 @@ namespace Model.Seeding
                 Floor = "P4",
                 BuildingId = 2,
             };
-            var e17_s1_e023 = new Classroom()
+            var e17_p4_e023 = new Classroom()
             {
                 Id = 74,
                 Code = "E023",
@@ -876,9 +878,19 @@ namespace Model.Seeding
                 BuildingId = 2,
             };
             //P5
-            var e17_p5_e010 = new Classroom()
+            var e17_p5_e001 = new Classroom()
             {
                 Id = 75,
+                Code = "E001",
+                IsLab = false,
+                Name = null,
+                Capacity = 48,
+                Floor = "P5",
+                BuildingId = 2,
+            };
+            var e17_p5_e010 = new Classroom()
+            {
+                Id = 76,
                 Code = "E010",
                 IsLab = true,
                 Name = "Lab. Petroleos",
@@ -888,7 +900,7 @@ namespace Model.Seeding
             };
             var e17_p5_e020 = new Classroom()
             {
-                Id = 76,
+                Id = 77,
                 Code = "E020",
                 IsLab = false,
                 Name = null,
@@ -898,7 +910,7 @@ namespace Model.Seeding
             };
             var e17_p5_e027 = new Classroom()
             {
-                Id = 77,
+                Id = 78,
                 Code = "E027",
                 IsLab = false,
                 Name = null,
@@ -908,7 +920,7 @@ namespace Model.Seeding
             };
             var e17_p5_e028 = new Classroom()
             {
-                Id = 78,
+                Id = 79,
                 Code = "E028",
                 IsLab = false,
                 Name = null,
@@ -918,7 +930,7 @@ namespace Model.Seeding
             };
             var e17_p5_e029 = new Classroom()
             {
-                Id = 79,
+                Id = 80,
                 Code = "E029",
                 IsLab = false,
                 Name = null,
@@ -929,7 +941,7 @@ namespace Model.Seeding
             //P6
             var e17_p6_e002 = new Classroom()
             {
-                Id = 80,
+                Id = 81,
                 Code = "E002",
                 IsLab = true,
                 Name = "LAB. DE SENSORES Y TRANSDUCTORES",
@@ -939,7 +951,7 @@ namespace Model.Seeding
             };
             var e17_p6_e003 = new Classroom()
             {
-                Id = 81,
+                Id = 82,
                 Code = "E003",
                 IsLab = true,
                 Name = "LAB. INSTRUMENTACIÓN INDUSTRIAL",
@@ -949,7 +961,7 @@ namespace Model.Seeding
             };
             var e17_p6_e004 = new Classroom()
             {
-                Id = 82,
+                Id = 83,
                 Code = "E004",
                 IsLab = true,
                 Name = "LAB. DE SCADA",
@@ -959,7 +971,7 @@ namespace Model.Seeding
             };
             var e17_p6_e022 = new Classroom()
             {
-                Id = 83,
+                Id = 84,
                 Code = "E022",
                 IsLab = true,
                 Name = "LAB. SALA E",
@@ -969,7 +981,7 @@ namespace Model.Seeding
             };
             var e17_p6_e023 = new Classroom()
             {
-                Id = 84,
+                Id = 85,
                 Code = "E023",
                 IsLab = true,
                 Name = "LAB. SALA D",
@@ -979,7 +991,7 @@ namespace Model.Seeding
             };
             var e17_p6_e026 = new Classroom()
             {
-                Id = 85,
+                Id = 86,
                 Code = "E026",
                 IsLab = true,
                 Name = "LAB. SALA C",
@@ -989,7 +1001,7 @@ namespace Model.Seeding
             };
             var e17_p6_e027 = new Classroom()
             {
-                Id = 86,
+                Id = 87,
                 Code = "E027",
                 IsLab = true,
                 Name = "LAB. SALA B",
@@ -999,7 +1011,7 @@ namespace Model.Seeding
             };
             var e17_p6_e028 = new Classroom()
             {
-                Id = 87,
+                Id = 88,
                 Code = "E028",
                 IsLab = true,
                 Name = "LAB. SALA A",
@@ -1010,7 +1022,7 @@ namespace Model.Seeding
             //P7
             var e17_p7_e001 = new Classroom()
             {
-                Id = 88,
+                Id = 89,
                 Code = "E001",
                 IsLab = true,
                 Name = "LAB. COMUNICACIONES INALÁMBRICAS",
@@ -1020,7 +1032,7 @@ namespace Model.Seeding
             };
             var e17_p7_e002 = new Classroom()
             {
-                Id = 89,
+                Id = 90,
                 Code = "E002",
                 IsLab = true,
                 Name = "LAB. SISTEMAS DE TRANSMISIÓN",
@@ -1030,7 +1042,7 @@ namespace Model.Seeding
             };
             var e17_p7_e003 = new Classroom()
             {
-                Id = 90,
+                Id = 91,
                 Code = "E003",
                 IsLab = true,
                 Name = "LAB. SOFTWARE DEFINIDO POR RADIO",
@@ -1040,7 +1052,7 @@ namespace Model.Seeding
             };
             var e17_p7_e004 = new Classroom()
             {
-                Id = 91,
+                Id = 92,
                 Code = "E004",
                 IsLab = true,
                 Name = "LAB. INTERCONECTIVIDAD",
@@ -1050,7 +1062,7 @@ namespace Model.Seeding
             };
             var e17_p7_e005 = new Classroom()
             {
-                Id = 92,
+                Id = 93,
                 Code = "E005",
                 IsLab = true,
                 Name = "LAB. COMUNICACIONES UNIFICADAS",
@@ -1060,7 +1072,7 @@ namespace Model.Seeding
             };
             var e17_p7_e006 = new Classroom()
             {
-                Id = 93,
+                Id = 94,
                 Code = "E006",
                 IsLab = true,
                 Name = "LAB. REDES INDUSTRIALES Y SCADA",
@@ -1070,7 +1082,7 @@ namespace Model.Seeding
             };
             var e17_p7_e008 = new Classroom()
             {
-                Id = 94,
+                Id = 95,
                 Code = "E008",
                 IsLab = true,
                 Name = "LAB. DE INVEST. EN REDES Y SISTEMAS DISTRI",
@@ -1080,7 +1092,7 @@ namespace Model.Seeding
             };
             var e17_p7_e014 = new Classroom()
             {
-                Id = 95,
+                Id = 96,
                 Code = "E014",
                 IsLab = true,
                 Name = "LAB. INVES. Y SIMULACION DE TELECOM",
@@ -1090,7 +1102,7 @@ namespace Model.Seeding
             };
             var e17_p7_e015 = new Classroom()
             {
-                Id = 96,
+                Id = 97,
                 Code = "E015",
                 IsLab = true,
                 Name = "LAB. COMUNICACIONES OPTICAS",
@@ -1100,7 +1112,7 @@ namespace Model.Seeding
             };
             var e17_p7_e024 = new Classroom()
             {
-                Id = 97,
+                Id = 98,
                 Code = "E024",
                 IsLab = false,
                 Name = null,
@@ -1110,7 +1122,7 @@ namespace Model.Seeding
             };
             var e17_p7_e025 = new Classroom()
             {
-                Id = 98,
+                Id = 99,
                 Code = "E025",
                 IsLab = false,
                 Name = null,
@@ -1120,7 +1132,7 @@ namespace Model.Seeding
             };
             var e17_p7_e026 = new Classroom()
             {
-                Id = 99,
+                Id = 100,
                 Code = "E026",
                 IsLab = false,
                 Name = null,
@@ -1131,7 +1143,7 @@ namespace Model.Seeding
             //P8
             var e17_P8_e002 = new Classroom()
             {
-                Id = 100,
+                Id = 101,
                 Code = "E002",
                 IsLab = true,
                 Name = "LABORATORIO DE ANTENAS",
@@ -1142,7 +1154,7 @@ namespace Model.Seeding
             //PB
             var e17_pb_e001 = new Classroom()
             {
-                Id = 101,
+                Id = 102,
                 Code = "E001",
                 IsLab = false,
                 Name = null,
@@ -1152,7 +1164,7 @@ namespace Model.Seeding
             };
             var e17_pb_e014 = new Classroom()
             {
-                Id = 102,
+                Id = 103,
                 Code = "E014",
                 IsLab = false,
                 Name = null,
@@ -1162,7 +1174,7 @@ namespace Model.Seeding
             };
             var e17_pb_e020 = new Classroom()
             {
-                Id = 103,
+                Id = 104,
                 Code = "E020",
                 IsLab = false,
                 Name = null,
@@ -1172,7 +1184,7 @@ namespace Model.Seeding
             };
             var e17_pb_e023 = new Classroom()
             {
-                Id = 104,
+                Id = 105,
                 Code = "E023",
                 IsLab = true,
                 Name = "LAB. CONTROL DE PROCESOS",
@@ -1181,6 +1193,7 @@ namespace Model.Seeding
                 BuildingId = 2,
             };
 
+            //Agregado
             modelBuilder
                 .Entity<Classroom>()
                 .HasData(
@@ -1194,8 +1207,8 @@ namespace Model.Seeding
                 e17_p1_e001, e17_p1_e002, e17_p1_e003, e17_p1_e004, e17_p1_e006, e17_p1_e007, e17_p1_e008, e17_p1_e009, e17_p1_e010, e17_p1_e011, e17_p1_e012, e17_p1_e013, e17_p1_e014, e17_p1_e019,
                 e17_p2_e004, e17_p2_e005, e17_p2_e009, e17_p2_e021, e17_p2_e022, e17_p2_e023, e17_p2_e030,
                 e17_p3_e001, e17_p3_e002, e17_p3_e014, e17_p3_e016, e17_p3_e021, e17_p3_e022, e17_p3_e023,
-                e17_p4_e004, e17_p4_e005, e17_p4_e006, e17_p4_e007, e17_p4_e008, e17_p4_e009, e17_p4_e013, e17_p4_e020, e17_p4_e021, e17_p4_e022, e17_s1_e023,
-                e17_p5_e010, e17_p5_e020, e17_p5_e027, e17_p5_e028, e17_p5_e029,
+                e17_p4_e004, e17_p4_e005, e17_p4_e006, e17_p4_e007, e17_p4_e008, e17_p4_e009, e17_p4_e013, e17_p4_e020, e17_p4_e021, e17_p4_e022, e17_p4_e023,
+                e17_p5_e001, e17_p5_e010, e17_p5_e020, e17_p5_e027, e17_p5_e028, e17_p5_e029,
                 e17_p6_e002, e17_p6_e003, e17_p6_e004, e17_p6_e022, e17_p6_e023, e17_p6_e026, e17_p6_e027, e17_p6_e028,
                 e17_p7_e001, e17_p7_e002, e17_p7_e003, e17_p7_e004, e17_p7_e005, e17_p7_e006, e17_p7_e008, e17_p7_e014, e17_p7_e015, e17_p7_e024, e17_p7_e025, e17_p7_e026,
                 e17_P8_e002,
@@ -1203,514 +1216,2397 @@ namespace Model.Seeding
                 );
 
             //**************************** MATERIAS ***************************
-            //Electrotecnia
-            var electrotecnia = new Subject() { 
+            // ----------- Repetidas ---------------
+            // materias comunes
+            var algebra = new Subject()
+            {
                 Id = 1,
-                Code = "IEED272L",
-                IsLab = true,
-                Name = "LABORATORIO ELECTROTECNIA",
+                Code = "MATD113",
+                IsLab = false,
+                Name = "ÁLGEBRA LINEAL",
                 Alias = null,
-                NumHours = 2,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 1,
+            };
+            var calculo = new Subject()
+            {
+                Id = 2,
+                Code = "MATD123",
+                IsLab = false,
+                Name = "CÁLCULO EN UNA VARIABLE",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 1,
+            };
+            var mecanica = new Subject()
+            {
+                Id = 3,
+                Code = "FISD134",
+                IsLab = false,
+                Name = "MECÁNICA NEWTONIANA",
+                Alias = null,
+                NumHours = 192,
+                NumCredits = 4,
+                NumSemester = 1,
+            };
+            var laboratorioMecanica = new Subject()
+            {
+                Id = 4,
+                Code = "FISD134L",
+                IsLab = true,
+                Name = "LABORATORIO MECÁNICA NEWTONIANA",
+                Alias = null,
+                NumHours = 192,
+                NumCredits = 4,
+                NumSemester = 1,
+            };
+            var quimica = new Subject()
+            {
+                Id = 5,
+                Code = "QUID143",
+                IsLab = false,
+                Name = "QUÍMICA GENERAL",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 1,
+            };
+            var herramientasInformaticas = new Subject()
+            {
+                Id = 6,
+                Code = "ICOD111",
+                IsLab = false,
+                Name = "HERRAMIENTAS INFORMÁTICAS",
+                Alias = null,
+                NumHours = 48,
+                NumCredits = 1,
+                NumSemester = 1,
+            };
+            var comunicacionOralEscrita = new Subject()
+            {
+                Id = 7,
+                Code = "CSHD111",
+                IsLab = false,
+                Name = "COMUNICACIÓN ORAL Y ESCRITA",
+                Alias = null,
+                NumHours = 48,
+                NumCredits = 1,
+                NumSemester = 1,
+            };
+            var ecuacionesDiferenciales = new Subject()
+            {
+                Id = 8,
+                Code = "MATD213",
+                IsLab = false,
+                Name = "ECUACIONES DIFERENCIALES ORDINARIAS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 2,
+            };
+            var probabilidadEstadistica = new Subject()
+            {
+                Id = 9,
+                Code = "MATD223",
+                IsLab = false,
+                Name = "PROBABILIDAD Y ESTADÍSTICA BÁSICAS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 2,
+            };
+            var calculoVectorial = new Subject()
+            {
+                Id = 10,
+                Code = "IEED232",
+                IsLab = false,
+                Name = "CÁLCULO VECTORIAL",
+                Alias = null,
+                NumHours = 96,
                 NumCredits = 2,
                 NumSemester = 2,
             };
-            var fundamentoscircuitos = new Subject() {
-                Id = 2,
-                Code = "IEED353L",
-                IsLab = true,
-                Name = "LABORATORIO FUNDAMENTOS DE CIRCUITOS ELECTRICOS",
+            var fundamentosElectromagnetismo = new Subject()
+            {
+                Id = 11,
+                Code = "IEED242",
+                IsLab = false,
+                Name = "FUNDAMENTOS DE ELECTROMAGNETISMO",
                 Alias = null,
-                NumHours = 2,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 2,
+            };
+            var programacion = new Subject()
+            {
+                Id = 12,
+                Code = "IEED252",
+                IsLab = false,
+                Name = "PROGRAMACIÓN",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 2,
+            };
+            var analisisSocioeconomico = new Subject()
+            {
+                Id = 13,
+                Code = "CSHD211",
+                IsLab = false,
+                Name = "ANÁLISIS SOCIOECONÓMICO Y POLÍTICO DEL ECUADOR",
+                Alias = null,
+                NumHours = 48,
+                NumCredits = 1,
+                NumSemester = 2,
+            };
+            var electrotecnia = new Subject()
+            {
+                Id = 14,
+                Code = "IEED272",
+                IsLab = false,
+                Name = "ELECTROTECNIA",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 2,
+            };
+            var laboratorioElectrotecnia = new Subject()
+            {
+                Id = 15,
+                Code = "IEED272L",
+                IsLab = true,
+                Name = "LABORATORIO DE ELECTROTECNIA",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 2,
+            };
+            var matematicaAvanzada = new Subject()
+            {
+                Id = 16,
+                Code = "IEED312",
+                IsLab = false,
+                Name = "MATEMÁTICA AVANZADA",
+                Alias = null,
+                NumHours = 96,
                 NumCredits = 2,
                 NumSemester = 3,
             };
+            var sistemasDigitales = new Subject()
+            {
+                Id = 17,
+                Code = "IEED323",
+                IsLab = false,
+                Name = "SISTEMAS DIGITALES",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 2,
+            };
+            var laboratorioSistemasDigitales = new Subject()
+            {
+                Id = 18,
+                Code = "IEED323L",
+                IsLab = true,
+                Name = "LABORATORIO DE SISTEMAS DIGITALES",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 2,
+            };
+            var dispositivosElectronicos = new Subject()
+            {
+                Id = 19,
+                Code = "IEED333",
+                IsLab = false,
+                Name = "DISPOSITIVOS ELECTRÓNICOS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 3,
+            };
+            var laboratorioDispositivosElectronicos = new Subject()
+            {
+                Id = 20,
+                Code = "IEED333L",
+                IsLab = true,
+                Name = "LABORATORIO DE DISPOSITIVOS ELECTRONICOS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 3,
+            };
+            var teoriaElectromagnetica = new Subject()
+            {
+                Id = 21,
+                Code = "IEED342",
+                IsLab = false,
+                Name = "TEORÍA ELECTROMAGNÉTICA",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 3,
+            };
+            var fundamentosCircuitosElectricos = new Subject()
+            {
+                Id = 22,
+                Code = "IEED353",
+                IsLab = false,
+                Name = "FUNDAMENTOS DE CIRCUITOS ELÉCTRICOS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 3,
+            };
+            var laboratorioFundamentosCircuitosElectricos = new Subject()
+            {
+                Id = 23,
+                Code = "IEED353L",
+                IsLab = true,
+                Name = "LABORATORIO DE FUNDAMENTOS DE CIRCUITOS ELÉCTRICOS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 3,
+            };
+            var matematicaDiscreta = new Subject()
+            {
+                Id = 24,
+                Code = "IEED371",
+                IsLab = false,
+                Name = "MATEMÁTICA DISCRETA",
+                Alias = null,
+                NumHours = 48,
+                NumCredits = 1,
+                NumSemester = 3,
+            };
+            var instalacionesElectricasComunicaciones = new Subject()
+            {
+                Id = 25,
+                Code = "IEED413",
+                IsLab = false,
+                Name = "INSTALACIONES ELÉCTRICAS Y COMUNICACIONES",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 4,
+            };
+            var analisisSenalesSistemas = new Subject()
+            {
+                Id = 26,
+                Code = "IEAD423",
+                IsLab = false,
+                Name = "ANÁLISIS DE SEÑALES Y SISTEMAS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 4,
+            };
+            var circuitosElectronicos = new Subject()
+            {
+                Id = 27,
+                Code = "IEED433",
+                IsLab = false,
+                Name = "CIRCUITOS ELECTRÓNICOS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 4,
+            };
+            var laboratorioCircuitosElectronicos = new Subject()
+            {
+                Id = 28,
+                Code = "IEED433L",
+                IsLab = true,
+                Name = "LABORATORIO DE CIRCUITOS ELECTRÓNICOS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 4,
+            };
+            var conversionElectromecanicaEnergia = new Subject()
+            {
+                Id = 29,
+                Code = "IELD443",
+                IsLab = false,
+                Name = "CONVERSIÓN ELECTROMECÁNICA DE ENERGÍA",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 4,
+            };
+            var laboratorioConversionElectromecanicaEnergia = new Subject()
+            {
+                Id = 30,
+                Code = "IELD443L",
+                IsLab = true,
+                Name = "LABORATORIO DE CONVERSIÓN ELECTROMECÁNICA DE ENERGÍA",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 4,
+            };
+            var analisisCircuitosElectricos = new Subject()
+            {
+                Id = 31,
+                Code = "IEED452",
+                IsLab = false,
+                Name = "ANÁLISIS DE CIRCUITOS ELÉCTRICOS",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 4,
+            };
+            var laboratorioAnalisisCircuitosElectricos = new Subject()
+            {
+                Id = 32,
+                Code = "IEED452L",
+                IsLab = true,
+                Name = "LABORATORIO DE ANÁLISIS DE CIRCUITOS ELÉCTRICOS",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 4,
+            };
+            var electronicaPotencia = new Subject()
+            {
+                Id = 33,
+                Code = "IEAD533",
+                IsLab = false,
+                Name = "ELECTRÓNICA DE POTENCIA",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 5,
+            };
+            var laboratorioElectronicaPotencia = new Subject()
+            {
+                Id = 34,
+                Code = "IEAD533L",
+                IsLab = true,
+                Name = "LABORATORIO DE ELECTRÓNICA DE POTENCIA",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 5,
+            };
+            var maquinasElectricas = new Subject()
+            {
+                Id = 35,
+                Code = "IELD543",
+                IsLab = false,
+                Name = "MÁQUINAS ELÉCTRICAS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 5,
+            };
+            var laboratorioMaquinasElectricas = new Subject()
+            {
+                Id = 36,
+                Code = "IELD543L",
+                IsLab = true,
+                Name = "LABORATORIO DE MÁQUINAS ELÉCTRICAS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 5,
+            };
+            var sistemasControlAutomatico = new Subject()
+            {
+                Id = 37,
+                Code = "IEAD553",
+                IsLab = false,
+                Name = "SISTEMAS DE CONTROL AUTOMÁTICO",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 5,
+            };
+            var laboratorioSistemasControlAutomatico = new Subject()
+            {
+                Id = 38,
+                Code = "IEAD553L",
+                IsLab = true,
+                Name = "LABORATORIO DE SISTEMAS DE CONTROL AUTOMÁTICO",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 5,
+            };
+            var controlIndustrial = new Subject()
+            {
+                Id = 39,
+                Code = "IEAD642",
+                IsLab = false,
+                Name = "CONTROL INDUSTRIAL",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 6,
+            };
+            var laboratorioControlIndustrial = new Subject()
+            {
+                Id = 40,
+                Code = "IEAD642L",
+                IsLab = true,
+                Name = "LABORATORIO DE CONTROL INDUSTRIAL",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 6,
+            };
+            var seguridadIndustrialProteccionAmbiental = new Subject()
+            {
+                Id = 41,
+                Code = "IELD761",
+                IsLab = false,
+                Name = "SEGURIDAD INDUSTRIAL Y PROTECCIÓN AMBIENTAL",
+                Alias = null,
+                NumHours = 48,
+                NumCredits = 1,
+                NumSemester = 9,
+            };
+            var analisisSenalesDiscretasComunicaciones = new Subject()
+            {
+                Id = 42,
+                Code = "TELD423",
+                IsLab = false,
+                Name = "ANÁLISIS DE SEÑALES DISCRETAS PARA COMUNICACIONES",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 4,
+            };
+            var teoriaInformacionCodificacion = new Subject()
+            {
+                Id = 43,
+                Code = "TELD522",
+                IsLab = false,
+                Name = "TEORÍA DE LA INFORMACIÓN Y CODIFICACIÓN",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 5,
+            };
+            var sistemasEmbebidos = new Subject()
+            {
+                Id = 44,
+                Code = "ITID553",
+                IsLab = false,
+                Name = "SISTEMAS EMBEBIDOS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 5,
+            };
+            var laboratorioSistemasEmbebidos = new Subject()
+            {
+                Id = 45,
+                Code = "ITID553L",
+                IsLab = true,
+                Name = "LABORATORIO DE SISTEMAS EMBEBIDOS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 5,
+            };
+            var sistemasCableadoEstructurado = new Subject()
+            {
+                Id = 46,
+                Code = "ITID512",
+                IsLab = false,
+                Name = "SISTEMAS DE CABLEADO ESTRUCTURADO",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 5,
+            };
+            var gestionOrganizacional = new Subject()
+            {
+                Id = 47,
+                Code = "ADMD511",
+                IsLab = false,
+                Name = "GESTIÓN ORGANIZACIONAL",
+                Alias = null,
+                NumHours = 48,
+                NumCredits = 1,
+                NumSemester = 5,
+            };
+            var gestionProcesosCalidad = new Subject()
+            {
+                Id = 48,
+                Code = "ADMD611",
+                IsLab = false,
+                Name = "GESTIÓN DE PROCESOS Y CALIDAD",
+                Alias = null,
+                NumHours = 48,
+                NumCredits = 1,
+                NumSemester = 6,
+            };
+            var ingenieriaFinanciera = new Subject()
+            {
+                Id = 49,
+                Code = "ADMD711",
+                IsLab = false,
+                Name = "INGENIERÍA FINANCIERA",
+                Alias = null,
+                NumHours = 48,
+                NumCredits = 1,
+                NumSemester = 7,
+            };
+            var disenoTrabajoIntegracionCurricular = new Subject()
+            {
+                Id = 50,
+                Code = "TITD101",
+                IsLab = false,
+                Name = "DISEÑO DE TRABAJO DE INTEGRACIÓN CURRICULAR/ PREPARACIÓN EXAMEN DE CARÁCTER COMPLEXIVO",
+                Alias = null,
+                NumHours = 48,
+                NumCredits = 1,
+                NumSemester = 8,
+            };
+            var trabajoIntegracionCurricular = new Subject()
+            {
+                Id = 51,
+                Code = "TITD201",
+                IsLab = false,
+                Name = "TRABAJO DE INTEGRACIÓN CURRICULAR/EXAMEN DE CARÁCTER COMPLEXIVO",
+                Alias = null,
+                NumHours = 240,
+                NumCredits = 5,
+                NumSemester = 9,
+            };
+            // ----------- Electrica ---------------
+            var modelacionSistemasElectricosPotencia = new Subject()
+            {
+                Id = 52,
+                Code = "IELD512",
+                IsLab = false,
+                Name = "MODELACIÓN DE SISTEMAS ELÉCTRICOS DE POTENCIA",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 5,
+            };
+            var laboratorioModelacionSistemasElectricosPotencia = new Subject()
+            {
+                Id = 53,
+                Code = "IELD512L",
+                IsLab = true,
+                Name = "LAB. DE MODELACIÓN DE SISTEMAS ELÉCTRICOS DE POTENCIA",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 5,
+            };
+            var altoVoltaje = new Subject()
+            {
+                Id = 54,
+                Code = "IELD523",
+                IsLab = false,
+                Name = "ALTO VOLTAJE",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 5,
+            };
+            var laboratorioAltoVoltaje = new Subject()
+            {
+                Id = 55,
+                Code = "IELD523L",
+                IsLab = true,
+                Name = "LAB. DE ALTO VOLTAJE",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 5,
+            };
+            var estudiosEstadoEstacionarioSistemasElectricosPotencia = new Subject()
+            {
+                Id = 56,
+                Code = "IELD613",
+                IsLab = false,
+                Name = "ESTUDIOS DE ESTADO ESTACIONARIO DE SISTEMAS ELÉCTRICOS DE POTENCIA",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 6,
+            };
+            var laboratorioEstudiosEstadoEstacionarioSistemasElectricosPotencia = new Subject()
+            {
+                Id = 57,
+                Code = "IELD613L",
+                IsLab = true,
+                Name = "LAB. DE ESTUDIOS DE ESTADO ESTACIONARIO DE SISTEMAS ELÉCTRICOS DE POTENCIA",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 6,
+            };
+            var disenoAltoVoltaje = new Subject()
+            {
+                Id = 58,
+                Code = "IELD622",
+                IsLab = false,
+                Name = "DISEÑO EN ALTO VOLTAJE",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 6,
+            };
+            var sistemasElectricosDistribucion = new Subject()
+            {
+                Id = 59,
+                Code = "IELD633",
+                IsLab = false,
+                Name = "SISTEMAS ELÉCTRICOS DE DISTRIBUCIÓN",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 6,
+            };
+            var laboratorioSistemasElectricosDistribucion = new Subject()
+            {
+                Id = 60,
+                Code = "IELD633L",
+                IsLab = true,
+                Name = "LAB. DE SISTEMAS ELÉCTRICOS DE DISTRIBUCIÓN",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 6,
+            };
+            var dinamicaMaquinasElectricas = new Subject()
+            {
+                Id = 61,
+                Code = "IELD643",
+                IsLab = false,
+                Name = "DINÁMICA DE MÁQUINAS ELÉCTRICAS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 6,
+            };
+            var laboratorioDinamicaMaquinasElectricas = new Subject()
+            {
+                Id = 62,
+                Code = "IELD643L",
+                IsLab = true,
+                Name = "LAB. DE DINÁMICA DE MÁQUINAS ELÉCTRICAS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 6,
+            };
+            var instalacionesElectricasMedioVoltaje = new Subject()
+            {
+                Id = 63,
+                Code = "IELD652",
+                IsLab = false,
+                Name = "INSTALACIONES ELÉCTRICAS DE MEDIO VOLTAJE",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 6,
+            };
+            var estabilidadSistemasElectricosPotencia = new Subject()
+            {
+                Id = 64,
+                Code = "IELD713",
+                IsLab = false,
+                Name = "ESTABILIDAD DE SISTEMAS ELÉCTRICOS DE POTENCIA",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 7,
+            };
+            var laboratorioEstabilidadSistemasElectricosPotencia = new Subject()
+            {
+                Id = 65,
+                Code = "IELD713L",
+                IsLab = true,
+                Name = "LAB. DE ESTABILIDAD DE SISTEMAS ELÉCTRICOS DE POTENCIA",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 7,
+            };
+            var disenoElectromecanicoLineasTransmision = new Subject()
+            {
+                Id = 66,
+                Code = "IELD722",
+                IsLab = false,
+                Name = "DISEÑO ELECTROMECÁNICO DE LÍNEAS DE TRANSMISIÓN",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 7,
+            };
+            var construccionRedesElectricas = new Subject()
+            {
+                Id = 67,
+                Code = "IELD732",
+                IsLab = false,
+                Name = "CONSTRUCCIÓN DE REDES ELÉCTRICAS",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 7,
+            };
+            var centralesGeneracionElectrica = new Subject()
+            {
+                Id = 68,
+                Code = "IELD742",
+                IsLab = false,
+                Name = "CENTRALES DE GENERACIÓN ELÉCTRICA",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 7,
+            };
+            var introduccionProteccionesElectricas = new Subject()
+            {
+                Id = 69,
+                Code = "IELD753",
+                IsLab = false,
+                Name = "INTRODUCCIÓN A PROTECCIONES ELÉCTRICAS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 7,
+            };
+            var laboratorioIntroduccionProteccionesElectricas = new Subject()
+            {
+                Id = 70,
+                Code = "IELD753L",
+                IsLab = true,
+                Name = "LAB. DE INTRODUCCIÓN A PROTECCIONES ELÉCTRICAS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 7,
+            };
+            var optimizacionSistemasElectricosPotencia = new Subject()
+            {
+                Id = 71,
+                Code = "IELD772",
+                IsLab = false,
+                Name = "OPTIMIZACIÓN DE SISTEMAS ELÉCTRICOS DE POTENCIA",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 7,
+            };
+            var operacionControlSistemasElectricosPotencia = new Subject()
+            {
+                Id = 72,
+                Code = "IELD813",
+                IsLab = false,
+                Name = "OPERACIÓN Y CONTROL DE SISTEMAS ELÉCTRICOS DE POTENCIA",
+                Alias = null,
+                NumHours = 86,
+                NumCredits = 2,
+                NumSemester = 7,
+            };
+            var analisisSistemasElectricosPotencia = new Subject()
+            {
+                Id = 73,
+                Code = "IELD801",
+                IsLab = false,
+                Name = "ANÁLISIS DE SISTEMAS ELÉCTRICOS DE POTENCIA",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 8,
+            };
+            var accionamientoMaquinasElectricas = new Subject()
+            {
+                Id = 74,
+                Code = "IELD802",
+                IsLab = false,
+                Name = "ACCIONAMIENTO DE MÁQUINAS ELÉCTRICAS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 8,
+            };
+            var redesElectricasInteligentesGeneracionDistribuida = new Subject()
+            {
+                Id = 75,
+                Code = "ELD803",
+                IsLab = false,
+                Name = "REDES ELÉCTRICAS INTELIGENTES Y GENERACIÓN DISTRIBUIDA",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 8,
+            };
+            var calidadEnergiaElectrica = new Subject()
+            {
+                Id = 76,
+                Code = "IELD832",
+                IsLab = false,
+                Name = "CALIDAD DE ENERGÍA ELÉCTRICA",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 8,
+            };
+            var confiabilidadSistemasElectricosPotencia = new Subject()
+            {
+                Id = 77,
+                Code = "IELD842",
+                IsLab = false,
+                Name = "CONFIABILIDAD DE SISTEMAS ELÉCTRICOS DE POTENCIA",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 8,
+            };
+            var planificacionSistemasElectricosDistribucion = new Subject()
+            {
+                Id = 78,
+                Code = "IELD852",
+                IsLab = false,
+                Name = "PLANIFICACIÓN DE SISTEMAS ELÉCTRICOS DE DISTRIBUCIÓN",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 8,
+            };
+            var analisisEstabilidadPequenaSeñalSistemas = new Subject()
+            {
+                Id = 79,
+                Code = "IELD901",
+                IsLab = false,
+                Name = "ANÁLISIS DE ESTABILIDAD DE PEQUEÑA SEÑAL DE SISTEMAS",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 9,
+            };
+            var integracionEnergiasRenovablesSistemas = new Subject()
+            {
+                Id = 80,
+                Code = "ELD902",
+                IsLab = false,
+                Name = "INTEGRACIÓN DE ENERGÍAS RENOVABLES A SISTEMAS ELÉCTRICOS DE POTENCIA",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 9,
+            };
+            var sistemaGestionRedesDistribucion = new Subject()
+            {
+                Id = 81,
+                Code = "ELD903",
+                IsLab = false,
+                Name = "SISTEMA DE GESTIÓN DE REDES ELÉCTRICAS DE DISTRIBUCIÓN",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 9,
+            };
+            // -----------  Control ----------------
+            //5to Semestre
+            var sensoresytransductores = new Subject()
+            {
+                Id = 82,
+                Code = "IEAD513",
+                IsLab = false,
+                Name = "SENSORES Y TRANSDUCTORES",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 5,
+            };
+            var labSensoresytransductores = new Subject()
+            {
+                Id = 83,
+                Code = "IEAD513L",
+                IsLab = true,
+                Name = "LAB. DE SENSORES Y TRANSDUCTORES",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 5,
+            };
+            var sistemasMicroprocesados = new Subject()
+            {
+                Id = 84,
+                Code = "IEAD522",
+                IsLab = false,
+                Name = "SISTEMAS MICROPROCESADOS",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 5,
+            };
+            var labSistemasMicroprocesados = new Subject()
+            {
+                Id = 85,
+                Code = "IEAD522L",
+                IsLab = true,
+                Name = "LAB. DE SISTEMAS MICROPROCESADOS",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 5,
+            };
+            //6to semestre
+            var instrumentacionIndustrial = new Subject()
+            {
+                Id = 86,
+                Code = "IEAD613",
+                IsLab = false,
+                Name = "INSTRUMENTACIÓN INDUSTRIAL",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 6,
+            };
+            var labInstrumentacionIndustrial = new Subject()
+            {
+                Id = 87,
+                Code = "IEAD613L",
+                IsLab = true,
+                Name = "LAB. DE INSTRUMENTACIÓN INDUSTRIAL",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 6,
+            };
+            var controlEmbebido = new Subject()
+            {
+                Id = 88,
+                Code = "IEAD623",
+                IsLab = false,
+                Name = "CONTROL EMBEBIDO",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 6,
+            };
+            var labControlEmbebido = new Subject()
+            {
+                Id = 89,
+                Code = "IEAD623L",
+                IsLab = true,
+                Name = "LAB. DE CONTROL EMBEBIDO",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 6,
+            };
+            var conversoresEstaticos = new Subject()
+            {
+                Id = 90,
+                Code = "IEAD633",
+                IsLab = false,
+                Name = "CONVERSORES ESTÁTICOS",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 6,
+            };
+            var labConversoresEstaticos = new Subject()
+            {
+                Id = 91,
+                Code = "IEAD633L",
+                IsLab = true,
+                Name = "LAB. DE CONVERSORES ESTÁTICOS",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 6,
+            };
+            var sistemasControlDiscreto = new Subject()
+            {
+                Id = 92,
+                Code = "IEAD653",
+                IsLab = false,
+                Name = "SISTEMAS DE CONTROL DISCRETO",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 6,
+            };
+            var labSistemasControlDiscreto = new Subject()
+            {
+                Id = 93,
+                Code = "IEAD653L",
+                IsLab = true,
+                Name = "LAB. DE SISTEMAS DE CONTROL DISCRETO",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 6,
+            };
+            //7mo semestre
+            var redesIndustriales = new Subject()
+            {
+                Id = 94,
+                Code = "IEAD713",
+                IsLab = false,
+                Name = "REDES INDUSTRIALES",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 7,
+            };
+            var labRedesIndustriales = new Subject()
+            {
+                Id = 95,
+                Code = "IEAD713L",
+                IsLab = true,
+                Name = "LAB. DE REDES INDUSTRIALES",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 7,
+            };
+            var instalacionesElectricasIndustriales = new Subject()
+            {
+                Id = 96,
+                Code = "IEAD722",
+                IsLab = false,
+                Name = "INSTALACIONES ELÉCTRICAS INDUSTRIALES",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 7,
+            };
+            var accionamientosElectronicos = new Subject()
+            {
+                Id = 97,
+                Code = "IEAD733",
+                IsLab = false,
+                Name = "ACCIONAMIENTOS ELECTRÓNICOS",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 7,
+            };
+            var labAccionamientosElectronicos = new Subject()
+            {
+                Id = 98,
+                Code = "IEAD733L",
+                IsLab = true,
+                Name = "LAB. DE ACCIONAMIENTOS ELECTRÓNICOS",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 7,
+            };
+            var automatizacionPLCs = new Subject()
+            {
+                Id = 99,
+                Code = "IEAD743",
+                IsLab = false,
+                Name = "AUTOMATIZACIÓN USANDO PLCs",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 7,
+            };
+            var labAutomatizacionPLCs = new Subject()
+            {
+                Id = 100,
+                Code = "IEAD743L",
+                IsLab = true,
+                Name = "LAB. DE AUTOMATIZACIÓN USANDO PLCs",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 7,
+            };
+            var controlProcesosIndustriales = new Subject()
+            {
+                Id = 101,
+                Code = "IEAD753",
+                IsLab = false,
+                Name = "CONTROL DE PROCESOS INDUSTRIALES",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 7,
+            };
+            var labControlProcesosIndustriales = new Subject()
+            {
+                Id = 102,
+                Code = "IEAD753L",
+                IsLab = true,
+                Name = "LAB. DE CONTROL DE PROCESOS INDUSTRIALES",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 7,
+            };
+            //8vo semestre
+            var sintesisPlantasIndustriales = new Subject()
+            {
+                Id = 103,
+                Code = "IEAD801",
+                IsLab = false,
+                Name = "SÍNTESIS DE PLANTAS INDUSTRIALES",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 8,
+            };
+            var instrumentacionBiomedica = new Subject()
+            {
+                Id = 104,
+                Code = "IEAD802",
+                IsLab = false,
+                Name = "INSTRUMENTACIÓN BIOMÉDICA",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 8,
+            };
+            var fundamentosSistemasElectricosPotencia = new Subject()
+            {
+                Id = 105,
+                Code = "IEAD803",
+                IsLab = false,
+                Name = "FUNDAMENTOS DE SISTEMAS ELÉCTRICOS DE POTENCIA",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 8,
+            };
+            var sistemasScada = new Subject()
+            {
+                Id = 106,
+                Code = "IEAD823",
+                IsLab = false,
+                Name = "SISTEMAS SCADA",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 8,
+            };
+            var labSistemasScada = new Subject()
+            {
+                Id = 107,
+                Code = "IEAD823L",
+                IsLab = true,
+                Name = "LAB. DE SISTEMAS SCADA",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 8,
+            };
+            var mandosNeumaticos = new Subject()
+            {
+                Id = 108,
+                Code = "IEAD833",
+                IsLab = false,
+                Name = "MANDOS NEUMÁTICOS",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 8,
+            };
+            var labMandosNeumaticos = new Subject()
+            {
+                Id = 109,
+                Code = "IEAD833L",
+                IsLab = true,
+                Name = "LAB. DE MANDOS NEUMÁTICOS",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 8,
+            };
+            var robotica = new Subject()
+            {
+                Id = 110,
+                Code = "IEAD842",
+                IsLab = false,
+                Name = "ROBÓTICA",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 8,
+            };
+            var labRobotica = new Subject()
+            {
+                Id = 111,
+                Code = "IEAD842L",
+                IsLab = true,
+                Name = "LAB. DE ROBÓTICA",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 8,
+            };
+            var introduccionControlMultivariable = new Subject()
+            {
+                Id = 112,
+                Code = "IEAD853",
+                IsLab = false,
+                Name = "INTRODUCCIÓN A CONTROL MULTIVARIABLE",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 8,
+            };
+            //9no semestre
+            var introduccionIndustria40 = new Subject()
+            {
+                Id = 113,
+                Code = "IEAD901",
+                IsLab = false,
+                Name = "INTRODUCCIÓN A INDUSTRIA 4.0",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 9,
+            };
+            var visionArtificial = new Subject()
+            {
+                Id = 114,
+                Code = "IEAD902",
+                IsLab = false,
+                Name = "VISIÓN ARTIFICIAL",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 9,
+            };
+            var energiasRenovablesRedesInteligentes = new Subject()
+            {
+                Id = 115,
+                Code = "IEAD903",
+                IsLab = false,
+                Name = "ENERGÍAS RENOVABLES Y REDES INTELIGENTES",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 9,
+            };
 
-            //GRUPO GR1-1
-            var gr1_1 = new Group() {
-                Id = 1,
+            // -----------  Telecomunicaciones ---------------
+            //4to semestre
+            var sistemaOperativoLinux = new Subject()
+            {
+                Id = 116,
+                Code = "TELD452",
+                IsLab = false,
+                Name = "SISTEMA OPERATIVO LINUX",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 4,
+            };
+            //5to semestre
+            var fundamentosComunicaciones = new Subject()
+            {
+                Id = 117,
+                Code = "TELD513",
+                IsLab = false,
+                Name = "FUNDAMENTOS DE COMUNICACIONES",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 5,
+            };
+            var labFundamentosComunicaciones = new Subject()
+            {
+                Id = 118,
+                Code = "TELD513L",
+                IsLab = true,
+                Name = "LAB. DE FUNDAMENTOS DE COMUNICACIONES",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 5,
+            };
+            var procesamientoDigitalSenales = new Subject()
+            {
+                Id = 119,
+                Code = "TELD532",
+                IsLab = false,
+                Name = "PROCESAMIENTO DIGITAL DE SEÑALES",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 5,
+            };
+            var sistemasTransmision = new Subject()
+            {
+                Id = 120,
+                Code = "TELD553",
+                IsLab = false,
+                Name = "SISTEMAS DE TRANSMISIÓN",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 5,
+            };
+            var labSistemasTransmision = new Subject()
+            {
+                Id = 121,
+                Code = "TELD553L",
+                IsLab = true,
+                Name = "LAB. DE SISTEMAS DE TRANSMISIÓN",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 5,
+            };
+            //6to semestre
+            var comunicacionDigital = new Subject()
+            {
+                Id = 122,
+                Code = "TELD613",
+                IsLab = false,
+                Name = "COMUNICACIÓN DIGITAL",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 6,
+            };
+            var labComunicacionDigital = new Subject()
+            {
+                Id = 123,
+                Code = "TELD613L",
+                IsLab = true,
+                Name = "LAB. DE COMUNICACIÓN DIGITAL",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 6,
+            };
+            var telematicaBasica = new Subject()
+            {
+                Id = 124,
+                Code = "TELD623",
+                IsLab = false,
+                Name = "TELEMÁTICA BÁSICA",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 6,
+            };
+            var labTelematicaBasica = new Subject()
+            {
+                Id = 125,
+                Code = "TELD623L",
+                IsLab = true,
+                Name = "LAB. DE TELEMÁTICA BÁSICA",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 6,
+            };
+            var electronicaRadiofrecuencia = new Subject()
+            {
+                Id = 126,
+                Code = "TELD633",
+                IsLab = false,
+                Name = "ELECTRÓNICA DE RADIOFRECUENCIA",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 6,
+            };
+            var labElectronicaRadiofrecuencia = new Subject()
+            {
+                Id = 127,
+                Code = "TELD633L",
+                IsLab = true,
+                Name = "LAB. DE ELECTRÓNICA DE RADIOFRECUENCIA",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 6,
+            };
+            var aplicacionesSistemasEmbebidos = new Subject()
+            {
+                Id = 128,
+                Code = "TELD642",
+                IsLab = false,
+                Name = "APLICACIONES CON SISTEMAS EMBEBIDOS",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 6,
+            };
+            var labAplicacionesSistemasEmbebidos = new Subject()
+            {
+                Id = 129,
+                Code = "TELD642L",
+                IsLab = true,
+                Name = "LAB. DE APLICACIONES CON SISTEMAS EMBEBIDOS",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 6,
+            };
+            var propagacionAntenas = new Subject()
+            {
+                Id = 130,
+                Code = "TELD654",
+                IsLab = false,
+                Name = "PROPAGACIÓN Y ANTENAS",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 6,
+            };
+            var labPropagacionAntenas = new Subject()
+            {
+                Id = 131,
+                Code = "TELD654L",
+                IsLab = true,
+                Name = "LAB. DE PROPAGACIÓN Y ANTENAS",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 6,
+            };
+            //7mo semestre
+            var comunicacionesOpticas = new Subject()
+            {
+                Id = 132,
+                Code = "TELD713",
+                IsLab = false,
+                Name = "COMUNICACIONES ÓPTICAS",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 7,
+            };
+            var labComunicacionesOpticas = new Subject()
+            {
+                Id = 133,
+                Code = "TELD713L",
+                IsLab = true,
+                Name = "LAB. DE COMUNICACIONES ÓPTICAS",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 7,
+            };
+            var telematicaAvanzada = new Subject()
+            {
+                Id = 134,
+                Code = "TELD723",
+                IsLab = false,
+                Name = "TELEMÁTICA AVANZADA",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 7,
+            };
+            var labTelematicaAvanzada = new Subject()
+            {
+                Id = 135,
+                Code = "TELD723L",
+                IsLab = true,
+                Name = "LAB. DE TELEMÁTICA AVANZADA",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 7,
+            };
+            var comunicacionesInalambricas = new Subject()
+            {
+                Id = 136,
+                Code = "TELD733",
+                IsLab = false,
+                Name = "COMUNICACIONES INALÁMBRICAS",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 7,
+            };
+            var labComunicacionesInalambricas = new Subject()
+            {
+                Id = 137,
+                Code = "TELD733L",
+                IsLab = true,
+                Name = "LAB. DE COMUNICACIONES INALÁMBRICAS",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 7,
+            };
+            var telefoniaIP = new Subject()
+            {
+                Id = 138,
+                Code = "TELD743",
+                IsLab = false,
+                Name = "TELEFONÍA IP",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 7,
+            };
+            var ingenieriaMicroondas = new Subject()
+            {
+                Id = 139,
+                Code = "TELD752",
+                IsLab = false,
+                Name = "INGENIERÍA DE MICROONDAS",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 7,
+            };
+            //8vo semestre
+            var componentesPasivosRF = new Subject()
+            {
+                Id = 140,
+                Code = "TELD801",
+                IsLab = false,
+                Name = "COMPONENTES PASIVOS DE RADIOFRECUENCIA",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 8,
+            };
+            var tecnicasAvanzadasPDSD = new Subject()
+            {
+                Id = 141,
+                Code = "TELD802",
+                IsLab = false,
+                Name = "TÉCNICAS AVANZADAS DE PROCESAMIENTO DIGITAL DE SEÑALES",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 8,
+            };
+            var conmutacionEnrutamientoAvanzado = new Subject()
+            {
+                Id = 142,
+                Code = "TELD803",
+                IsLab = false,
+                Name = "CONMUTACIÓN Y ENRUTAMIENTO AVANZADO",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 8,
+            };
+            var redesOpticas = new Subject()
+            {
+                Id = 143,
+                Code = "TELD823",
+                IsLab = false,
+                Name = "REDES ÓPTICAS",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 8,
+            };
+            var labRedesOpticas = new Subject()
+            {
+                Id = 144,
+                Code = "TELD823L",
+                IsLab = true,
+                Name = "LAB. DE REDES ÓPTICAS",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 8,
+            };
+            var introduccionDisenoRedes = new Subject()
+            {
+                Id = 145,
+                Code = "TELD833",
+                IsLab = false,
+                Name = "INTRODUCCIÓN A DISEÑO DE REDES",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 8,
+            };
+            var sistemasCelulares = new Subject()
+            {
+                Id = 146,
+                Code = "TELD843",
+                IsLab = false,
+                Name = "SISTEMAS CELULARES",
+                Alias = null,
+                NumCredits = 3,
+                NumHours = 144,
+                NumSemester = 8,
+            };
+            var fundamentosSeguridad = new Subject()
+            {
+                Id = 147,
+                Code = "TELD852",
+                IsLab = false,
+                Name = "FUNDAMENTOS DE SEGURIDAD",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 8,
+            };
+            var labFundamentosSeguridad = new Subject()
+            {
+                Id = 148,
+                Code = "TELD852L",
+                IsLab = true,
+                Name = "LAB. DE FUNDAMENTOS DE SEGURIDAD",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 8,
+            };
+            //9no semestre
+            var componentesActivosRF = new Subject()
+            {
+                Id = 149,
+                Code = "TELD901",
+                IsLab = false,
+                Name = "COMPONENTES ACTIVOS DE RADIOFRECUENCIA",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 9,
+            };
+            var tecnicasAvanzadasClasificacionSenales = new Subject()
+            {
+                Id = 150,
+                Code = "TELD902",
+                IsLab = false,
+                Name = "TÉCNICAS AVANZADAS DE CLASIFICACIÓN DE SEÑALES",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 9,
+            };
+            var tecnologiasAvanzadasRedesDatos = new Subject()
+            {
+                Id = 151,
+                Code = "TELD903",
+                IsLab = false,
+                Name = "TECNOLOGÍAS AVANZADAS DE REDES DE DATOS",
+                Alias = null,
+                NumCredits = 2,
+                NumHours = 96,
+                NumSemester = 9,
+            };
+            var marcoRegulatorioServiciosTelecom = new Subject()
+            {
+                Id = 152,
+                Code = "TELD941",
+                IsLab = false,
+                Name = "MARCO REGULATORIO DE LOS SERVICIOS DE TELECOMUNICACIONES",
+                Alias = null,
+                NumCredits = 1,
+                NumHours = 48,
+                NumSemester = 9,
+            };
+
+            // ---------- TI -------------
+            var basesDeDatos = new Subject()
+            {
+                Id = 153,
+                Code = "ITID443",
+                IsLab = false,
+                Name = "BASES DE DATOS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 4,
+            };
+            var sistemasOperativos = new Subject()
+            {
+                Id = 154,
+                Code = "ITID452",
+                IsLab = false,
+                Name = "SISTEMAS OPERATIVOS",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 4,
+            };
+            var transmisionDigital = new Subject()
+            {
+                Id = 155,
+                Code = "ITID524",
+                IsLab = false,
+                Name = "TRANSMISIÓN DIGITAL",
+                Alias = null,
+                NumHours = 192,
+                NumCredits = 4,
+                NumSemester = 5,
+            };
+            var laboratorioTransmisionDigital = new Subject()
+            {
+                Id = 156,
+                Code = "ITID524L",
+                IsLab = true,
+                Name = "LAB. DE TRANSMISIÓN DIGITAL",
+                Alias = null,
+                NumHours = 192,
+                NumCredits = 4,
+                NumSemester = 5,
+            };
+            var disenoProgramacionSoftware = new Subject()
+            {
+                Id = 157,
+                Code = "ITID543",
+                IsLab = false,
+                Name = "DISEÑO Y PROGRAMACIÓN DE SOFTWARE",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 5,
+            };
+            var cableadoEstructuradoAvanzado = new Subject()
+            {
+                Id = 158,
+                Code = "ITID612",
+                IsLab = false,
+                Name = "CABLEADO ESTRUCTURADO AVANZADO",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 6,
+            };
+            var redesAreaLocal = new Subject()
+            {
+                Id = 159,
+                Code = "ITID623",
+                IsLab = false,
+                Name = "REDES DE ÁREA LOCAL",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 6,
+            };
+            var laboratorioRedesAreaLocal = new Subject()
+            {
+                Id = 160,
+                Code = "ITID623L",
+                IsLab = true,
+                Name = "LAB. DE REDES DE ÁREA LOCAL",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 6,
+            };
+            var enrutamiento = new Subject()
+            {
+                Id = 161,
+                Code = "ITID633",
+                IsLab = false,
+                Name = "ENRUTAMIENTO",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 6,
+            };
+            var laboratorioEnrutamiento = new Subject()
+            {
+                Id = 162,
+                Code = "ITID633L",
+                IsLab = true,
+                Name = "LAB. DE ENRUTAMIENTO",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 6,
+            };
+            var sistemasInalambricos = new Subject()
+            {
+                Id = 163,
+                Code = "ITID643",
+                IsLab = false,
+                Name = "SISTEMAS INALÁMBRICOS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 6,
+            };
+            var almacenamientoProcesamientoDatos = new Subject()
+            {
+                Id = 164,
+                Code = "ITID653",
+                IsLab = false,
+                Name = "ALMACENAMIENTO Y PROCESAMIENTO DE DATOS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 6,
+            };
+            var aplicacionesDistribuidas = new Subject()
+            {
+                Id = 165,
+                Code = "ITID713",
+                IsLab = false,
+                Name = "APLICACIONES DISTRIBUIDAS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 7,
+            };
+            var redesAreaExtendida = new Subject()
+            {
+                Id = 166,
+                Code = "ITID723",
+                IsLab = false,
+                Name = "REDES DE ÁREA EXTENDIDA",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 7,
+            };
+            var laboratorioRedesAreaExtendida = new Subject()
+            {
+                Id = 167,
+                Code = "ITID723L",
+                IsLab = true,
+                Name = "LAB. DE REDES DE ÁREA EXTENDIDA",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 7,
+            };
+            var seguridadRedes = new Subject()
+            {
+                Id = 168,
+                Code = "ITID733",
+                IsLab = false,
+                Name = "SEGURIDAD EN REDES",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 7,
+            };
+            var redesIntranets = new Subject()
+            {
+                Id = 169,
+                Code = "ITID742",
+                IsLab = false,
+                Name = "REDES E INTRANETS",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 7,
+            };
+            var aplicacionesWebMoviles = new Subject()
+            {
+                Id = 170,
+                Code = "ITID753",
+                IsLab = false,
+                Name = "APLICACIONES WEB Y MÓVILES",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 7,
+            };
+            var hackingEtico = new Subject()
+            {
+                Id = 171,
+                Code = "ITID801",
+                IsLab = false,
+                Name = "HACKING ÉTICO",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 8,
+            };
+            var comunicacionesUnificadas = new Subject()
+            {
+                Id = 172,
+                Code = "ITID802",
+                IsLab = false,
+                Name = "COMUNICACIONES UNIFICADAS",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 8,
+            };
+            var disenoAplicacionesServiciosInternet = new Subject()
+            {
+                Id = 173,
+                Code = "ITID803",
+                IsLab = false,
+                Name = "DISEÑO DE APLICACIONES Y SERVICIOS DE INTERNET",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 8,
+            };
+            var evaluacionRedes = new Subject()
+            {
+                Id = 174,
+                Code = "ITID822",
+                IsLab = false,
+                Name = "EVALUACIÓN DE REDES",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 8,
+            };
+            var redesAreaLocalInalambricas = new Subject()
+            {
+                Id = 175,
+                Code = "ITID832",
+                IsLab = false,
+                Name = "REDES DE ÁREA LOCAL INALÁMBRICAS",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 8,
+            };
+            var administracionRedes = new Subject()
+            {
+                Id = 176,
+                Code = "ITID843",
+                IsLab = false,
+                Name = "ADMINISTRACIÓN DE REDES",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 8,
+            };
+            var mineriaDatos = new Subject()
+            {
+                Id = 177,
+                Code = "ITID853",
+                IsLab = false,
+                Name = "MINERÍA DE DATOS",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 8,
+            };
+            var sistemasIoT = new Subject()
+            {
+                Id = 178,
+                Code = "ITID862",
+                IsLab = false,
+                Name = "SISTEMAS IoT",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 8,
+            };
+            var administracionProcesosServiciosTI = new Subject()
+            {
+                Id = 179,
+                Code = "ITID901",
+                IsLab = false,
+                Name = "ADMINISTRACIÓN DE PROCESOS Y SERVICIOS DE TI",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 9,
+            };
+            var redesDefinidasSoftware = new Subject()
+            {
+                Id = 180,
+                Code = "ITID902",
+                IsLab = false,
+                Name = "REDES DEFINIDAS POR SOFTWARE",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 9,
+            };
+            var aplicacionesMovilesAvanzadas = new Subject()
+            {
+                Id = 181,
+                Code = "ITID903",
+                IsLab = false,
+                Name = "APLICACIONES MÓVILES AVANZADAS",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 9,
+            };
+
+            //Olvidadas
+            var ecologia = new Subject()
+            {
+                Id = 182,
+                Code = "AMBD900",
+                IsLab = false,
+                Name = "ECOLOGIA Y AMBIENTE",
+                Alias = null,
+                NumHours = 0,
+                NumCredits = 0,
+                NumSemester = 5
+            };
+            var emprendimiento = new Subject()
+            {
+                Id = 183,
+                Code = "ADMD700",
+                IsLab = false,
+                Name = "EMPRENDIMIENTO",
+                Alias = null,
+                NumHours = 0,
+                NumCredits = 0,
+                NumSemester = 5
+            };
+            var formulacion = new Subject()
+            {
+                Id = 184,
+                Code = "ADMD800",
+                IsLab = false,
+                Name = "FORMULACION Y EVALUACION DE PROYECTOS",
+                Alias = null,
+                NumHours = 0,
+                NumCredits = 0,
+                NumSemester = 5
+            };
+            var metodologiaEstudio = new Subject()
+            {
+                Id = 185,
+                Code = "IEED210",
+                IsLab = false,
+                Name = "METODOLOGIAS DE ESTUDIO",
+                Alias = null,
+                NumHours = 0,
+                NumCredits = 0,
+                NumSemester = 5
+            };
+            var prograAvanzada = new Subject()
+            {
+                Id = 186,
+                Code = "ITID433",
+                IsLab = false,
+                Name = "PROGRAMACION AVANZADA",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 4
+            };
+            var protecciones = new Subject()
+            {
+                Id = 187,
+                Code = "IELD941",
+                IsLab = false,
+                Name = "PROTECCIONES ELÉCTRICAS",
+                Alias = null,
+                NumHours = 48,
+                NumCredits = 1,
+                NumSemester = 9
+            };
+            var sistemasDeGestion = new Subject()
+            {
+                Id = 188,
+                Code = "IELD903",
+                IsLab = false,
+                Name = "SISTEMAS DE GESTIÓN EN REDES ELÉCTRICAS DE DISTRIBUCIÓN",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 9
+            };
+            var labMicroondas = new Subject()
+            {
+                Id = 189,
+                Code = "TELD752L",
+                IsLab = true,
+                Name = "LAB. INGENIERIA DE MICROONDAS",
+                Alias = null,
+                NumHours = 96,
+                NumCredits = 2,
+                NumSemester = 7
+            };
+            var regulacion = new Subject()
+            {
+                Id = 190,
+                Code = "ITID941",
+                IsLab = false,
+                Name = "REGULACION DE LAS TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION",
+                Alias = null,
+                NumHours = 48,
+                NumCredits = 1,
+                NumSemester = 9
+            };
+            var redesElectricas = new Subject()
+            {
+                Id = 191,
+                Code = "IELD803",
+                IsLab = false,
+                Name = "REDES ELÉCTRICAS INTELIGENTES Y GENERACIÓN DISTRIBUIDA",
+                Alias = null,
+                NumHours = 144,
+                NumCredits = 3,
+                NumSemester = 8
+            };
+            var clubes = new Subject()
+            {
+                Id = 192,
+                Code = "SOCD210",
+                IsLab = false,
+                Name = "CLUBES",
+                Alias = null,
+                NumHours = 0,
+                NumCredits = 0,
+                NumSemester = 5
+            };
+
+            //Agregado
+            modelBuilder
+                .Entity<Subject>()
+                .HasData(
+                //Repetidas
+                algebra, calculo, mecanica, laboratorioMecanica, quimica, herramientasInformaticas, comunicacionOralEscrita,
+                ecuacionesDiferenciales, probabilidadEstadistica, calculoVectorial, fundamentosElectromagnetismo, programacion,
+                analisisSocioeconomico, electrotecnia, laboratorioElectrotecnia, matematicaAvanzada, sistemasDigitales, laboratorioSistemasDigitales,
+                dispositivosElectronicos, laboratorioDispositivosElectronicos, teoriaElectromagnetica, fundamentosCircuitosElectricos,
+                laboratorioFundamentosCircuitosElectricos, matematicaDiscreta, instalacionesElectricasComunicaciones, analisisSenalesSistemas,
+                circuitosElectronicos, laboratorioCircuitosElectronicos, conversionElectromecanicaEnergia, laboratorioConversionElectromecanicaEnergia,
+                analisisCircuitosElectricos, laboratorioAnalisisCircuitosElectricos, electronicaPotencia, laboratorioElectronicaPotencia, maquinasElectricas,
+                laboratorioMaquinasElectricas, sistemasControlAutomatico, laboratorioSistemasControlAutomatico, controlIndustrial, laboratorioControlIndustrial,
+                seguridadIndustrialProteccionAmbiental, analisisSenalesDiscretasComunicaciones, teoriaInformacionCodificacion, sistemasEmbebidos,
+                laboratorioSistemasEmbebidos, sistemasCableadoEstructurado, gestionOrganizacional, gestionProcesosCalidad, ingenieriaFinanciera, disenoTrabajoIntegracionCurricular, trabajoIntegracionCurricular,
+                //Electrica
+                modelacionSistemasElectricosPotencia, laboratorioModelacionSistemasElectricosPotencia, altoVoltaje, laboratorioAltoVoltaje, estudiosEstadoEstacionarioSistemasElectricosPotencia, laboratorioEstudiosEstadoEstacionarioSistemasElectricosPotencia,
+                disenoAltoVoltaje, sistemasElectricosDistribucion, laboratorioSistemasElectricosDistribucion, dinamicaMaquinasElectricas,
+                laboratorioDinamicaMaquinasElectricas, instalacionesElectricasMedioVoltaje, estabilidadSistemasElectricosPotencia, laboratorioEstabilidadSistemasElectricosPotencia, disenoElectromecanicoLineasTransmision,
+                construccionRedesElectricas, centralesGeneracionElectrica, introduccionProteccionesElectricas, laboratorioIntroduccionProteccionesElectricas, optimizacionSistemasElectricosPotencia,
+                operacionControlSistemasElectricosPotencia, analisisSistemasElectricosPotencia, accionamientoMaquinasElectricas, redesElectricasInteligentesGeneracionDistribuida, calidadEnergiaElectrica, confiabilidadSistemasElectricosPotencia,
+                planificacionSistemasElectricosDistribucion, analisisEstabilidadPequenaSeñalSistemas, integracionEnergiasRenovablesSistemas, sistemaGestionRedesDistribucion,
+                //Control
+                sensoresytransductores, labSensoresytransductores, sistemasMicroprocesados, labSistemasMicroprocesados,
+                instrumentacionIndustrial, labInstrumentacionIndustrial, controlEmbebido, labControlEmbebido, conversoresEstaticos, labConversoresEstaticos, sistemasControlDiscreto, labSistemasControlDiscreto,
+                redesIndustriales, labRedesIndustriales, instalacionesElectricasIndustriales, accionamientosElectronicos, labAccionamientosElectronicos, automatizacionPLCs, labAutomatizacionPLCs, controlProcesosIndustriales, labControlProcesosIndustriales,
+                sintesisPlantasIndustriales, instrumentacionBiomedica, fundamentosSistemasElectricosPotencia, sistemasScada, labSistemasScada, mandosNeumaticos, labMandosNeumaticos, robotica, labRobotica, introduccionControlMultivariable,
+                introduccionIndustria40, visionArtificial, energiasRenovablesRedesInteligentes,
+                //Telecom
+                sistemaOperativoLinux,
+                fundamentosComunicaciones, labFundamentosComunicaciones, procesamientoDigitalSenales, sistemasTransmision, labSistemasTransmision,
+                comunicacionDigital, labComunicacionDigital, telematicaBasica, labTelematicaBasica, electronicaRadiofrecuencia, labElectronicaRadiofrecuencia, aplicacionesSistemasEmbebidos, labAplicacionesSistemasEmbebidos, propagacionAntenas, labPropagacionAntenas,
+                comunicacionesOpticas, labComunicacionesOpticas, telematicaAvanzada, labTelematicaAvanzada, comunicacionesInalambricas, labComunicacionesInalambricas, telefoniaIP, ingenieriaMicroondas,
+                componentesPasivosRF, tecnicasAvanzadasPDSD, conmutacionEnrutamientoAvanzado, redesOpticas, labRedesOpticas, introduccionDisenoRedes, sistemasCelulares, fundamentosSeguridad, labFundamentosSeguridad,
+                componentesActivosRF, tecnicasAvanzadasClasificacionSenales, tecnologiasAvanzadasRedesDatos, marcoRegulatorioServiciosTelecom,
+                //Ti
+                basesDeDatos, sistemasOperativos, transmisionDigital, laboratorioTransmisionDigital, disenoProgramacionSoftware, cableadoEstructuradoAvanzado,
+                redesAreaLocal, laboratorioRedesAreaLocal, enrutamiento, laboratorioEnrutamiento, sistemasInalambricos, almacenamientoProcesamientoDatos,
+                aplicacionesDistribuidas, redesAreaExtendida, laboratorioRedesAreaExtendida, seguridadRedes, redesIntranets, aplicacionesWebMoviles,
+                hackingEtico, comunicacionesUnificadas, disenoAplicacionesServiciosInternet, evaluacionRedes, redesAreaLocalInalambricas, administracionRedes,
+                mineriaDatos, sistemasIoT, administracionProcesosServiciosTI, redesDefinidasSoftware, aplicacionesMovilesAvanzadas,
+                //Olvidadas
+                ecologia, emprendimiento, formulacion, metodologiaEstudio, prograAvanzada, protecciones,
+                sistemasDeGestion, labMicroondas, regulacion, redesElectricas, clubes
+                );
+
+
+            //GRUPOS EDIFICIO 16
+            //AULA E16/P1/E006A - LAB. ELECTROTECNIA
+            var e16_p1_e006a_gr1_1_15 = new Group()
+            {
+                Id = 501,
                 Name = "GR1-1",
-                SubjectId = 1,
+                SubjectId = 15,
                 ClassroomId = 1,
                 CalendarId = 1,
+                Sessions = new List<Session>() {
+                    new Session() {
+                        Id = 1001,
+                        Day = Enum.Day.Martes,
+                        StartTime = new TimeSpan(9, 0, 0),
+                        EndTime = new TimeSpan(11, 0, 0)
+                    }
+                }
+            };
+            var e16_p1_e006a_gr1_2_15 = new Group()
+            {
+                Id = 502,
+                Name = "GR1-2",
+                SubjectId = 15,
+                ClassroomId = 1,
+                CalendarId = 1,
+                Sessions = new List<Session>() {
+                    new Session() {
+                        Id = 1002,
+                        Day = Enum.Day.Lunes,
+                        StartTime = new TimeSpan(14, 0, 0),
+                        EndTime = new TimeSpan(16, 0, 0)
+                    }
+                }
+            };
+            var e16_p1_e006a_gr1_3_15 = new Group()
+            {
+                Id = 503,
+                Name = "GR1-3",
+                SubjectId = 15,
+                ClassroomId = 1,
+                CalendarId = 1,
+                Sessions = new List<Session>() {
+                    new Session() {
+                        Id = 1003,
+                        Day = Enum.Day.Miercoles,
+                        StartTime = new TimeSpan(14, 0, 0),
+                        EndTime = new TimeSpan(16, 0, 0)
+                    }
+                }
+            };
+            var e16_p1_e006a_gr1_4_15 = new Group()
+            {
+                Id = 504,
+                Name = "GR1-4",
+                SubjectId = 15,
+                ClassroomId = 1,
+                CalendarId = 1,
+                Sessions = new List<Session>() {
+                    new Session() {
+                        Id = 1004,
+                        Day = Enum.Day.Lunes,
+                        StartTime = new TimeSpan(16, 0, 0),
+                        EndTime = new TimeSpan(18, 0, 0)
+                    }
+                }
+            };
+            var e16_p1_e006a_gr3_1_15 = new Group()
+            {
+                Id = 505,
+                Name = "GR3-1",
+                SubjectId = 15,
+                ClassroomId = 1,
+                CalendarId = 1,
+                Sessions = new List<Session>() {
+                    new Session() {
+                        Id = 1005,
+                        Day = Enum.Day.Lunes,
+                        StartTime = new TimeSpan(9, 0, 0),
+                        EndTime = new TimeSpan(11, 0, 0)
+                    }
+                }
+            };
+            var e16_p1_e006a_gr3_3_15 = new Group()
+            {
+                Id = 506,
+                Name = "GR3-3",
+                SubjectId = 15,
+                ClassroomId = 1,
+                CalendarId = 1,
+                Sessions = new List<Session>() {
+                    new Session() {
+                        Id = 1006,
+                        Day = Enum.Day.Martes,
+                        StartTime = new TimeSpan(14, 0, 0),
+                        EndTime = new TimeSpan(16, 0, 0)
+                    }
+                }
+            };
+            var e16_p1_e006a_gr3_4_15 = new Group()
+            {
+                Id = 507,
+                Name = "GR3-4",
+                SubjectId = 15,
+                ClassroomId = 1,
+                CalendarId = 1,
+                Sessions = new List<Session>() {
+                    new Session() {
+                        Id = 1007,
+                        Day = Enum.Day.Jueves,
+                        StartTime = new TimeSpan(14, 0, 0),
+                        EndTime = new TimeSpan(16, 0, 0)
+                    }
+                }
+            };
+            var e16_p1_e006a_gr3_5_15 = new Group()
+            {
+                Id = 508,
+                Name = "GR3-5",
+                SubjectId = 15,
+                ClassroomId = 1,
+                CalendarId = 1,
+                Sessions = new List<Session>() {
+                    new Session() {
+                        Id = 1008,
+                        Day = Enum.Day.Viernes,
+                        StartTime = new TimeSpan(7, 0, 0),
+                        EndTime = new TimeSpan(9, 0, 0)
+                    }
+                }
+            };
+            var e16_p1_e006a_gr5_2_15 = new Group()
+            {
+                Id = 509,
+                Name = "GR5-2",
+                SubjectId = 15,
+                ClassroomId = 1,
+                CalendarId = 1,
+                Sessions = new List<Session>() {
+                    new Session() {
+                        Id = 1009,
+                        Day = Enum.Day.Martes,
+                        StartTime = new TimeSpan(7, 0, 0),
+                        EndTime = new TimeSpan(9, 0, 0)
+                    }
+                }
+            };
+            var e16_p1_e006a_gr5_3_15 = new Group()
+            {
+                Id = 510,
+                Name = "GR5-3",
+                SubjectId = 15,
+                ClassroomId = 1,
+                CalendarId = 1,
+                Sessions = new List<Session>() {
+                    new Session() {
+                        Id = 1010,
+                        Day = Enum.Day.Miercoles,
+                        StartTime = new TimeSpan(7, 0, 0),
+                        EndTime = new TimeSpan(9, 0, 0)
+                    }
+                }
+            };
+            var e16_p1_e006a_gr5_4_15 = new Group()
+            {
+                Id = 511,
+                Name = "GR5-4",
+                SubjectId = 15,
+                ClassroomId = 1,
+                CalendarId = 1,
+                Sessions = new List<Session>() {
+                    new Session() {
+                        Id = 1011,
+                        Day = Enum.Day.Jueves,
+                        StartTime = new TimeSpan(7, 0, 0),
+                        EndTime = new TimeSpan(9, 0, 0)
+                    }
+                }
+            };
+            var e16_p1_e006a_gr5_5_15 = new Group()
+            {
+                Id = 512,
+                Name = "GR5-5",
+                SubjectId = 15,
+                ClassroomId = 1,
+                CalendarId = 1,
+                Sessions = new List<Session>() {
+                    new Session() {
+                        Id = 1012,
+                        Day = Enum.Day.Lunes,
+                        StartTime = new TimeSpan(11, 0, 0),
+                        EndTime = new TimeSpan(13, 0, 0)
+                    }
+                }
             };
 
-            //Sesion 1
-            var session1GR1_1_electrotecnica = new Session() { 
-                Id = 1,
-                Day = Enum.Day.Martes,
-                StartTime = new TimeSpan(9, 0, 0),
-                EndTime = new TimeSpan(11,0, 0),
-                GroupId = 1,
-            };
-         
-
-            modelBuilder.Entity<Subject>().HasData(electrotecnia, fundamentoscircuitos);
-            modelBuilder.Entity<Group>().HasData(gr1_1);
-            modelBuilder.Entity<Session>().HasData(session1GR1_1_electrotecnica);
-
-            //Materias
-            //var adminRedes = new Subject()
-            //{
-            //    Id = 1,
-            //    Code = "ITID843",
-            //    Name = "ADMINISTRACION DE REDES",
-            //    NumHours = 4,
-            //    NumCredits = 3,
-            //    NumSemester = 8,
-            //    IsLab = false
-            //};
-            //var evalRedes = new Subject()
-            //{
-            //    Id = 2,
-            //    Code = "ITID822",
-            //    Name = "EVALUACION DE REDES",
-            //    NumHours = 4,
-            //    NumCredits = 3,
-            //    NumSemester = 8,
-            //    IsLab = false
-            //};
-            //var hacking = new Subject()
-            //{
-            //    Id = 3,
-            //    Code = "ITID801",
-            //    Name = "HACKING ETICO",
-            //    NumHours = 3,
-            //    NumCredits = 2,
-            //    NumSemester = 8,
-            //    IsLab = false
-            //};
-            //var wlan = new Subject()
-            //{
-            //    Id = 4,
-            //    Code = "ITID832",
-            //    Name = "REDES DE AREA LOCAL INALAMBRICAS",
-            //    Alias = "WLAN",
-            //    NumHours = 3,
-            //    NumCredits = 3,
-            //    NumSemester = 8,
-            //    IsLab = false
-            //};
-            //var web = new Subject()
-            //{
-            //    Id = 5,
-            //    Code = "ITID753",
-            //    Name = "APLICACIONES WEB Y MOVILES",
-            //    NumHours = 4,
-            //    NumCredits = 3,
-            //    NumSemester = 7,
-            //    IsLab = false
-            //};
-            //var redesIntra = new Subject()
-            //{
-            //    Id = 6,
-            //    Code = "ITID742",
-            //    Name = "REDES E INTRANETS",
-            //    NumHours = 4,
-            //    NumCredits = 3,
-            //    NumSemester = 7,
-            //    IsLab = false
-            //};
-            //var appsDistr = new Subject()
-            //{
-            //    Id = 7,
-            //    Code = "ITID713",
-            //    Name = "APLICACIONES DISTRIBUIDAS",
-            //    NumHours = 3,
-            //    NumCredits = 2,
-            //    NumSemester = 7,
-            //    IsLab = false
-            //};
-            //var lan = new Subject()
-            //{
-            //    Id = 8,
-            //    Code = "ITID623",
-            //    Name = "REDES DE AREA LOCAL",
-            //    NumHours = 3,
-            //    NumCredits = 2,
-            //    NumSemester = 6,
-            //    IsLab = false
-            //};
-            //var lanLab = new Subject()
-            //{
-            //    Id = 9,
-            //    Code = "ITID623L",
-            //    Name = "LABORATORIO REDES DE AREA LOCAL",
-            //    NumHours = 2,
-            //    NumCredits = 2,
-            //    NumSemester = 6,
-            //    IsLab = true
-            //};
-            //var wan = new Subject()
-            //{
-            //    Id = 10,
-            //    Code = "ITID723",
-            //    Name = "REDES DE AREA EXTENDIDA",
-            //    NumHours = 3,
-            //    NumCredits = 2,
-            //    NumSemester = 6,
-            //    IsLab = false
-            //};
-            //var wanLab = new Subject()
-            //{
-            //    Id = 11,
-            //    Code = "ITID723L",
-            //    Name = "LABORATORIO REDES DE AREA LOCAL",
-            //    NumHours = 2,
-            //    NumCredits = 2,
-            //    NumSemester = 6,
-            //    IsLab = true
-            //};
-            //var trxDigital = new Subject()
-            //{
-            //    Id = 12,
-            //    Code = "ITID524",
-            //    Name = "TRANSMISION DIGITAL",
-            //    NumHours = 2,
-            //    NumCredits = 2,
-            //    NumSemester = 5,
-            //    IsLab = false
-            //};
-            //var trxDigitalLab = new Subject()
-            //{
-            //    Id = 13,
-            //    Code = "ITID524L",
-            //    Name = "LABORATORIO TRANSMISION DIGITAL",
-            //    NumHours = 2,
-            //    NumCredits = 2,
-            //    NumSemester = 5,
-            //    IsLab = true
-            //};
-            //var sisOp = new Subject()
-            //{
-            //    Id = 14,
-            //    Code = "ITID452",
-            //    Name = "SISTEMAS OPERATIVOS",
-            //    NumHours = 3,
-            //    NumCredits = 3,
-            //    NumSemester = 4,
-            //    IsLab = false
-            //};
-            //var prograAva = new Subject()
-            //{
-            //    Id = 15,
-            //    Code = "ITID433",
-            //    Name = "PROGRAMACION AVANZADA",
-            //    NumHours = 3,
-            //    NumCredits = 2,
-            //    NumSemester = 4,
-            //    IsLab = false
-            //};
-
-            //modelBuilder.Entity<Subject>().HasData(adminRedes, evalRedes, hacking, wlan, web, redesIntra, appsDistr, lan, lanLab, wan, wanLab, trxDigital, trxDigitalLab, sisOp, prograAva);
-
-            //Aulas
-            //var aula1 = new Classroom()
-            //{
-            //    Id = 1,
-            //    Code = "E023",
-            //    IsLab = true,
-            //    Name = "Laboratorioa FIEE CEC 1",
-            //    Capacity = 25,
-            //    Floor = "P6",
-            //    BuildingId = 2,
-            //};
-            //var aula2 = new Classroom()
-            //{
-            //    Id = 2,
-            //    Code = "E028",
-            //    IsLab = false,
-            //    Name = null,
-            //    Capacity = 35,
-            //    Floor = "P5",
-            //    BuildingId = 2,
-            //};
-            //var aula3 = new Classroom()
-            //{
-            //    Id = 3,
-            //    Code = "E026",
-            //    IsLab = true,
-            //    Name = "Laboratorio FIEE CEC 2",
-            //    Capacity = 25,
-            //    Floor = "P6",
-            //    BuildingId = 2,
-            //};
-            //var aula4 = new Classroom()
-            //{
-            //    Id = 4,
-            //    Code = "E002",
-            //    IsLab = false,
-            //    Name = null,
-            //    Capacity = 20,
-            //    Floor = "P2",
-            //    BuildingId = 1,
-            //};
-            //var aula5 = new Classroom()
-            //{
-            //    Id = 5,
-            //    Code = "LABINTC",
-            //    IsLab = true,
-            //    Name = "LABORATORIO DE INTERCONECTIVIDAD",
-            //    Capacity = 20,
-            //    Floor = "P7",
-            //    BuildingId = 2
-            //};
-            //var aula6 = new Classroom()
-            //{
-            //    Id = 6,
-            //    Code = "E003",
-            //    IsLab = false,
-            //    Name = null,
-            //    Capacity = 20,
-            //    Floor = "P2",
-            //    BuildingId = 1
-            //};
-            //var aula7 = new Classroom()
-            //{
-            //    Id = 7,
-            //    Code = "E022",
-            //    IsLab = false,
-            //    Name = null,
-            //    Capacity = 20,
-            //    Floor = "P6",
-            //    BuildingId = 2
-            //};
-            //var aula8 = new Classroom()
-            //{
-            //    Id = 8,
-            //    Code = "E022",
-            //    IsLab = false,
-            //    Name = null,
-            //    Capacity = 20,
-            //    Floor = "P3",
-            //    BuildingId = 2
-            //};
-            //var aula9 = new Classroom()
-            //{
-            //    Id = 9,
-            //    Code = "E001",
-            //    IsLab = false,
-            //    Name = null,
-            //    Capacity = 20,
-            //    Floor = "P2",
-            //    BuildingId = 1
-            //};
-            //var aula10 = new Classroom()
-            //{
-            //    Id = 10,
-            //    Code = "E004",
-            //    IsLab = false,
-            //    Name = null,
-            //    Capacity = 20,
-            //    Floor = "P7",
-            //    BuildingId = 2,
-
-            //};
-
-            //modelBuilder.Entity<Classroom>().HasData(aula1, aula2, aula3, aula4, aula5, aula6, aula7, aula8, aula9, aula10);
-
-            //Grupos
-            //var grAdmin = new Group()
-            //{
-            //    Id = 1,
-            //    Name = "GR1",
-            //    SubjectId = 1,
-            //    ClassroomId = 1,
-            //    CalendarId = 1,
-            //};
-            //var grEvalRedes = new Group()
-            //{
-            //    Id = 2,
-            //    Name = "GR1",
-            //    SubjectId = 2,
-            //    ClassroomId = 2,
-            //    CalendarId = 1,
-
-            //};
-            //var grHacking = new Group()
-            //{
-            //    Id = 3,
-            //    Name = "GR1",
-            //    SubjectId = 3,
-            //    ClassroomId = 3,
-            //    CalendarId = 1,
-
-            //};
-
-            //Llenado aula4
-            //var grIntranets = new Group()
-            //{
-            //    Id = 4,
-            //    Name = "GR1",
-            //    SubjectId = 6,
-            //    ClassroomId = 4,
-            //    CalendarId = 1,
-
-            //};
-            //var grDistr = new Group()
-            //{
-            //    Id = 5,
-            //    Name = "GR1",
-            //    SubjectId = 7,
-            //    ClassroomId = 4,
-            //    CalendarId = 1,
-
-            //};
-            //var grwlan = new Group()
-            //{
-            //    Id = 6,
-            //    Name = "GR1",
-            //    SubjectId = 4,
-            //    ClassroomId = 4,
-            //    CalendarId = 1,
-
-            //};
-            //var grSisOp = new Group()
-            //{
-            //    Id = 7,
-            //    Name = "GR1",
-            //    SubjectId = 14,
-            //    ClassroomId = 4,
-            //    CalendarId = 1,
-
-            //};
-
-            //modelBuilder.Entity<Group>().HasData(grAdmin, grEvalRedes, grHacking, grIntranets, grDistr, grwlan, grSisOp);
-
-            //Sesiones
-            //Grupo Admin
-            //var sessionAdmin1 = new Session()
-            //{
-            //    Id = 1,
-            //    Day = Enum.Day.Lunes,
-            //    StartTime = new TimeSpan(9, 0, 0),
-            //    EndTime = new TimeSpan(11, 0, 0),
-            //    GroupId = 1,
-            //};
-            //var sessionAdmin2 = new Session()
-            //{
-            //    Id = 2,
-            //    Day = Enum.Day.Martes,
-            //    StartTime = new TimeSpan(11, 0, 0),
-            //    EndTime = new TimeSpan(13, 0, 0),
-            //    GroupId = 1,
-            //};
-            //Grupo Eval
-            //var sessionEval1 = new Session()
-            //{
-            //    Id = 3,
-            //    Day = Enum.Day.Lunes,
-            //    StartTime = new TimeSpan(11, 0, 0),
-            //    EndTime = new TimeSpan(13, 0, 0),
-            //    GroupId = 2
-            //};
-            //var sessionEval2 = new Session()
-            //{
-            //    Id = 4,
-            //    Day = Enum.Day.Jueves,
-            //    StartTime = new TimeSpan(7, 0, 0),
-            //    EndTime = new TimeSpan(9, 0, 0),
-            //    GroupId = 2
-            //};
-            //Grupo Hacking
-            //var sessionHacking1 = new Session()
-            //{
-            //    Id = 5,
-            //    Day = Enum.Day.Martes,
-            //    StartTime = new TimeSpan(9, 0, 0),
-            //    EndTime = new TimeSpan(11, 0, 0),
-            //    GroupId = 3
-            //};
-            //var sessionHacking2 = new Session()
-            //{
-            //    Id = 6,
-            //    Day = Enum.Day.Viernes,
-            //    StartTime = new TimeSpan(10, 0, 0),
-            //    EndTime = new TimeSpan(11, 0, 0),
-            //    GroupId = 3
-            //};
-
-            //Llenado aula4
-            //Sesiones Intranets
-            //var sessionHIntra1 = new Session()
-            //{
-            //    Id = 7,
-            //    Day = Enum.Day.Lunes,
-            //    StartTime = new TimeSpan(9, 0, 0),
-            //    EndTime = new TimeSpan(11, 0, 0),
-            //    GroupId = 4
-            //};
-            //var sessionHIntra2 = new Session()
-            //{
-            //    Id = 8,
-            //    Day = Enum.Day.Martes,
-            //    StartTime = new TimeSpan(12, 0, 0),
-            //    EndTime = new TimeSpan(13, 0, 0),
-            //    GroupId = 4
-            //};
-            //Sesiones Ditri
-            //var sessionDistri1 = new Session()
-            //{
-            //    Id = 9,
-            //    Day = Enum.Day.Jueves,
-            //    StartTime = new TimeSpan(9, 0, 0),
-            //    EndTime = new TimeSpan(11, 0, 0),
-            //    GroupId = 5
-            //};
-            //var sessionDistri2 = new Session()
-            //{
-            //    Id = 10,
-            //    Day = Enum.Day.Viernes,
-            //    StartTime = new TimeSpan(7, 0, 0),
-            //    EndTime = new TimeSpan(9, 0, 0),
-            //    GroupId = 5
-            //};
-            //Sesiones WLAN
-            //var sessionwlan = new Session()
-            //{
-            //    Id = 11,
-            //    Day = Enum.Day.Viernes,
-            //    StartTime = new TimeSpan(11, 0, 0),
-            //    EndTime = new TimeSpan(13, 0, 0),
-            //    GroupId = 6
-            //};
-            //Sesiones de Sistemas Op
-            //var sessionsysOp1 = new Session()
-            //{
-            //    Id = 12,
-            //    Day = Enum.Day.Lunes,
-            //    StartTime = new TimeSpan(11, 0, 0),
-            //    EndTime = new TimeSpan(13, 0, 0),
-            //    GroupId = 7
-            //};
-            //var sessionsysOp2 = new Session()
-            //{
-            //    Id = 13,
-            //    Day = Enum.Day.Miercoles,
-            //    StartTime = new TimeSpan(8, 0, 0),
-            //    EndTime = new TimeSpan(9, 0, 0),
-            //    GroupId = 7
-            //};
-            //var sessionsysOp3 = new Session()
-            //{
-            //    Id = 14,
-            //    Day = Enum.Day.Viernes,
-            //    StartTime = new TimeSpan(9, 0, 0),
-            //    EndTime = new TimeSpan(11, 0, 0),
-            //    GroupId = 7
-            //};
 
 
-            //modelBuilder.Entity<Session>().HasData(
-            //    sessionAdmin1, sessionAdmin2,
-            //    sessionEval1, sessionEval2,
-            //    sessionHacking1, sessionHacking2,
-            //    sessionHIntra1, sessionHIntra2,
-            //    sessionDistri1, sessionDistri2,
-            //    sessionwlan,
-            //    sessionsysOp1, sessionsysOp2, sessionsysOp3);
+
+
+
+
+
+
+
+
+
+
+
+
 
         }
-
-
     }
 }

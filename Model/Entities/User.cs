@@ -1,11 +1,9 @@
 ﻿using Model.Enum;
-using System.ComponentModel.DataAnnotations;
 
 namespace Model.Entities
 {
     public class User: BaseEntity
     {
-        [EmailAddress]
         public string Email { get; set; }
 
         private string _password;

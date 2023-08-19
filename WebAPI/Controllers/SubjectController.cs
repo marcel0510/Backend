@@ -32,7 +32,6 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("{id:int}")]
-        [AllowAnonymous]
         public async Task<ActionResult<SubjectDTO>> GetSubject(int id)
         {
             var Subjects = _subjectDAL.GetAll();
@@ -40,7 +39,6 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("new")]
-        
         public async Task<ActionResult> AddSubject(ManSubjectDTO subjectDTO)
         {
             var subject = _mapper.Map<Subject>(subjectDTO);

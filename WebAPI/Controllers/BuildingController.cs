@@ -3,7 +3,6 @@ using AutoMapper.QueryableExtensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Model;
 using Model.Entities;
 using WebAPI.DTO.QueryDTO.BuildingMapper;
 using Model.DAL.Interfaces;
@@ -24,7 +23,6 @@ namespace WebAPI.Controllers
             _mapper = mapper;
         }
         [HttpGet]
-        [AllowAnonymous]
         public async Task<ActionResult<IEnumerable<BuildingDTO>>> GetBuildings()
         {
             var Buildings = _buildingDAL.GetAll();
