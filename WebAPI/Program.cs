@@ -22,6 +22,7 @@ builder.Services.AddDbContext<ScheduleDbContext>(options =>
 {
     options.UseSqlServer(connectionString);
     options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+    options.EnableSensitiveDataLogging();
 });
 // Add services to the container.
 
