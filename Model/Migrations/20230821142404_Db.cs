@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Model.Migrations
 {
     /// <inheritdoc />
-    public partial class DB : Migration
+    public partial class Db : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -23,7 +23,7 @@ namespace Model.Migrations
                     name = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 8, 20, 23, 7, 41, 225, DateTimeKind.Local).AddTicks(947)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 8, 21, 9, 24, 3, 716, DateTimeKind.Local).AddTicks(2493)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -45,7 +45,7 @@ namespace Model.Migrations
                     periodEnd = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 8, 20, 23, 7, 41, 225, DateTimeKind.Local).AddTicks(2488)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 8, 21, 9, 24, 3, 716, DateTimeKind.Local).AddTicks(4690)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -71,7 +71,7 @@ namespace Model.Migrations
                     IsLab = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 8, 20, 23, 7, 41, 225, DateTimeKind.Local).AddTicks(9825)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 8, 21, 9, 24, 3, 717, DateTimeKind.Local).AddTicks(4451)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -95,7 +95,7 @@ namespace Model.Migrations
                     reset = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 8, 20, 23, 7, 41, 226, DateTimeKind.Local).AddTicks(2013)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 8, 21, 9, 24, 3, 717, DateTimeKind.Local).AddTicks(7401)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -120,7 +120,7 @@ namespace Model.Migrations
                     buildingId = table.Column<int>(type: "int", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 8, 20, 23, 7, 41, 225, DateTimeKind.Local).AddTicks(4069)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 8, 21, 9, 24, 3, 716, DateTimeKind.Local).AddTicks(6837)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -170,7 +170,7 @@ namespace Model.Migrations
                     calendarId = table.Column<int>(type: "int", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false, defaultValue: 1),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 8, 20, 23, 7, 41, 225, DateTimeKind.Local).AddTicks(6566)),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 8, 21, 9, 24, 3, 717, DateTimeKind.Local).AddTicks(141)),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DeletedBy = table.Column<int>(type: "int", nullable: false),
@@ -901,7 +901,7 @@ namespace Model.Migrations
             migrationBuilder.InsertData(
                 table: "User",
                 columns: new[] { "id", "DeletedBy", "DeletedDate", "email", "name", "password", "role", "UpdatedBy", "UpdatedDate" },
-                values: new object[] { 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin@gmail.com", "Admin", "$2a$11$JrVC9Y4nMDN9BQFXIlidOeKNLmF5U1vbdLHwAIbgKsdw3FmnQPAU6", "Admin", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
+                values: new object[] { 1, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "admin@gmail.com", "Admin", "$2a$11$Y.mCcOVJGYjj.eOwCM/g0eG4BAnthVE/19BD9.wqpvXCy7t6d/nVy", "Admin", 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Classroom",
@@ -1244,7 +1244,26 @@ namespace Model.Migrations
                     { 709, 1, 100, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 78, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
                     { 710, 1, 100, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 122, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
                     { 711, 1, 100, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 145, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
-                    { 712, 1, 100, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 143, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                    { 712, 1, 100, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 143, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 713, 1, 88, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR2", 135, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 714, 1, 96, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR2", 50, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 715, 1, 97, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR2", 133, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 716, 1, 97, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR3", 133, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 717, 1, 97, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR2", 144, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 718, 1, 97, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR3", 144, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 719, 1, 97, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR4", 144, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 720, 1, 98, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 174, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 721, 1, 98, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 106, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 722, 1, 98, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 191, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 723, 1, 98, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 132, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 724, 1, 98, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 139, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 725, 1, 101, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 131, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 726, 1, 101, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR2", 131, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 727, 1, 101, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR3", 131, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 728, 1, 101, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR4", 131, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 729, 1, 105, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR1", 102, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 730, 1, 105, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR2", 102, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 731, 1, 105, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "GR3", 102, 0, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) }
                 });
 
             migrationBuilder.InsertData(
@@ -1513,7 +1532,29 @@ namespace Model.Migrations
                     { 1259, "Miercoles", new TimeSpan(0, 11, 30, 0, 0), 711, new TimeSpan(0, 10, 0, 0, 0) },
                     { 1260, "Viernes", new TimeSpan(0, 11, 0, 0, 0), 711, new TimeSpan(0, 9, 0, 0, 0) },
                     { 1261, "Martes", new TimeSpan(0, 16, 0, 0, 0), 712, new TimeSpan(0, 14, 0, 0, 0) },
-                    { 1262, "Jueves", new TimeSpan(0, 15, 0, 0, 0), 712, new TimeSpan(0, 14, 0, 0, 0) }
+                    { 1262, "Jueves", new TimeSpan(0, 15, 0, 0, 0), 712, new TimeSpan(0, 14, 0, 0, 0) },
+                    { 1263, "Lunes", new TimeSpan(0, 16, 0, 0, 0), 713, new TimeSpan(0, 14, 0, 0, 0) },
+                    { 1264, "Lunes", new TimeSpan(0, 12, 0, 0, 0), 714, new TimeSpan(0, 11, 0, 0, 0) },
+                    { 1265, "Jueves", new TimeSpan(0, 11, 0, 0, 0), 715, new TimeSpan(0, 9, 0, 0, 0) },
+                    { 1267, "Martes", new TimeSpan(0, 16, 0, 0, 0), 716, new TimeSpan(0, 14, 0, 0, 0) },
+                    { 1268, "Martes", new TimeSpan(0, 10, 0, 0, 0), 717, new TimeSpan(0, 9, 0, 0, 0) },
+                    { 1269, "Miercoles", new TimeSpan(0, 15, 0, 0, 0), 718, new TimeSpan(0, 14, 0, 0, 0) },
+                    { 1270, "Miercoles", new TimeSpan(0, 8, 0, 0, 0), 719, new TimeSpan(0, 7, 0, 0, 0) },
+                    { 1271, "Lunes", new TimeSpan(0, 13, 0, 0, 0), 720, new TimeSpan(0, 11, 0, 0, 0) },
+                    { 1272, "Jueves", new TimeSpan(0, 9, 0, 0, 0), 720, new TimeSpan(0, 7, 0, 0, 0) },
+                    { 1273, "Miercoles", new TimeSpan(0, 13, 0, 0, 0), 721, new TimeSpan(0, 11, 0, 0, 0) },
+                    { 1274, "Jueves", new TimeSpan(0, 11, 0, 0, 0), 722, new TimeSpan(0, 9, 0, 0, 0) },
+                    { 1275, "Martes", new TimeSpan(0, 9, 0, 0, 0), 722, new TimeSpan(0, 7, 0, 0, 0) },
+                    { 1276, "Miercoles", new TimeSpan(0, 9, 0, 0, 0), 722, new TimeSpan(0, 8, 0, 0, 0) },
+                    { 1277, "Martes", new TimeSpan(0, 10, 0, 0, 0), 723, new TimeSpan(0, 9, 0, 0, 0) },
+                    { 1278, "Viernes", new TimeSpan(0, 9, 0, 0, 0), 723, new TimeSpan(0, 7, 0, 0, 0) },
+                    { 1279, "Jueves", new TimeSpan(0, 16, 0, 0, 0), 723, new TimeSpan(0, 14, 0, 0, 0) },
+                    { 1280, "Jueves", new TimeSpan(0, 18, 0, 0, 0), 724, new TimeSpan(0, 16, 0, 0, 0) },
+                    { 1281, "Viernes", new TimeSpan(0, 13, 0, 0, 0), 725, new TimeSpan(0, 11, 0, 0, 0) },
+                    { 1282, "Viernes", new TimeSpan(0, 9, 0, 0, 0), 726, new TimeSpan(0, 7, 0, 0, 0) },
+                    { 1283, "Jueves", new TimeSpan(0, 16, 0, 0, 0), 726, new TimeSpan(0, 14, 0, 0, 0) },
+                    { 1284, "Lunes", new TimeSpan(0, 13, 0, 0, 0), 727, new TimeSpan(0, 11, 0, 0, 0) },
+                    { 1285, "Martes", new TimeSpan(0, 11, 0, 0, 0), 728, new TimeSpan(0, 9, 0, 0, 0) }
                 });
 
             migrationBuilder.CreateIndex(

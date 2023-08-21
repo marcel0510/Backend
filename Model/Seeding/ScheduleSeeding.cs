@@ -6774,7 +6774,7 @@ namespace Model.Seeding
             };
             #endregion
 
-            //E17/PB/E020 PROBADO
+            //E17/PB/E020 
 
             #region e17_pb_e020_gr1_1
             var e17_pb_e020_gr1_1 = new Group()
@@ -7930,7 +7930,8 @@ namespace Model.Seeding
 
             #endregion
 
-            //E17/P7/E026
+            //E17/P7/E026 PROBADO
+
             #region e17_p7_e026_gr1_166
             var e17_p7_e026_gr1_166 = new Group()
             {
@@ -8111,6 +8112,422 @@ namespace Model.Seeding
 
             #endregion
 
+            //E17/P6/E028
+            #region e17_p6_e028_gr2_88
+            var e17_p6_e028_gr2_88 = new Group()
+            {
+                Id = 713,
+                Name = "GR2",
+                SubjectId = 135,
+                ClassroomId = 88,
+                CalendarId = 1,
+            };
+
+            var e17_p6_e028_gr2_88_session1 = new Session()
+            {
+                Id = 1263,
+                Day = Enum.Day.Lunes,
+                StartTime = new TimeSpan(14, 0, 0),
+                EndTime = new TimeSpan(16, 0, 0),
+                GroupId = 713
+            };
+
+            #endregion
+
+            //E17/P7/E014
+            #region e17_p7_e014_gr2_50
+            var e17_p7_e014_gr2_50 = new Group()
+            {
+                Id = 714,
+                Name = "GR2",
+                SubjectId = 50,
+                ClassroomId = 96,
+                CalendarId = 1,
+            };
+
+            var e17_p7_e014_gr2_50_session1 = new Session()
+            {
+                Id = 1264,
+                Day = Enum.Day.Lunes,
+                StartTime = new TimeSpan(11, 0, 0),
+                EndTime = new TimeSpan(12, 0, 0),
+                GroupId = 714
+            };
+
+            #endregion
+
+            //E17/P7/E015
+            #region e17_p7_e015_gr2_133
+            var e17_p7_e015_gr2_133 = new Group()
+            {
+                Id = 715,
+                Name = "GR2",
+                SubjectId = 133,
+                ClassroomId = 97,
+                CalendarId = 1,
+            };
+
+            var e17_p7_e015_gr2_133_session1 = new Session()
+            {
+                Id = 1265,
+                Day = Enum.Day.Jueves,
+                StartTime = new TimeSpan(9, 0, 0),
+                EndTime = new TimeSpan(11, 0, 0),
+                GroupId = 715
+            };
+            #endregion
+
+            #region e17_p7_e015_gr3_133
+            var e17_p7_e015_gr3_133 = new Group()
+            {
+                Id = 716,
+                Name = "GR3",
+                SubjectId = 133,
+                ClassroomId = 97,
+                CalendarId = 1,
+            };
+
+            var e17_p7_e015_gr3_133_session1 = new Session()
+            {
+                Id = 1267,
+                Day = Enum.Day.Martes,
+                StartTime = new TimeSpan(14, 0, 0),
+                EndTime = new TimeSpan(16, 0, 0),
+                GroupId = 716
+            };
+            #endregion
+
+            #region e17_p7_e015_gr2_144
+            var e17_p7_e015_gr2_144 = new Group()
+            {
+                Id = 717,
+                Name = "GR2",
+                SubjectId = 144,
+                ClassroomId = 97,
+                CalendarId = 1,
+            };
+
+            var e17_p7_e015_gr2_144_session1 = new Session()
+            {
+                Id = 1268,
+                Day = Enum.Day.Martes,
+                StartTime = new TimeSpan(9, 0, 0),
+                EndTime = new TimeSpan(10, 0, 0),
+                GroupId = 717
+            };
+            #endregion
+
+            #region e17_p7_e015_gr3_144
+            var e17_p7_e015_gr3_144 = new Group()
+            {
+                Id = 718,
+                Name = "GR3",
+                SubjectId = 144,
+                ClassroomId = 97,
+                CalendarId = 1,
+            };
+
+            var e17_p7_e015_gr3_144_session1 = new Session()
+            {
+                Id = 1269,
+                Day = Enum.Day.Miercoles,
+                StartTime = new TimeSpan(14, 0, 0),
+                EndTime = new TimeSpan(15, 0, 0),
+                GroupId = 718
+            };
+            #endregion
+
+            #region e17_p7_e015_gr4_144
+            var e17_p7_e015_gr4_144 = new Group()
+            {
+                Id = 719,
+                Name = "GR4",
+                SubjectId = 144,
+                ClassroomId = 97,
+                CalendarId = 1,
+            };
+
+            var e17_p7_e015_gr4_144_session1 = new Session()
+            {
+                Id = 1270,
+                Day = Enum.Day.Miercoles,
+                StartTime = new TimeSpan(7, 0, 0),
+                EndTime = new TimeSpan(8, 0, 0),
+                GroupId = 719
+            };
+            #endregion
+
+            //E17/P7/E024
+            #region e17_p7_e024_gr1_174
+            var e17_p7_e024_gr1_174 = new Group()
+            {
+                Id = 720,
+                Name = "GR1",
+                SubjectId = 174,
+                ClassroomId = 98,
+                CalendarId = 1,
+            };
+
+            var e17_p7_e024_gr1_174_session1 = new Session()
+            {
+                Id = 1271,
+                Day = Enum.Day.Lunes,
+                StartTime = new TimeSpan(11, 0, 0),
+                EndTime = new TimeSpan(13, 0, 0),
+                GroupId = 720
+            };
+
+            var e17_p7_e024_gr1_174_session2 = new Session()
+            {
+                Id = 1272,
+                Day = Enum.Day.Jueves,
+                StartTime = new TimeSpan(7, 0, 0),
+                EndTime = new TimeSpan(9, 0, 0),
+                GroupId = 720
+            };
+
+            #endregion
+
+            #region e17_p7_e024_gr1_106
+            var e17_p7_e024_gr1_106 = new Group()
+            {
+                Id = 721,
+                Name = "GR1",
+                SubjectId = 106,
+                ClassroomId = 98,
+                CalendarId = 1,
+            };
+
+            var e17_p7_e024_gr1_106_session1 = new Session()
+            {
+                Id = 1273,
+                Day = Enum.Day.Miercoles,
+                StartTime = new TimeSpan(11, 0, 0),
+                EndTime = new TimeSpan(13, 0, 0),
+                GroupId = 721
+            };
+            #endregion
+
+            #region e17_p7_e024_gr2_191
+            var e17_p7_e024_gr2_191 = new Group()
+            {
+                Id = 722,
+                Name = "GR1",
+                SubjectId = 191,
+                ClassroomId = 98,
+                CalendarId = 1,
+            };
+
+            var e17_p7_e024_gr2_191_session1 = new Session()
+            {
+                Id = 1274,
+                Day = Enum.Day.Jueves,
+                StartTime = new TimeSpan(9, 0, 0),
+                EndTime = new TimeSpan(11, 0, 0),
+                GroupId = 722
+            };
+            #endregion
+
+            #region e17_p7_e024_gr1_132
+            var e17_p7_e024_gr1_132 = new Group()
+            {
+                Id = 723,
+                Name = "GR1",
+                SubjectId = 132,
+                ClassroomId = 98,
+                CalendarId = 1,
+            };
+
+            var e17_p7_e024_gr1_132_session1 = new Session()
+            {
+                Id = 1275,
+                Day = Enum.Day.Martes,
+                StartTime = new TimeSpan(7, 0, 0),
+                EndTime = new TimeSpan(9, 0, 0),
+                GroupId = 722
+            };
+
+            var e17_p7_e024_gr1_132_session2 = new Session()
+            {
+                Id = 1276,
+                Day = Enum.Day.Miercoles,
+                StartTime = new TimeSpan(8, 0, 0),
+                EndTime = new TimeSpan(9, 0, 0),
+                GroupId = 722
+            };
+            #endregion
+
+            #region e17_p7_e024_gr2_139
+            var e17_p7_e024_gr2_139 = new Group()
+            {
+                Id = 724,
+                Name = "GR1",
+                SubjectId = 139,
+                ClassroomId = 98,
+                CalendarId = 1,
+            };
+
+            var e17_p7_e024_gr2_139_session1 = new Session()
+            {
+                Id = 1277,
+                Day = Enum.Day.Martes,
+                StartTime = new TimeSpan(9, 0, 0),
+                EndTime = new TimeSpan(10, 0, 0),
+                GroupId = 723
+            };
+
+            var e17_p7_e024_gr2_139_session2 = new Session()
+            {
+                Id = 1278,
+                Day = Enum.Day.Viernes,
+                StartTime = new TimeSpan(7, 0, 0),
+                EndTime = new TimeSpan(9, 0, 0),
+                GroupId = 723
+            };
+            #endregion
+
+            //E17/P8/E002
+            #region e17_p8_e002_gr1_131
+            var e17_p8_e002_gr1_131 = new Group()
+            {
+                Id = 725,
+                Name = "GR1",
+                SubjectId = 131,
+                ClassroomId = 101,
+                CalendarId = 1,
+            };
+
+            var e17_p8_e002_gr1_131_session1 = new Session()
+            {
+                Id = 1279,
+                Day = Enum.Day.Jueves,
+                StartTime = new TimeSpan(14, 0, 0),
+                EndTime = new TimeSpan(16, 0, 0),
+                GroupId = 723
+            };
+            #endregion
+
+            #region e17_p8_e002_gr2_131
+            var e17_p8_e002_gr2_131 = new Group()
+            {
+                Id = 726,
+                Name = "GR2",
+                SubjectId = 131,
+                ClassroomId = 101,
+                CalendarId = 1,
+            };
+
+            var e17_p8_e002_gr2_131_session1 = new Session()
+            {
+                Id = 1280,
+                Day = Enum.Day.Jueves,
+                StartTime = new TimeSpan(16, 0, 0),
+                EndTime = new TimeSpan(18, 0, 0),
+                GroupId = 724
+            };
+            #endregion
+
+            #region e17_p8_e002_gr3_131
+            var e17_p8_e002_gr3_131 = new Group()
+            {
+                Id = 727,
+                Name = "GR3",
+                SubjectId = 131,
+                ClassroomId = 101,
+                CalendarId = 1,
+            };
+
+            var e17_p8_e002_gr3_131_session1 = new Session()
+            {
+                Id = 1281,
+                Day = Enum.Day.Viernes,
+                StartTime = new TimeSpan(11, 0, 0),
+                EndTime = new TimeSpan(13, 0, 0),
+                GroupId = 725
+            };
+            #endregion
+
+            #region e17_p8_e002_gr4_131
+            var e17_p8_e002_gr4_131 = new Group()
+            {
+                Id = 728,
+                Name = "GR4",
+                SubjectId = 131,
+                ClassroomId = 101,
+                CalendarId = 1,
+            };
+          
+            var e17_p8_e002_gr4_131_session1 = new Session()
+            {
+                Id = 1282,
+                Day = Enum.Day.Viernes,
+                StartTime = new TimeSpan(7, 0, 0),
+                EndTime = new TimeSpan(9, 0, 0),
+                GroupId = 726
+            };
+            #endregion
+
+            //E17/PB/E023
+            #region e17_pb_e023_gr1_102
+            var e17_pb_e023_gr1_102 = new Group()
+            {
+                Id = 729,
+                Name = "GR1",
+                SubjectId = 102,
+                ClassroomId = 105,
+                CalendarId = 1,
+            };
+
+            var e17_pb_e023_gr1_102_session1 = new Session()
+            {
+                Id = 1283,
+                Day = Enum.Day.Jueves,
+                StartTime = new TimeSpan(14, 0, 0),
+                EndTime = new TimeSpan(16, 0, 0),
+                GroupId = 726
+            };
+            #endregion
+
+            #region e17_pb_e023_gr2_102
+            var e17_pb_e023_gr2_102 = new Group()
+            {
+                Id = 730,
+                Name = "GR2",
+                SubjectId = 102,
+                ClassroomId = 105,
+                CalendarId = 1,
+            };
+
+            var e17_pb_e023_gr2_102_session1 = new Session()
+            {
+                Id = 1284,
+                Day = Enum.Day.Lunes,
+                StartTime = new TimeSpan(11, 0, 0),
+                EndTime = new TimeSpan(13, 0, 0),
+                GroupId = 727
+            };
+            #endregion
+
+            #region e17_pb_e023_gr3_102
+            var e17_pb_e023_gr3_102 = new Group()
+            {
+                Id = 731,
+                Name = "GR3",
+                SubjectId = 102,
+                ClassroomId = 105,
+                CalendarId = 1,
+            };
+
+            var e17_pb_e023_gr3_102_session1 = new Session()
+            {
+                Id = 1285,
+                Day = Enum.Day.Martes,
+                StartTime = new TimeSpan(9, 0, 0),
+                EndTime = new TimeSpan(11, 0, 0),
+                GroupId = 728
+            };
+            #endregion
+
             modelBuilder
                 .Entity<Group>()
                 .HasData(
@@ -8199,8 +8616,19 @@ namespace Model.Seeding
                 e17_p7_e025_gr1_134,
 
                 //E17/P7/E026
-                e17_p7_e026_gr1_166, e17_p7_e026_gr1_43, e17_p7_e026_gr1_78, e17_p7_e026_gr1_122, e17_p7_e026_gr1_145, e17_p7_e026_gr1_143
-
+                e17_p7_e026_gr1_166, e17_p7_e026_gr1_43, e17_p7_e026_gr1_78, e17_p7_e026_gr1_122, e17_p7_e026_gr1_145, e17_p7_e026_gr1_143,
+                //E17/P7/E028
+                e17_p6_e028_gr2_88,
+                //E17/P7/E014
+                e17_p7_e014_gr2_50,
+                //E17/P7/E015
+                e17_p7_e015_gr2_133, e17_p7_e015_gr3_133, e17_p7_e015_gr2_144, e17_p7_e015_gr3_144, e17_p7_e015_gr4_144,
+                //E17/P8/E024
+                e17_p7_e024_gr1_174, e17_p7_e024_gr1_106, e17_p7_e024_gr2_191, e17_p7_e024_gr1_132, e17_p7_e024_gr2_139,
+                //E17/P8/E002
+                e17_p8_e002_gr1_131, e17_p8_e002_gr2_131, e17_p8_e002_gr3_131, e17_p8_e002_gr4_131,
+                //E17/PB/E023
+                e17_pb_e023_gr1_102, e17_pb_e023_gr2_102, e17_pb_e023_gr3_102
             #endregion
                 );
 
@@ -8499,19 +8927,46 @@ namespace Model.Seeding
                 e17_p7_e026_gr1_78_session1, e17_p7_e026_gr1_78_session2,
                 e17_p7_e026_gr1_122_session1, e17_p7_e026_gr1_122_session2,
                 e17_p7_e026_gr1_145_session1, e17_p7_e026_gr1_145_session2,
-                e17_p7_e026_gr1_143_session1, e17_p7_e026_gr1_143_session2
+                e17_p7_e026_gr1_143_session1, e17_p7_e026_gr1_143_session2,
+            #endregion
+            #region E17/P6/E028
+                e17_p6_e028_gr2_88_session1,
+            #endregion
+            #region E17/P7/E014
+                e17_p7_e014_gr2_50_session1,
+            #endregion
+            #region E17/P7/E015
+                e17_p7_e015_gr2_133_session1,
+                e17_p7_e015_gr3_133_session1,
+                e17_p7_e015_gr2_144_session1,
+                e17_p7_e015_gr3_144_session1,
+                e17_p7_e015_gr4_144_session1,
+            #endregion
+            #region E17/P7/E024
+                e17_p7_e024_gr1_174_session1, e17_p7_e024_gr1_174_session2,
+                e17_p7_e024_gr1_106_session1,
+                e17_p7_e024_gr2_191_session1,
+                e17_p7_e024_gr1_132_session1, e17_p7_e024_gr1_132_session2,
+                e17_p7_e024_gr2_139_session1, e17_p7_e024_gr2_139_session2,
+            #endregion
+            #region E17/P8/E002
+                e17_p8_e002_gr1_131_session1,
+                e17_p8_e002_gr2_131_session1,
+                e17_p8_e002_gr3_131_session1,
+                e17_p8_e002_gr4_131_session1,
+            #endregion
+            #region E17/PB/E023
+                e17_pb_e023_gr1_102_session1,
+                e17_pb_e023_gr2_102_session1,
+                e17_pb_e023_gr3_102_session1
             #endregion
               );
 
 
 
+            //***************** JOU   ***********************
 
-
-
-
-
-
-
+            
 
         }
     }
