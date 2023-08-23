@@ -45,7 +45,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 9, 24, 3, 716, DateTimeKind.Local).AddTicks(2493));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 20, 22, 31, 743, DateTimeKind.Local).AddTicks(4175));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -123,7 +123,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 9, 24, 3, 716, DateTimeKind.Local).AddTicks(4690));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 20, 22, 31, 743, DateTimeKind.Local).AddTicks(5673));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -210,7 +210,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 9, 24, 3, 716, DateTimeKind.Local).AddTicks(6837));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 20, 22, 31, 743, DateTimeKind.Local).AddTicks(7198));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -2134,7 +2134,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 9, 24, 3, 717, DateTimeKind.Local).AddTicks(141));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 20, 22, 31, 743, DateTimeKind.Local).AddTicks(9576));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -5548,6 +5548,3771 @@ namespace Model.Migrations
                             SubjectId = 102,
                             UpdatedBy = 0,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CalendarId = 1,
+                            ClassroomId = 33,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 55,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 9,
+                            CalendarId = 1,
+                            ClassroomId = 33,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 55,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CalendarId = 1,
+                            ClassroomId = 33,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 55,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CalendarId = 1,
+                            ClassroomId = 32,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 65,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CalendarId = 1,
+                            ClassroomId = 32,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 65,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CalendarId = 1,
+                            ClassroomId = 32,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 60,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CalendarId = 1,
+                            ClassroomId = 32,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 60,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CalendarId = 1,
+                            ClassroomId = 32,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 60,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 16,
+                            CalendarId = 1,
+                            ClassroomId = 32,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR4",
+                            SubjectId = 60,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 17,
+                            CalendarId = 1,
+                            ClassroomId = 32,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR5",
+                            SubjectId = 60,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 18,
+                            CalendarId = 1,
+                            ClassroomId = 32,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR6",
+                            SubjectId = 60,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 19,
+                            CalendarId = 1,
+                            ClassroomId = 31,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 62,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 20,
+                            CalendarId = 1,
+                            ClassroomId = 31,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 62,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 21,
+                            CalendarId = 1,
+                            ClassroomId = 31,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 62,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 22,
+                            CalendarId = 1,
+                            ClassroomId = 31,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR4",
+                            SubjectId = 62,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 23,
+                            CalendarId = 1,
+                            ClassroomId = 31,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 65,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 24,
+                            CalendarId = 1,
+                            ClassroomId = 31,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR4",
+                            SubjectId = 65,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 25,
+                            CalendarId = 1,
+                            ClassroomId = 31,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR6",
+                            SubjectId = 65,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 26,
+                            CalendarId = 1,
+                            ClassroomId = 31,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-1",
+                            SubjectId = 57,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 27,
+                            CalendarId = 1,
+                            ClassroomId = 30,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-1",
+                            SubjectId = 30,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 28,
+                            CalendarId = 1,
+                            ClassroomId = 30,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-2",
+                            SubjectId = 30,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 29,
+                            CalendarId = 1,
+                            ClassroomId = 30,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-3",
+                            SubjectId = 30,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 30,
+                            CalendarId = 1,
+                            ClassroomId = 30,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-4",
+                            SubjectId = 30,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 31,
+                            CalendarId = 1,
+                            ClassroomId = 30,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-1",
+                            SubjectId = 30,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 32,
+                            CalendarId = 1,
+                            ClassroomId = 30,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-2",
+                            SubjectId = 30,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 33,
+                            CalendarId = 1,
+                            ClassroomId = 30,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-3",
+                            SubjectId = 30,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 34,
+                            CalendarId = 1,
+                            ClassroomId = 30,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-4",
+                            SubjectId = 30,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 35,
+                            CalendarId = 1,
+                            ClassroomId = 30,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-1",
+                            SubjectId = 36,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 36,
+                            CalendarId = 1,
+                            ClassroomId = 30,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-2",
+                            SubjectId = 36,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 37,
+                            CalendarId = 1,
+                            ClassroomId = 30,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-3",
+                            SubjectId = 36,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 38,
+                            CalendarId = 1,
+                            ClassroomId = 30,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-4",
+                            SubjectId = 36,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 39,
+                            CalendarId = 1,
+                            ClassroomId = 30,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-1",
+                            SubjectId = 36,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 40,
+                            CalendarId = 1,
+                            ClassroomId = 30,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-2",
+                            SubjectId = 36,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 41,
+                            CalendarId = 1,
+                            ClassroomId = 30,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-3",
+                            SubjectId = 36,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 42,
+                            CalendarId = 1,
+                            ClassroomId = 30,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-4",
+                            SubjectId = 36,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 43,
+                            CalendarId = 1,
+                            ClassroomId = 29,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 184,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 44,
+                            CalendarId = 1,
+                            ClassroomId = 29,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 99,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 48,
+                            CalendarId = 1,
+                            ClassroomId = 29,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 37,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 50,
+                            CalendarId = 1,
+                            ClassroomId = 29,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 56,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 52,
+                            CalendarId = 1,
+                            ClassroomId = 29,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 59,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 54,
+                            CalendarId = 1,
+                            ClassroomId = 29,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 146,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 56,
+                            CalendarId = 1,
+                            ClassroomId = 28,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 10,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 58,
+                            CalendarId = 1,
+                            ClassroomId = 28,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 14,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 60,
+                            CalendarId = 1,
+                            ClassroomId = 28,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 46,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 62,
+                            CalendarId = 1,
+                            ClassroomId = 28,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 66,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 64,
+                            CalendarId = 1,
+                            ClassroomId = 28,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 64,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 66,
+                            CalendarId = 1,
+                            ClassroomId = 27,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 136,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 68,
+                            CalendarId = 1,
+                            ClassroomId = 26,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 70,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 69,
+                            CalendarId = 1,
+                            ClassroomId = 26,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 70,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 70,
+                            CalendarId = 1,
+                            ClassroomId = 26,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR4",
+                            SubjectId = 70,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 71,
+                            CalendarId = 1,
+                            ClassroomId = 26,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR5",
+                            SubjectId = 70,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 72,
+                            CalendarId = 1,
+                            ClassroomId = 25,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 98,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 73,
+                            CalendarId = 1,
+                            ClassroomId = 25,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 98,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 74,
+                            CalendarId = 1,
+                            ClassroomId = 25,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 98,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 75,
+                            CalendarId = 1,
+                            ClassroomId = 25,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR4",
+                            SubjectId = 98,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 76,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-1",
+                            SubjectId = 91,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 77,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-2",
+                            SubjectId = 91,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 78,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-3",
+                            SubjectId = 91,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 79,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-4",
+                            SubjectId = 91,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 80,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-1",
+                            SubjectId = 91,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 81,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-2",
+                            SubjectId = 91,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 82,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-3",
+                            SubjectId = 91,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 83,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-1",
+                            SubjectId = 34,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 84,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-2",
+                            SubjectId = 34,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 85,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-3",
+                            SubjectId = 34,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 86,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-5",
+                            SubjectId = 34,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 87,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-1",
+                            SubjectId = 34,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 88,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-2",
+                            SubjectId = 34,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 89,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-3",
+                            SubjectId = 34,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 90,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-4",
+                            SubjectId = 34,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 91,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-5",
+                            SubjectId = 34,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 92,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3-1",
+                            SubjectId = 34,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 93,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3-2",
+                            SubjectId = 34,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 94,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3-3",
+                            SubjectId = 34,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 95,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3-4",
+                            SubjectId = 34,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 96,
+                            CalendarId = 1,
+                            ClassroomId = 24,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3-5",
+                            SubjectId = 34,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 97,
+                            CalendarId = 1,
+                            ClassroomId = 23,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 100,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 98,
+                            CalendarId = 1,
+                            ClassroomId = 23,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 100,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 99,
+                            CalendarId = 1,
+                            ClassroomId = 23,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR5",
+                            SubjectId = 100,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 100,
+                            CalendarId = 1,
+                            ClassroomId = 23,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR6",
+                            SubjectId = 51,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 101,
+                            CalendarId = 1,
+                            ClassroomId = 22,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-1",
+                            SubjectId = 40,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 102,
+                            CalendarId = 1,
+                            ClassroomId = 22,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-2",
+                            SubjectId = 40,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 103,
+                            CalendarId = 1,
+                            ClassroomId = 22,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-3",
+                            SubjectId = 40,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 104,
+                            CalendarId = 1,
+                            ClassroomId = 22,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-2",
+                            SubjectId = 40,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 105,
+                            CalendarId = 1,
+                            ClassroomId = 22,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-3",
+                            SubjectId = 40,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 106,
+                            CalendarId = 1,
+                            ClassroomId = 22,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-4",
+                            SubjectId = 40,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 107,
+                            CalendarId = 1,
+                            ClassroomId = 21,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR4",
+                            SubjectId = 2,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 109,
+                            CalendarId = 1,
+                            ClassroomId = 21,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-GP",
+                            SubjectId = 3,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 111,
+                            CalendarId = 1,
+                            ClassroomId = 20,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 51,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 113,
+                            CalendarId = 1,
+                            ClassroomId = 20,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR9",
+                            SubjectId = 51,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 115,
+                            CalendarId = 1,
+                            ClassroomId = 19,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-1",
+                            SubjectId = 89,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 116,
+                            CalendarId = 1,
+                            ClassroomId = 19,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-2",
+                            SubjectId = 89,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 117,
+                            CalendarId = 1,
+                            ClassroomId = 19,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-3",
+                            SubjectId = 89,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 118,
+                            CalendarId = 1,
+                            ClassroomId = 19,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-1",
+                            SubjectId = 89,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 119,
+                            CalendarId = 1,
+                            ClassroomId = 19,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-2",
+                            SubjectId = 89,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 120,
+                            CalendarId = 1,
+                            ClassroomId = 19,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-3",
+                            SubjectId = 89,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 121,
+                            CalendarId = 1,
+                            ClassroomId = 19,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-1",
+                            SubjectId = 85,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 122,
+                            CalendarId = 1,
+                            ClassroomId = 19,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-2",
+                            SubjectId = 85,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 123,
+                            CalendarId = 1,
+                            ClassroomId = 19,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-3",
+                            SubjectId = 85,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 124,
+                            CalendarId = 1,
+                            ClassroomId = 19,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-4",
+                            SubjectId = 85,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 125,
+                            CalendarId = 1,
+                            ClassroomId = 19,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-5",
+                            SubjectId = 85,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 126,
+                            CalendarId = 1,
+                            ClassroomId = 19,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-6",
+                            SubjectId = 85,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 127,
+                            CalendarId = 1,
+                            ClassroomId = 19,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 88,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 129,
+                            CalendarId = 1,
+                            ClassroomId = 18,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-2",
+                            SubjectId = 38,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 130,
+                            CalendarId = 1,
+                            ClassroomId = 18,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-3",
+                            SubjectId = 38,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 131,
+                            CalendarId = 1,
+                            ClassroomId = 18,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-4",
+                            SubjectId = 38,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 132,
+                            CalendarId = 1,
+                            ClassroomId = 18,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-1",
+                            SubjectId = 38,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 133,
+                            CalendarId = 1,
+                            ClassroomId = 18,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-2",
+                            SubjectId = 38,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 134,
+                            CalendarId = 1,
+                            ClassroomId = 18,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-3",
+                            SubjectId = 38,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 135,
+                            CalendarId = 1,
+                            ClassroomId = 18,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-1",
+                            SubjectId = 93,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 136,
+                            CalendarId = 1,
+                            ClassroomId = 18,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-2",
+                            SubjectId = 93,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 137,
+                            CalendarId = 1,
+                            ClassroomId = 18,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-3",
+                            SubjectId = 93,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 138,
+                            CalendarId = 1,
+                            ClassroomId = 18,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-4",
+                            SubjectId = 93,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 139,
+                            CalendarId = 1,
+                            ClassroomId = 18,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-5",
+                            SubjectId = 93,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 140,
+                            CalendarId = 1,
+                            ClassroomId = 18,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 108,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 141,
+                            CalendarId = 1,
+                            ClassroomId = 18,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 110,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 142,
+                            CalendarId = 1,
+                            ClassroomId = 18,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 88,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 1,
+                            CalendarId = 1,
+                            ClassroomId = 34,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 111,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CalendarId = 1,
+                            ClassroomId = 34,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 111,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CalendarId = 1,
+                            ClassroomId = 34,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 111,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CalendarId = 1,
+                            ClassroomId = 35,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 109,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CalendarId = 1,
+                            ClassroomId = 35,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 109,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CalendarId = 1,
+                            ClassroomId = 35,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 109,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CalendarId = 1,
+                            ClassroomId = 35,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR4",
+                            SubjectId = 109,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 143,
+                            CalendarId = 1,
+                            ClassroomId = 85,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 151,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 145,
+                            CalendarId = 1,
+                            ClassroomId = 85,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 176,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 148,
+                            CalendarId = 1,
+                            ClassroomId = 85,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 12,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 151,
+                            CalendarId = 1,
+                            ClassroomId = 85,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR6",
+                            SubjectId = 12,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 154,
+                            CalendarId = 1,
+                            ClassroomId = 85,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 186,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 157,
+                            CalendarId = 1,
+                            ClassroomId = 87,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR11",
+                            SubjectId = 6,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 159,
+                            CalendarId = 1,
+                            ClassroomId = 87,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 6,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 161,
+                            CalendarId = 1,
+                            ClassroomId = 87,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 167,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 163,
+                            CalendarId = 1,
+                            ClassroomId = 87,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR11",
+                            SubjectId = 12,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 166,
+                            CalendarId = 1,
+                            ClassroomId = 87,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR5",
+                            SubjectId = 12,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 169,
+                            CalendarId = 1,
+                            ClassroomId = 87,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 177,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 172,
+                            CalendarId = 1,
+                            ClassroomId = 82,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR7",
+                            SubjectId = 51,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 175,
+                            CalendarId = 1,
+                            ClassroomId = 81,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-1",
+                            SubjectId = 83,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 178,
+                            CalendarId = 1,
+                            ClassroomId = 81,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-2",
+                            SubjectId = 83,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 179,
+                            CalendarId = 1,
+                            ClassroomId = 81,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-3",
+                            SubjectId = 83,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 180,
+                            CalendarId = 1,
+                            ClassroomId = 81,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-4",
+                            SubjectId = 83,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 181,
+                            CalendarId = 1,
+                            ClassroomId = 81,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-5",
+                            SubjectId = 83,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 182,
+                            CalendarId = 1,
+                            ClassroomId = 81,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-6",
+                            SubjectId = 83,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 183,
+                            CalendarId = 1,
+                            ClassroomId = 81,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-7",
+                            SubjectId = 83,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 184,
+                            CalendarId = 1,
+                            ClassroomId = 80,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 10,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 185,
+                            CalendarId = 1,
+                            ClassroomId = 80,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 8,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 188,
+                            CalendarId = 1,
+                            ClassroomId = 80,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 14,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 189,
+                            CalendarId = 1,
+                            ClassroomId = 80,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR5",
+                            SubjectId = 22,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 190,
+                            CalendarId = 1,
+                            ClassroomId = 80,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 68,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 191,
+                            CalendarId = 1,
+                            ClassroomId = 80,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 68,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 192,
+                            CalendarId = 1,
+                            ClassroomId = 80,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 187,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 193,
+                            CalendarId = 1,
+                            ClassroomId = 80,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 10,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 194,
+                            CalendarId = 1,
+                            ClassroomId = 79,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR6",
+                            SubjectId = 1,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 195,
+                            CalendarId = 1,
+                            ClassroomId = 79,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-GP",
+                            SubjectId = 2,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 196,
+                            CalendarId = 1,
+                            ClassroomId = 79,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR6",
+                            SubjectId = 2,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 197,
+                            CalendarId = 1,
+                            ClassroomId = 79,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 8,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 198,
+                            CalendarId = 1,
+                            ClassroomId = 79,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 14,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 199,
+                            CalendarId = 1,
+                            ClassroomId = 79,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR4",
+                            SubjectId = 14,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 200,
+                            CalendarId = 1,
+                            ClassroomId = 79,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR6",
+                            SubjectId = 3,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 201,
+                            CalendarId = 1,
+                            ClassroomId = 79,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2-GP",
+                            SubjectId = 9,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 202,
+                            CalendarId = 1,
+                            ClassroomId = 79,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR6",
+                            SubjectId = 5,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 203,
+                            CalendarId = 1,
+                            ClassroomId = 79,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 27,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 204,
+                            CalendarId = 1,
+                            ClassroomId = 77,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 25,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 205,
+                            CalendarId = 1,
+                            ClassroomId = 77,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 44,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 206,
+                            CalendarId = 1,
+                            ClassroomId = 77,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 26,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 207,
+                            CalendarId = 1,
+                            ClassroomId = 77,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 90,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 208,
+                            CalendarId = 1,
+                            ClassroomId = 77,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 86,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 209,
+                            CalendarId = 1,
+                            ClassroomId = 77,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 49,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 210,
+                            CalendarId = 1,
+                            ClassroomId = 77,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 61,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 211,
+                            CalendarId = 1,
+                            ClassroomId = 77,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 69,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 212,
+                            CalendarId = 1,
+                            ClassroomId = 74,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 10,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 213,
+                            CalendarId = 1,
+                            ClassroomId = 74,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 182,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 214,
+                            CalendarId = 1,
+                            ClassroomId = 74,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 101,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 215,
+                            CalendarId = 1,
+                            ClassroomId = 74,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 19,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 216,
+                            CalendarId = 1,
+                            ClassroomId = 74,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 19,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 217,
+                            CalendarId = 1,
+                            ClassroomId = 74,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 22,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 218,
+                            CalendarId = 1,
+                            ClassroomId = 74,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR4",
+                            SubjectId = 16,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 219,
+                            CalendarId = 1,
+                            ClassroomId = 74,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR4",
+                            SubjectId = 17,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 220,
+                            CalendarId = 1,
+                            ClassroomId = 74,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 126,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 221,
+                            CalendarId = 1,
+                            ClassroomId = 74,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 130,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 222,
+                            CalendarId = 1,
+                            ClassroomId = 73,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 26,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 223,
+                            CalendarId = 1,
+                            ClassroomId = 73,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 33,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 224,
+                            CalendarId = 1,
+                            ClassroomId = 73,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 92,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 225,
+                            CalendarId = 1,
+                            ClassroomId = 73,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 21,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 226,
+                            CalendarId = 1,
+                            ClassroomId = 73,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 21,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 227,
+                            CalendarId = 1,
+                            ClassroomId = 73,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 19,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 228,
+                            CalendarId = 1,
+                            ClassroomId = 73,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR4",
+                            SubjectId = 19,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 229,
+                            CalendarId = 1,
+                            ClassroomId = 73,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 47,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 230,
+                            CalendarId = 1,
+                            ClassroomId = 73,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 49,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 231,
+                            CalendarId = 1,
+                            ClassroomId = 73,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 31,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 232,
+                            CalendarId = 1,
+                            ClassroomId = 73,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 31,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 233,
+                            CalendarId = 1,
+                            ClassroomId = 73,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 72,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 234,
+                            CalendarId = 1,
+                            ClassroomId = 72,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 47,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 235,
+                            CalendarId = 1,
+                            ClassroomId = 72,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 185,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 236,
+                            CalendarId = 1,
+                            ClassroomId = 72,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR4",
+                            SubjectId = 21,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 237,
+                            CalendarId = 1,
+                            ClassroomId = 72,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 26,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 238,
+                            CalendarId = 1,
+                            ClassroomId = 72,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 35,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 239,
+                            CalendarId = 1,
+                            ClassroomId = 72,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 37,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 240,
+                            CalendarId = 1,
+                            ClassroomId = 72,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1-GP",
+                            SubjectId = 1,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 241,
+                            CalendarId = 1,
+                            ClassroomId = 72,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 63,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 243,
+                            CalendarId = 1,
+                            ClassroomId = 71,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 33,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 244,
+                            CalendarId = 1,
+                            ClassroomId = 71,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 33,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 245,
+                            CalendarId = 1,
+                            ClassroomId = 71,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 35,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 246,
+                            CalendarId = 1,
+                            ClassroomId = 71,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 41,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 247,
+                            CalendarId = 1,
+                            ClassroomId = 71,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 25,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 248,
+                            CalendarId = 1,
+                            ClassroomId = 71,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 82,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 249,
+                            CalendarId = 1,
+                            ClassroomId = 71,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 117,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 250,
+                            CalendarId = 1,
+                            ClassroomId = 71,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 120,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 255,
+                            CalendarId = 1,
+                            ClassroomId = 71,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 84,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 256,
+                            CalendarId = 1,
+                            ClassroomId = 71,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 67,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 257,
+                            CalendarId = 1,
+                            ClassroomId = 71,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 152,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 258,
+                            CalendarId = 1,
+                            ClassroomId = 71,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 48,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 259,
+                            CalendarId = 1,
+                            ClassroomId = 71,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 48,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 260,
+                            CalendarId = 1,
+                            ClassroomId = 71,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 156,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 261,
+                            CalendarId = 1,
+                            ClassroomId = 62,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 183,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 262,
+                            CalendarId = 1,
+                            ClassroomId = 62,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 24,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 263,
+                            CalendarId = 1,
+                            ClassroomId = 62,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 61,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 264,
+                            CalendarId = 1,
+                            ClassroomId = 62,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 72,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 265,
+                            CalendarId = 1,
+                            ClassroomId = 62,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 155,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 266,
+                            CalendarId = 1,
+                            ClassroomId = 62,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR4",
+                            SubjectId = 27,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 267,
+                            CalendarId = 1,
+                            ClassroomId = 62,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 77,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 268,
+                            CalendarId = 1,
+                            ClassroomId = 62,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 22,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 269,
+                            CalendarId = 1,
+                            ClassroomId = 62,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 11,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 270,
+                            CalendarId = 1,
+                            ClassroomId = 62,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 11,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 271,
+                            CalendarId = 1,
+                            ClassroomId = 62,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 16,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 283,
+                            CalendarId = 1,
+                            ClassroomId = 61,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR5",
+                            SubjectId = 19,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 284,
+                            CalendarId = 1,
+                            ClassroomId = 61,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 22,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 285,
+                            CalendarId = 1,
+                            ClassroomId = 61,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR4",
+                            SubjectId = 22,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 286,
+                            CalendarId = 1,
+                            ClassroomId = 61,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR4",
+                            SubjectId = 11,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 287,
+                            CalendarId = 1,
+                            ClassroomId = 61,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 16,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 288,
+                            CalendarId = 1,
+                            ClassroomId = 61,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 17,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 289,
+                            CalendarId = 1,
+                            ClassroomId = 61,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 17,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 290,
+                            CalendarId = 1,
+                            ClassroomId = 61,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 29,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 291,
+                            CalendarId = 1,
+                            ClassroomId = 61,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 182,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 292,
+                            CalendarId = 1,
+                            ClassroomId = 61,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 183,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 293,
+                            CalendarId = 1,
+                            ClassroomId = 61,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 183,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 294,
+                            CalendarId = 1,
+                            ClassroomId = 61,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR4",
+                            SubjectId = 47,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 295,
+                            CalendarId = 1,
+                            ClassroomId = 61,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 24,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 296,
+                            CalendarId = 1,
+                            ClassroomId = 61,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 97,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 297,
+                            CalendarId = 1,
+                            ClassroomId = 63,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 49,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 298,
+                            CalendarId = 1,
+                            ClassroomId = 63,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 24,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 299,
+                            CalendarId = 1,
+                            ClassroomId = 63,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 185,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 300,
+                            CalendarId = 1,
+                            ClassroomId = 63,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 128,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 301,
+                            CalendarId = 1,
+                            ClassroomId = 63,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR5",
+                            SubjectId = 14,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 302,
+                            CalendarId = 1,
+                            ClassroomId = 63,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 184,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 303,
+                            CalendarId = 1,
+                            ClassroomId = 63,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 11,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 304,
+                            CalendarId = 1,
+                            ClassroomId = 63,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 16,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 305,
+                            CalendarId = 1,
+                            ClassroomId = 63,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 27,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 306,
+                            CalendarId = 1,
+                            ClassroomId = 63,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR3",
+                            SubjectId = 27,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 307,
+                            CalendarId = 1,
+                            ClassroomId = 63,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 29,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 308,
+                            CalendarId = 1,
+                            ClassroomId = 63,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR2",
+                            SubjectId = 58,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 309,
+                            CalendarId = 1,
+                            ClassroomId = 63,
+                            CreatedBy = 0,
+                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            DeletedBy = 0,
+                            DeletedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            IsDeleted = false,
+                            Name = "GR1",
+                            SubjectId = 188,
+                            UpdatedBy = 0,
+                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -8145,6 +11910,3084 @@ namespace Model.Migrations
                             GroupId = 728,
                             IsDeleted = false,
                             StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 8,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 9,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 10,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 11,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 12,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 13,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 14,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 15,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 15,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 16,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 16,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 17,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 17,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 18,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 18,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 19,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 19,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 20,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 20,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 21,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 21,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 22,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 22,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 23,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 23,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 24,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 24,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 25,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 25,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 26,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 26,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 27,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 27,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 28,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 28,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 29,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 29,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 30,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 30,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 31,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 31,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 32,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 32,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 33,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 33,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 34,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 34,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 35,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 35,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 36,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 36,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 37,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 37,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 38,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 38,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 39,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 39,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 40,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 40,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 41,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 41,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 42,
+                            Day = "Domingo",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 42,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 43,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 43,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 44,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 44,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 48,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 48,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 49,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 8, 0, 0, 0),
+                            GroupId = 48,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 50,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 50,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 12, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 51,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 50,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 52,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 52,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 53,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 15, 0, 0, 0),
+                            GroupId = 52,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 54,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 12, 0, 0, 0),
+                            GroupId = 54,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 55,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 54,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 56,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 56,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 57,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 12, 0, 0, 0),
+                            GroupId = 56,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 58,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 58,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 59,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 58,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 10, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 60,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 60,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 61,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 15, 0, 0, 0),
+                            GroupId = 60,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 62,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 62,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 12, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 63,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 62,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 64,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 64,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 65,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 10, 0, 0, 0),
+                            GroupId = 64,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 66,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 66,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 67,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 66,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 68,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 12, 0, 0, 0),
+                            GroupId = 68,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 10, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 69,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 69,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 70,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 70,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 71,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 71,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 72,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 72,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 73,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 73,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 74,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 74,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 75,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 75,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 76,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 76,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 77,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 77,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 78,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 78,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 79,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 79,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 80,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 80,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 81,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 81,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 82,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 82,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 83,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 83,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 84,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 84,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 85,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 85,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 86,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 86,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 87,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 87,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 88,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 88,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 89,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 89,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 90,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 90,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 91,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 91,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 92,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 92,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 93,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 93,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 94,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 94,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 95,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 95,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 96,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 96,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 97,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 97,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 98,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 98,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 99,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 99,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 100,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 100,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 101,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 101,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 102,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 102,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 103,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 103,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 104,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 104,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 105,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 105,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 106,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 106,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 107,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 107,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 108,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 107,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 109,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 109,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 110,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 109,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 111,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 12, 0, 0, 0),
+                            GroupId = 111,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 112,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 111,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 113,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 113,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 114,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 113,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 8, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 115,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 115,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 116,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 116,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 117,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 117,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 118,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 118,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 119,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 119,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 120,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 120,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 121,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 121,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 122,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 122,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 123,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 123,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 124,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 124,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 125,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 125,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 126,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 126,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 127,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 127,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 128,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 127,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 10, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 129,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 129,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 130,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 130,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 131,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 131,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 132,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 132,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 133,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 133,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 134,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 134,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 135,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 135,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 136,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 136,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 137,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 137,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 138,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 138,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 139,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 139,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 140,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 140,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 141,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 141,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 142,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 142,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 143,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 142,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 10, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 1,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 8, 0, 0, 0),
+                            GroupId = 1,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 10, 0, 0, 0),
+                            GroupId = 2,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 15, 0, 0, 0),
+                            GroupId = 3,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 4,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 5,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 6,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 7,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 144,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 143,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 146,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 145,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 147,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 145,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 149,
+                            Day = "Domingo",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 148,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 150,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 10, 0, 0, 0),
+                            GroupId = 148,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 152,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 151,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 12, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 153,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 151,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 155,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 154,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 156,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 154,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 158,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 157,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 160,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 159,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 162,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 161,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 164,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 163,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 165,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 15, 0, 0, 0),
+                            GroupId = 163,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 167,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 166,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 168,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 166,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 10, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 170,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 169,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 171,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 169,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 172,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 10, 0, 0, 0),
+                            GroupId = 169,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 173,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 15, 0, 0, 0),
+                            GroupId = 172,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 174,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 17, 0, 0, 0),
+                            GroupId = 172,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 15, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 175,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 175,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 178,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 178,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 179,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 179,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 180,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 180,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 181,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 181,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 182,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 182,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 183,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 183,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 184,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 184,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 185,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 184,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 12, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 186,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 185,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 187,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 185,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 188,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 188,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 189,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 10, 0, 0, 0),
+                            GroupId = 188,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 190,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 15, 0, 0, 0),
+                            GroupId = 189,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 191,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 189,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 192,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 190,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 10, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 195,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 191,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 196,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 192,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 197,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 12, 0, 0, 0),
+                            GroupId = 193,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 198,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 194,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 199,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 194,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 200,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 195,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 201,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 195,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 202,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 196,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 203,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 196,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 204,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 197,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 205,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 197,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 206,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 198,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 207,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 198,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 208,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 199,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 209,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 199,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 10, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 210,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 200,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 211,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 200,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 212,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 201,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 213,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 201,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 214,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 202,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 215,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 202,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 216,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 203,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 217,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 10, 0, 0, 0),
+                            GroupId = 203,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 218,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 204,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 219,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 204,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 220,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 205,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 221,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 205,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 8, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 222,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 206,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 223,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 206,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 224,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 207,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 225,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 10, 0, 0, 0),
+                            GroupId = 207,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 226,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 208,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 10, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 227,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 208,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 228,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 209,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 229,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 12, 0, 0, 0),
+                            GroupId = 210,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 230,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 211,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 231,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 212,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 232,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 213,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 233,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 214,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 234,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 215,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 235,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 215,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 8, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 236,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 216,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 237,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 216,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 12, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 238,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 217,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 239,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 217,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 8, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 240,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 218,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 241,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 218,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 15, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 242,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 219,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 243,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 8, 0, 0, 0),
+                            GroupId = 219,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 244,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 8, 0, 0, 0),
+                            GroupId = 220,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 245,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 220,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 246,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 8, 0, 0, 0),
+                            GroupId = 221,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 247,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 221,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 248,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 222,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 249,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 222,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 250,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 223,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 251,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 12, 0, 0, 0),
+                            GroupId = 223,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 252,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 224,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 253,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 224,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 254,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 225,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 255,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 225,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 256,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 226,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 257,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 226,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 258,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 227,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 259,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 227,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 8, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 260,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 228,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 261,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 228,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 12, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 262,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 229,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 263,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 19, 0, 0, 0),
+                            GroupId = 230,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 17, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 264,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 231,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 265,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 232,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 266,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 233,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 267,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 234,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 268,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 235,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 269,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 236,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 270,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 236,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 271,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 237,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 272,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 237,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 273,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 238,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 274,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 12, 0, 0, 0),
+                            GroupId = 238,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 275,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 239,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 276,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 15, 0, 0, 0),
+                            GroupId = 239,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 277,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 240,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 278,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 240,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 279,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 241,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 280,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 241,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 17, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 283,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 243,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 284,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 243,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 12, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 285,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 244,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 286,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 14, 0, 0, 0),
+                            GroupId = 244,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 13, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 287,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 245,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 288,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 12, 0, 0, 0),
+                            GroupId = 245,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 289,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 246,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 290,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 15, 0, 0, 0),
+                            GroupId = 246,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 291,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 247,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 292,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 248,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 293,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 249,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 294,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 8, 0, 0, 0),
+                            GroupId = 250,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 299,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 255,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 300,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 19, 0, 0, 0),
+                            GroupId = 256,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 17, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 301,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 257,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 302,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 258,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 303,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 259,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 304,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 8, 0, 0, 0),
+                            GroupId = 260,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 305,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 261,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 306,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 262,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 307,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 263,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 308,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 264,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 309,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 265,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 310,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 265,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 311,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 266,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 312,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 266,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 12, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 313,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 19, 0, 0, 0),
+                            GroupId = 267,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 17, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 314,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 267,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 17, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 315,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 15, 0, 0, 0),
+                            GroupId = 268,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 316,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 268,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 317,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 269,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 318,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 269,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 319,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 270,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 320,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 270,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 321,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 271,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 322,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 8, 0, 0, 0),
+                            GroupId = 271,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 341,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 283,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 342,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 283,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 12, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 343,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 284,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 344,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 284,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 8, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 345,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 15, 0, 0, 0),
+                            GroupId = 285,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 346,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 285,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 347,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 286,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 348,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 286,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 349,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 287,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 350,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 287,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 15, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 351,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 288,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 352,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 12, 0, 0, 0),
+                            GroupId = 288,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 353,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 289,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 354,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 12, 0, 0, 0),
+                            GroupId = 289,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 355,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 290,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 356,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 10, 0, 0, 0),
+                            GroupId = 290,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 357,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 291,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 358,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 292,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 359,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            GroupId = 293,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 16, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 360,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 19, 0, 0, 0),
+                            GroupId = 294,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 17, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 361,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 295,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 362,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 296,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 363,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 297,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 364,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 298,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 365,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 299,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 366,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 15, 0, 0, 0),
+                            GroupId = 300,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 367,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 301,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 368,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 15, 0, 0, 0),
+                            GroupId = 301,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 369,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 19, 0, 0, 0),
+                            GroupId = 302,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 17, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 371,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 303,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 372,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            GroupId = 303,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 14, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 373,
+                            Day = "Lunes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 304,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 374,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 8, 0, 0, 0),
+                            GroupId = 304,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 375,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 9, 0, 0, 0),
+                            GroupId = 305,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 376,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 10, 0, 0, 0),
+                            GroupId = 305,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 377,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 306,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 378,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 13, 0, 0, 0),
+                            GroupId = 306,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 12, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 379,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 307,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 380,
+                            Day = "Miercoles",
+                            EndTime = new TimeSpan(0, 10, 0, 0, 0),
+                            GroupId = 307,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 381,
+                            Day = "Martes",
+                            EndTime = new TimeSpan(0, 19, 0, 0, 0),
+                            GroupId = 308,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 17, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 382,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 19, 0, 0, 0),
+                            GroupId = 308,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 18, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 383,
+                            Day = "Jueves",
+                            EndTime = new TimeSpan(0, 11, 0, 0, 0),
+                            GroupId = 309,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 384,
+                            Day = "Viernes",
+                            EndTime = new TimeSpan(0, 8, 0, 0, 0),
+                            GroupId = 309,
+                            IsDeleted = false,
+                            StartTime = new TimeSpan(0, 7, 0, 0, 0)
                         });
                 });
 
@@ -8176,7 +15019,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 9, 24, 3, 717, DateTimeKind.Local).AddTicks(4451));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 20, 22, 31, 744, DateTimeKind.Local).AddTicks(2797));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -11507,7 +18350,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 21, 9, 24, 3, 717, DateTimeKind.Local).AddTicks(7401));
+                        .HasDefaultValue(new DateTime(2023, 8, 21, 20, 22, 31, 744, DateTimeKind.Local).AddTicks(4956));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -11575,7 +18418,7 @@ namespace Model.Migrations
                             Email = "admin@gmail.com",
                             IsDeleted = false,
                             Name = "Admin",
-                            Password = "$2a$11$Y.mCcOVJGYjj.eOwCM/g0eG4BAnthVE/19BD9.wqpvXCy7t6d/nVy",
+                            Password = "$2a$11$QpFClw7skEkl3o38dWwwt.5FVeXz.tSmdXr9acHtqcCOpszuEtcgu",
                             Reset = false,
                             Role = "Admin",
                             UpdatedBy = 0,

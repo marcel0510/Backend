@@ -23,14 +23,16 @@ namespace WebAPI.Controllers
         }
 
         // GET: api/Courses
-        [HttpGet]
-        public async Task<IEnumerable<GeneralGroupDTO>> GetGroups()
+        [HttpGet("{calendarId:int}")]
+        public async Task<IEnumerable<GeneralGroupDTO>> GetGroups(int calendarId)
         {
             var Groups = _groupDAL.GetAll();
-            return await Groups.ProjectTo<GeneralGroupDTO>(_mapper.ConfigurationProvider).ToListAsync();
+            return await Groups.ProjectTo<GeneralGroupDTO>(_mapper.ConfigurationProvider)
+                .Where(g => g.Calendar.Id == calendarId)
+                .ToListAsync();
         }
 
-        [HttpGet("{id:int}")]
+        [HttpGet("get/{id:int}")]
         public async Task<ActionResult<GroupDTO>> GetGroup(int id)
         {
             var Groups = _groupDAL.GetAll();
