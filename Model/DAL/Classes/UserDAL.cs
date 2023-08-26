@@ -132,13 +132,22 @@ namespace Model.DAL.Classes
 
         public async Task<User> Validate(string email, string password)
         {
-            var user = await _context.User.FirstOrDefaultAsync(u => u.Email == email);
+            var auxUser = new User();
+            var user = await _context.User.FirstOrDefaultAsync(u => u.Email == email && !u.IsDeleted);
+            if(user == null)
+            {
+                auxUser.Id = 2;
+                auxUser.IsDeleted = true;
+                return auxUser;
+            }
             if (BCrypt.Net.BCrypt.Verify(password, user.Password))
             {
                 return user;
 
             }
-            return null;
+            auxUser.Id = 1;
+            auxUser.IsDeleted = true;
+            return auxUser;
 
         }
     }

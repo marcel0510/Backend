@@ -179,7 +179,7 @@ namespace Model.Seeding
             var e16_p1_e013 = new Classroom()
             {
                 Id = 6,
-                Code = "E008",
+                Code = "E013",
                 IsLab = true,
                 Name = "LAB. ALTA FRECUENCIA",
                 Capacity = 20,
@@ -240,7 +240,7 @@ namespace Model.Seeding
             var e16_p2_e002 = new Classroom()
             {
                 Id = 12,
-                Code = "E001",
+                Code = "E002",
                 IsLab = true,
                 Name = "LAB. REDES 2",
                 Capacity = 16,

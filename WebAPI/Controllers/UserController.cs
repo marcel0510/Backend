@@ -42,7 +42,7 @@ namespace WebAPI.Controllers
         [HttpPost("new")]
         public async Task<ActionResult> AddUser(ManUserDTO userDTO)
         {
-           
+
             var user = _mapper.Map<User>(userDTO);
             var response = await _userDAL.Add(user);
 
@@ -63,7 +63,7 @@ namespace WebAPI.Controllers
             {
                 return Ok(new { isSuccess = false, errorType = response.ErrorType });
             }
-           
+
         }
 
         [HttpPut("update")]
@@ -74,7 +74,7 @@ namespace WebAPI.Controllers
             user = _mapper.Map(userDTO, user);
             var response = await _userDAL.Update(user);
 
-            if(response.Ok) return Ok(new { isSuccess = true });
+            if (response.Ok) return Ok(new { isSuccess = true });
             else return Ok(new { isSuccess = false, errorType = response.ErrorType });
         }
 
@@ -82,7 +82,7 @@ namespace WebAPI.Controllers
         public async Task<ActionResult> DeleteUser(int usrId, int userId)
         {
             var ok = await _userDAL.Delete(usrId, userId);
-            if(ok) return Ok(new { isSuccess = true });
+            if (ok) return Ok(new { isSuccess = true });
             else return Ok(new { isSuccess = false, errorType = 0 });
         }
 
@@ -97,7 +97,7 @@ namespace WebAPI.Controllers
                 return Ok(new { isSuccess = OK });
             }
 
-            if(password.OldPassword != null)
+            if (password.OldPassword != null)
             {
                 var response = await _userDAL.ChangePassword(password.UserId, password.OldPassword, password.NewPassword);
                 if (response.Ok) return Ok(new { isSuccess = true });
@@ -109,26 +109,26 @@ namespace WebAPI.Controllers
 
         }
 
-       
+
         [HttpPost("validate")]
         public async Task<ActionResult> ValidateUser(ValidateUserDTO userDTO)
         {
             var user = await _userDAL.Validate(userDTO.Email, userDTO.Password);
-            if (user is null) return Ok(new { isSuccess = false });
-            else
+
+            if (user.IsDeleted) return Ok(new { isSuccess = false, errorType = user.Id });
+
+            var token = _tokenService.GetToken(user);
+            var usr = _mapper.Map<UserDTO>(user);
+            return Ok(new
             {
-                var token = _tokenService.GetToken(user);
-                var usr = _mapper.Map<UserDTO>(user);
-                return Ok(new
-                {
-                    isSuccess = true,
-                    token,
-                    usr.Id,
-                    usr.Name,
-                    usr.Role,
-                    usr.Reset
-                });
-            }
+                isSuccess = true,
+                token,
+                usr.Id,
+                usr.Name,
+                usr.Role,
+                usr.Reset
+            });
+
         }
     }
 }
