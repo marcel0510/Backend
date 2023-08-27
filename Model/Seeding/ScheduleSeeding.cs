@@ -250,7 +250,7 @@ namespace Model.Seeding
             var e16_p2_e003 = new Classroom()
             {
                 Id = 13,
-                Code = "E002",
+                Code = "E003",
                 IsLab = true,
                 Name = "LAB. REDES 1",
                 Capacity = 18,
