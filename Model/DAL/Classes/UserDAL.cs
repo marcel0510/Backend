@@ -40,7 +40,7 @@ namespace Model.DAL.Classes
                 response.ErrorType = 1;
                 return response;
             }
-            var doesRoleExists = await _context.User.AnyAsync(u => u.Role == newUser.Role);
+            var doesRoleExists = await _context.User.AnyAsync(u => u.Role == newUser.Role && u.Role != Role.None);
             if(doesRoleExists)
             {
                 response.Ok = false;
@@ -66,7 +66,7 @@ namespace Model.DAL.Classes
                 response.ErrorType = 1;
                 return response;
             }
-            var doesRoleExists = await _context.User.AnyAsync(u => u.Role == updatedUser.Role && u.Id != updatedUser.Id);
+            var doesRoleExists = await _context.User.AnyAsync(u => u.Role == updatedUser.Role && u.Role != Role.None && u.Id != updatedUser.Id);
             if (doesRoleExists)
             {
                 response.Ok = false;

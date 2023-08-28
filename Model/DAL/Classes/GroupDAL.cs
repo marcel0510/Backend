@@ -28,8 +28,9 @@ namespace Model.DAL.Classes
             var response = new Response();
             var classroom = await _context.Classroom.Include(c => c.Groups).ThenInclude(g => g.Sessions)
                 .FirstOrDefaultAsync(c => c.Id == newGroup.Classroom.Id);
+            var groups = classroom.Groups.Where(g => g.CalendarId == newGroup.CalendarId).ToList();
 
-            var doesGroupExist = ValidateRepitedNames(classroom.Groups, newGroup.Subject.Id, newGroup.Name, 0, false);
+            var doesGroupExist = ValidateRepitedNames(groups, newGroup.Subject.Id, newGroup.Name, 0, false);
             if (doesGroupExist)
             {
                 response.Ok = false;
@@ -43,7 +44,7 @@ namespace Model.DAL.Classes
                 response.ErrorType = 3;
                 return response;
             }
-            var doesOverlappingExist = ValidateOverlappingSchedules(classroom, newGroup.Sessions, 0, false);
+            var doesOverlappingExist = ValidateOverlappingSchedules(groups, newGroup.Sessions, 0, false);
             if(doesOverlappingExist.Count != 0)
             {
                 response.Ok = false;
@@ -72,7 +73,10 @@ namespace Model.DAL.Classes
             var classroom = await _context.Classroom.Include(c => c.Groups).ThenInclude(g => g.Sessions)
                 .FirstOrDefaultAsync(c => c.Id == updatedGroup.Classroom.Id);
 
-            var doesGroupExist = ValidateRepitedNames(classroom.Groups, updatedGroup.Subject.Id, updatedGroup.Name, updatedGroup.Id, true);
+            var groups = classroom.Groups.Where(g => g.CalendarId == updatedGroup.CalendarId).ToList();
+
+
+             var doesGroupExist = ValidateRepitedNames(groups, updatedGroup.Subject.Id, updatedGroup.Name, updatedGroup.Id, true);
             if (doesGroupExist)
             {
                 response.Ok = false;
@@ -86,7 +90,7 @@ namespace Model.DAL.Classes
                 response.ErrorType = 3;
                 return response;
             }
-            var doesOverlappingExist = ValidateOverlappingSchedules(classroom, updatedGroup.Sessions, updatedGroup.Id, true);
+            var doesOverlappingExist = ValidateOverlappingSchedules(groups, updatedGroup.Sessions, updatedGroup.Id, true);
             if (doesOverlappingExist.Count != 0)
             {
                 response.Ok = false;
@@ -129,6 +133,7 @@ namespace Model.DAL.Classes
                         {
                             if (group.Name == name)
                             {
+
                                 return true;
                             }
                         }
@@ -150,7 +155,7 @@ namespace Model.DAL.Classes
             }
             return false;
         }
-        public static List<int> ValidateOverlappingSchedules(Classroom classroom, List<Session> sessions, int groupId, bool isEdit)
+        public static List<int> ValidateOverlappingSchedules(List<Group> groups, List<Session> sessions, int groupId, bool isEdit)
         {
             var Schedule = new int[13, 5]; //13 filas y 5 columnas
             var sessionsSchedule = new int[13, 5]; //13 filas y 5 columnas
@@ -166,10 +171,11 @@ namespace Model.DAL.Classes
             }
             //Llenar la matriz con los grupos
             //Si es edicion se llena sin el grupo que se edita
+            
             if (isEdit)
             {
 
-                foreach (var group in classroom.Groups)
+                foreach (var group in groups)
                 {
                     foreach (var session in group.Sessions)
                     {
@@ -192,7 +198,7 @@ namespace Model.DAL.Classes
             }
             else
             {
-                foreach (var group in classroom.Groups)
+                foreach (var group in groups)
                 {
                     foreach (var session in group.Sessions)
                     {

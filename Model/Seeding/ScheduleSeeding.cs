@@ -9658,7 +9658,7 @@ namespace Model.Seeding
             var e16_s1_e011_gr2_4_30_36_session1 = new Session()
             {
                 Id = 42,
-                Day = Enum.Day.Domingo, // Coloca el día correcto
+                Day = Enum.Day.Lunes, // Coloca el día correcto
                 StartTime = new TimeSpan(7, 0, 0),
                 EndTime = new TimeSpan(9, 0, 0),
                 GroupId = 42,
@@ -11927,7 +11927,7 @@ namespace Model.Seeding
             var e17_p6_e023_gr1_85_12_session1 = new Session()
             {
                 Id = 149,
-                Day = Enum.Day.Domingo,
+                Day = Enum.Day.Lunes,
                 StartTime = new TimeSpan(7, 0, 0),
                 EndTime = new TimeSpan(9, 0, 0),
                 GroupId = 148,
@@ -11936,7 +11936,7 @@ namespace Model.Seeding
             var e17_p6_e023_gr1_85_12_session2 = new Session()
             {
                 Id = 150,
-                Day = Enum.Day.Lunes,
+                Day = Enum.Day.Miercoles,
                 StartTime = new TimeSpan(9, 0, 0),
                 EndTime = new TimeSpan(10, 0, 0),
                 GroupId = 148,

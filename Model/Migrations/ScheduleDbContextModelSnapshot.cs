@@ -45,7 +45,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 26, 16, 40, 37, 895, DateTimeKind.Local).AddTicks(5007));
+                        .HasDefaultValue(new DateTime(2023, 8, 28, 0, 2, 21, 579, DateTimeKind.Local).AddTicks(1577));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -123,7 +123,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 26, 16, 40, 37, 895, DateTimeKind.Local).AddTicks(8577));
+                        .HasDefaultValue(new DateTime(2023, 8, 28, 0, 2, 21, 579, DateTimeKind.Local).AddTicks(3056));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -210,7 +210,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 26, 16, 40, 37, 896, DateTimeKind.Local).AddTicks(1188));
+                        .HasDefaultValue(new DateTime(2023, 8, 28, 0, 2, 21, 579, DateTimeKind.Local).AddTicks(4572));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -458,7 +458,7 @@ namespace Model.Migrations
                             Id = 13,
                             BuildingId = 1,
                             Capacity = 18,
-                            Code = "E002",
+                            Code = "E003",
                             CreatedBy = 0,
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DeletedBy = 0,
@@ -2134,7 +2134,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 26, 16, 40, 37, 896, DateTimeKind.Local).AddTicks(5248));
+                        .HasDefaultValue(new DateTime(2023, 8, 28, 0, 2, 21, 579, DateTimeKind.Local).AddTicks(6908));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -12220,7 +12220,7 @@ namespace Model.Migrations
                         new
                         {
                             Id = 42,
-                            Day = "Domingo",
+                            Day = "Lunes",
                             EndTime = new TimeSpan(0, 9, 0, 0, 0),
                             GroupId = 42,
                             IsDeleted = false,
@@ -13201,7 +13201,7 @@ namespace Model.Migrations
                         new
                         {
                             Id = 149,
-                            Day = "Domingo",
+                            Day = "Lunes",
                             EndTime = new TimeSpan(0, 9, 0, 0, 0),
                             GroupId = 148,
                             IsDeleted = false,
@@ -13210,7 +13210,7 @@ namespace Model.Migrations
                         new
                         {
                             Id = 150,
-                            Day = "Lunes",
+                            Day = "Miercoles",
                             EndTime = new TimeSpan(0, 10, 0, 0, 0),
                             GroupId = 148,
                             IsDeleted = false,
@@ -15019,7 +15019,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 26, 16, 40, 37, 897, DateTimeKind.Local).AddTicks(307));
+                        .HasDefaultValue(new DateTime(2023, 8, 28, 0, 2, 21, 580, DateTimeKind.Local).AddTicks(47));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -18350,7 +18350,7 @@ namespace Model.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 8, 26, 16, 40, 37, 897, DateTimeKind.Local).AddTicks(3389));
+                        .HasDefaultValue(new DateTime(2023, 8, 28, 0, 2, 21, 580, DateTimeKind.Local).AddTicks(2118));
 
                     b.Property<int>("DeletedBy")
                         .HasColumnType("int");
@@ -18418,7 +18418,7 @@ namespace Model.Migrations
                             Email = "admin@gmail.com",
                             IsDeleted = false,
                             Name = "Admin",
-                            Password = "$2a$11$Cw498tXYPwBDhMiXkUxWr.3ehk83i9Jev.sdLpvizAIZJQ.VKmApO",
+                            Password = "$2a$11$Ek.ZfEF3eH06gIQLSVEZnejlnn9jfNODPJKBU5MZHYalWnykTcL/W",
                             Reset = false,
                             Role = "Admin",
                             UpdatedBy = 0,
